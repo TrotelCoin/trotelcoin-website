@@ -1,4 +1,4 @@
-# TrotelCoin Website
+# TrotelCoin Website v2
 
 Welcome to the TrotelCoin Website repository! This repository contains the source code for the official website that showcases the TrotelCoin project, an educational platform dedicated to simplifying the complexities of cryptocurrencies and promoting widespread adoption.
 
@@ -22,13 +22,13 @@ To run the TrotelCoin website locally, follow these steps:
 1. **Clone the Repository**: Begin by cloning this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/trotelcoin-website.git
+git clone https://github.com/your-username/trotelcoin-website-v2.git
 ```
 
 2. **Install Dependencies**: Navigate to the cloned repository's directory and install the project dependencies using npm or yarn:
 
 ```bash
-cd trotelcoin-website
+cd trotelcoin-website-v2
 yarn install
 ```
 
