@@ -4,15 +4,6 @@ import "../app/globals.css";
 import { useEffect } from "react";
 import { appWithTranslation } from "next-i18next";
 import i18n from "i18next";
-import Loading from "./loading";
-import { Suspense } from "react";
-import Hotjar from "@hotjar/browser";
-import Head from "next/head";
-
-const siteId = 3583733;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
