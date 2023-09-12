@@ -3,10 +3,9 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
   CheckIcon,
-  XMarkIcon as XMarkIconMini,
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
+  WalletIcon,
+  Cog6ToothIcon,
+  CreditCardIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
 
@@ -23,25 +22,25 @@ const navigation = [
 
 const features = [
   {
-    name: "Push to deploy",
+    name: "Choose your wallet.",
     description:
-      "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
-    href: "#",
-    icon: CloudArrowUpIcon,
+      "Begin by selecting a suitable wallet that suits your needs and preferences. Your wallet will serve as the secure hub for your TrotelCoin transactions.",
+    href: "https://docs.trotelcoin.com",
+    icon: WalletIcon,
   },
   {
-    name: "SSL certificates",
+    name: "Configure your wallet.",
     description:
-      "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
-    href: "#",
-    icon: LockClosedIcon,
+      "Once you've chosen your wallet, configure it according to your preferences and security settings.",
+    href: "https://docs.trotelcoin.com",
+    icon: Cog6ToothIcon,
   },
   {
-    name: "Simple queues",
+    name: "Get some TrotelCoin.",
     description:
-      "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
-    href: "#",
-    icon: ArrowPathIcon,
+      "Whether you earn, trade, or purchase TrotelCoin, having it in your wallet can accelerate and enrich your learning and earning opportunities.",
+    href: "https://docs.trotelcoin.com",
+    icon: CreditCardIcon,
   },
 ];
 
@@ -401,16 +400,16 @@ export default function GetStartedHero() {
               <div className="bg-gray-50 py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                      Deploy faster
+                    <h2 className="text-base font-semibold leading-7 text-blue-600">
+                      HODL TrotelCoin.
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      Everything you need to deploy your app
+                      Start learning now.
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                      Quis tellus eget adipiscing convallis sit sit eget aliquet
-                      quis. Suspendisse eget egestas a elementum pulvinar et
-                      feugiat blandit at. In mi viverra elit nunc.
+                      You can begin your learning and earning journey without
+                      possessing any TrotelCoin. However, you can enhance and
+                      expedite your learning progress by owning TrotelCoin.
                     </p>
                   </div>
                   <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -419,7 +418,7 @@ export default function GetStartedHero() {
                         <div key={feature.name} className="flex flex-col">
                           <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                             <feature.icon
-                              className="h-5 w-5 flex-none text-indigo-600"
+                              className="h-5 w-5 flex-none text-blue-600"
                               aria-hidden="true"
                             />
                             {feature.name}
@@ -429,7 +428,7 @@ export default function GetStartedHero() {
                             <p className="mt-6">
                               <a
                                 href={feature.href}
-                                className="text-sm font-semibold leading-6 text-indigo-600"
+                                className="text-sm font-semibold leading-6 text-blue-600"
                               >
                                 Learn more <span aria-hidden="true">→</span>
                               </a>
