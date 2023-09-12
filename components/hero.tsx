@@ -49,7 +49,7 @@ export default function Hero() {
           <div className="flex flex-1 items-center justify-end gap-x-6">
             <a
               href="https://app.trotelcoin.com"
-              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm duration-200 hover:scale-110 hover:duration-200 hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm border-2 border-transparent hover:bg-gray-100 hover:text-gray-900 hover:border-black hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Launch App
             </a>
@@ -61,10 +61,7 @@ export default function Hero() {
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon
-                className="h-6 w-6 text-gray-900"
-                aria-hidden="true"
-              />
+              <Bars3Icon className="h-6 w-6 text-gray-900" aria-hidden="true" />
             </button>
           </div>
         </nav>
@@ -129,7 +126,7 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Buy some TrotelCoin on PancakeSwap.{" "}
+              Buy $TROTEL on PancakeSwap.{" "}
               <a
                 href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                 target="_blank"
@@ -169,13 +166,14 @@ export default function Hero() {
               />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Earn crypto by learning and unlock the potential for revolutionary
-              advancements in finance and technology.
+              Acquire $TROTEL through the pursuit of knowledge, opening up
+              opportunities for groundbreaking developments in the realms of
+              finance and technology.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="https://app.trotelcoin.com"
-                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 hover:scale-110 duration-200 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-900 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Launch App
               </a>

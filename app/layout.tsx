@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TrotelCoin - Learn & earn crypto",
+  title: "TrotelCoin - Learn & earn crypto.",
   description: "Learn & earn crypto",
 };
 

@@ -18,7 +18,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-slate-800">
+    <header className="bg-white">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"
@@ -37,7 +37,7 @@ export default function Header() {
               key={item.name}
               href={item.href}
               target={item.target}
-              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
+              className="text-sm font-semibold leading-6 text-gray-900"
             >
               {item.name}
             </a>
@@ -46,7 +46,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="https://app.trotelcoin.com"
-            className="rounded-md bg-gray-900 px-3 py-2 text-sm dark:bg-gray-100 dark:text-gray-900 font-semibold text-gray-100 shadow-sm duration-200 hover:scale-110 hover:duration-200 hover:text-gray-100 dark:hover:text-gray-900 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm duration-200 border-2 border-transparent hover:border-black hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Launch App
           </a>
@@ -69,7 +69,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-slate-800 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center gap-x-6">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
@@ -81,7 +81,7 @@ export default function Header() {
             </a>
             <a
               href="https://app.trotelcoin.com"
-              className="ml-auto rounded-md bg-black px-3 py-2 text-sm font-semibold dark:bg-gray-100 dark:text-gray-900 text-white duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="ml-auto rounded-md bg-black px-3 py-2 text-sm font-semibold text-white duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Launch App
             </a>
@@ -101,7 +101,7 @@ export default function Header() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 dark:text-gray-100 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
                   </a>
