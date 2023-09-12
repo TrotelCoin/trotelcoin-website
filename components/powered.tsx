@@ -19,8 +19,8 @@ export default function Powered() {
         <div className="mt-16 flex justify-center">
           <p className="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
             <span className="hidden md:inline">
-              With Flooz, we have the capability to purchase $TROTEL using Apple
-              Pay and Google Pay.
+              With Flooz, you have the capability to purchase $TROTEL using
+              Apple Pay and Google Pay.
             </span>
             <a
               href="https://flooz.xyz/trade/how-to-buy/0xf04ab1a43cBA1474160B7B8409387853D7Be02d5?network=bsc"
