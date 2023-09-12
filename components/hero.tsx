@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Typed from "react-typed";
+import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "#" },
@@ -10,8 +11,8 @@ const navigation = [
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
     target: "_blank",
   },
-  { name: "Get started", href: "./getStarted" },
-  { name: "About", href: "./About" },
+  { name: "Get started", href: "/getStarted" },
+  { name: "About", href: "/about" },
 ];
 
 export default function Hero() {
@@ -36,14 +37,14 @@ export default function Hero() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 target={item.target}
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="flex flex-1 items-center justify-end gap-x-6">
@@ -95,14 +96,14 @@ export default function Hero() {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       target={item.target}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

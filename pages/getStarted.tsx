@@ -4,9 +4,5 @@ import React from "react";
 import Header from "../components/header";
 
 export default function getStarted() {
-  return (
-    <div>
-      <Header></Header>
-    </div>
-  );
+  return <div>getStarted</div>;
 }

@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/node": "^20.6.0",
     "@types/react": "18.2.21",
+    "daisyui": "^3.7.3",
     "typescript": "^5.2.2"
   }
 }

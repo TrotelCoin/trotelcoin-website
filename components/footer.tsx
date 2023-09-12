@@ -1,4 +1,5 @@
 import { JSX, SVGProps } from "react";
+import Link from "next/link";
 
 const navigation = {
   trotelcoin: [
@@ -8,8 +9,8 @@ const navigation = {
       href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
       target: "_blank",
     },
-    { name: "Get started", href: "#" },
-    { name: "About", href: "#" },
+    { name: "Get started", href: "./getStarted" },
+    { name: "About", href: "./about" },
   ],
   ecosystem: [
     {
@@ -143,13 +144,13 @@ export default function Footer() {
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.trotelcoin.map((item) => (
                     <li key={item.name}>
-                      <a
+                      <Link
                         href={item.href}
                         target={item.target}
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

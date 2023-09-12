@@ -11,7 +11,7 @@ const navigation = [
     target: "_blank",
   },
   { name: "Get started", href: "./getStarted" },
-  { name: "About", href: "./About" },
+  { name: "About", href: "./about" },
 ];
 
 export default function Header() {

@@ -1,5 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Loading from "./loading";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "TrotelCoin - Learn & earn crypto.",
@@ -13,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Suspense fallback={<Loading></Loading>}>
+        <body>{children}</body>
+      </Suspense>
     </html>
   );
 }
