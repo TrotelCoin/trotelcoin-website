@@ -1,6 +1,13 @@
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import { useState } from "react";
 
 export default function Banner() {
+  const [dismissed, setDismissed] = useState(false);
+
+  if (dismissed) {
+    return null;
+  }
+
   return (
     <>
       <div className="pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
@@ -22,7 +29,11 @@ export default function Banner() {
               <span aria-hidden="true">&rarr;</span>
             </a>
           </p>
-          <button type="button" className="-m-1.5 flex-none p-1.5">
+          <button
+            type="button"
+            className="-m-1.5 flex-none p-1.5"
+            onClick={() => setDismissed(true)}
+          >
             <span className="sr-only">Dismiss</span>
             <XMarkIcon className="h-5 w-5 text-white" aria-hidden="true" />
           </button>

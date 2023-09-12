@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Header from "../components/header";
+import Footer from "@/components/footer";
 
 export default function getStarted() {
-  return <div>getStarted</div>;
+  return (
+    <div>
+      <Footer></Footer>
+    </div>
+  );
 }
