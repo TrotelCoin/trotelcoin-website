@@ -1,4 +1,4 @@
-# TrotelCoin Website v2
+# TrotelCoin Website 
 
 Welcome to the TrotelCoin Website repository! This repository contains the source code for the official website that showcases the TrotelCoin project, an educational platform dedicated to simplifying the complexities of cryptocurrencies and promoting widespread adoption.
 
@@ -10,7 +10,7 @@ TrotelCoin is an innovative educational initiative launched in May 2023 by visio
 
 The TrotelCoin website is built using a modern tech stack, which includes:
 
-- **SvelteKit**: A powerful framework for modern web development that facilitates rapid development and produces optimized production builds.
+- **NextJS**: A powerful framework for modern web development.
 - **React.js**: A popular JavaScript library for building user interfaces, allowing for efficient and interactive components.
 - **TypeScript**: A typed superset of JavaScript that enhances code maintainability and helps catch potential errors during development.
 - **CSS**: Styling the website is done using CSS, ensuring a visually appealing and user-friendly interface.
