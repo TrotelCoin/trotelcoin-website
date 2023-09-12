@@ -78,7 +78,7 @@ export default function Hero() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
                 <img
-                  className="h-12 w-auto dark:invisible"
+                  className="h-12 w-auto"
                   src="trotelcoin.svg"
                   alt="TrotelCoin logo"
                 />

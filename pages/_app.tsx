@@ -1,13 +1,20 @@
-import { AppProps } from "next/app";
-import { NextPage } from "next";
-import "../app/globals.css";
+import { useEffect } from "react";
+import { appWithTranslation } from "next-i18next";
+import i18n from "i18next";
 
-const App: NextPage<AppProps> = ({ Component, pageProps }) => {
-  return (
-    <>
-      <Component {...pageProps} />
-    </>
-  );
-};
+function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    i18n.init({
+      lng: "en",
+      resources: {
+        en: { translation: require("../locales/en.json") },
+        fr: { translation: require("../locales/fr.json") },
+      },
+      interpolation: { escapeValue: false },
+    });
+  }, []);
 
-export default App;
+  return <Component {...pageProps} />;
+}
+
+export default appWithTranslation(MyApp);
