@@ -1,7 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/fontsource-poppins");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://cdn.jsdelivr.net/npm/fontsource-poppins");
 
 :root {
   --text-white: rgb(243 244 246);
@@ -10,6 +10,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    color: var(--text-white);
+    background-color: var(--bg-black);
+  }
 }
 
 *,
