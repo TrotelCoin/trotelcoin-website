@@ -6,14 +6,14 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 const navigation = [
-  { name: "{t(Home)}", href: "./" },
+  { name: "Home", href: "./" },
   {
-    name: "{t(Whitepaper)}",
+    name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
     target: "_blank",
   },
-  { name: "{t(Get started)}", href: "/getStarted" },
-  { name: "{t(About)}", href: "/about" },
+  { name: "Get started", href: "/getStarted" },
+  { name: "About", href: "/about" },
 ];
 
 export default function Example() {
