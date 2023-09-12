@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Typed from "react-typed";
 
 const navigation = [
   { name: "Home", href: "#" },
@@ -141,7 +142,31 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Learn & earn crypto.
+              Learn & earn{" "}
+              <Typed
+                strings={[
+                  "Crypto",
+                  "Bitcoin",
+                  "Blockchain",
+                  "Wallet",
+                  "Ethereum",
+                  "dApps",
+                  "DAOs",
+                  "DeFi",
+                  "IPFS",
+                  "Stablecoins",
+                  "Smart Contract",
+                  "Airdrop",
+                  "NFTs",
+                  "Web3",
+                  "EVM",
+                ]}
+                typeSpeed={100}
+                loop
+                backSpeed={20}
+                cursorChar=""
+                showCursor={false}
+              />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Learn about crypto and blockchain and unlock the potential for
