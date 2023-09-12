@@ -3,20 +3,22 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const navigation = [
-  { name: "Home", href: "./" },
+  { name: "{t(Home)}", href: "./" },
   {
-    name: "Whitepaper",
+    name: "{t(Whitepaper)}",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
     target: "_blank",
   },
-  { name: "Get started", href: "/getStarted" },
-  { name: "About", href: "/about" },
+  { name: "{t(Get started)}", href: "/getStarted" },
+  { name: "{t(About)}", href: "/about" },
 ];
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white">
