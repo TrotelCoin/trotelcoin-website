@@ -7,7 +7,7 @@ const navigation = [
   { name: "Home", href: "#" },
   {
     name: "Whitepaper",
-    href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki",
+    href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
     target: "_blank",
   },
   { name: "Get started", href: "./getStarted" },
