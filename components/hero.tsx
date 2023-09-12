@@ -3,6 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Typed from "react-typed";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const navigation = [
   { name: "Home", href: "./" },
@@ -17,6 +18,7 @@ const navigation = [
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white">
@@ -29,7 +31,7 @@ export default function Hero() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
               <img
-                className="h-12 w-auto dark:invisible"
+                className="h-12 w-auto"
                 src="trotelcoin.svg"
                 alt="TrotelCoin logo"
               />
@@ -52,7 +54,7 @@ export default function Hero() {
               href="https://app.trotelcoin.com"
               className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm border-2 border-transparent hover:bg-gray-100 hover:text-gray-900 hover:border-black hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Launch App
+              {t("Launch App")}
             </a>
           </div>
           <div className="flex lg:hidden">
