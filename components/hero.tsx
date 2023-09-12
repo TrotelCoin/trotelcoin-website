@@ -133,7 +133,7 @@ export default function Hero() {
               <a
                 href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                 target="_blank"
-                className="font-semibold text-yellow-500"
+                className="font-semibold text-blue-500"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Invest now <span aria-hidden="true">&rarr;</span>
@@ -142,7 +142,7 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Learn & earn{" "}
+              Learn{" "}
               <Typed
                 strings={[
                   "Crypto",
@@ -163,19 +163,19 @@ export default function Hero() {
                 ]}
                 typeSpeed={100}
                 loop
-                backSpeed={20}
-                cursorChar=""
-                showCursor={false}
+                backSpeed={50}
+                cursorChar="."
+                showCursor={true}
               />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Learn about crypto and blockchain and unlock the potential for
-              revolutionary advancements in finance and technology.
+              Earn crypto by learning and unlock the potential for revolutionary
+              advancements in finance and technology.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="https://app.trotelcoin.com"
-                className="rounded-md bg-yellow-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-400 hover:scale-110 duration-200 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 hover:scale-110 duration-200 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Launch App
               </a>
