@@ -5,7 +5,7 @@ import Typed from "react-typed";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "./" },
   {
     name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",

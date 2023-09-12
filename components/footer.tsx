@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const navigation = {
   trotelcoin: [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "./" },
     {
       name: "Whitepaper",
       href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",

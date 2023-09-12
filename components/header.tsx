@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../app/globals.css";
 
 const navigation = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "./" },
   {
     name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
