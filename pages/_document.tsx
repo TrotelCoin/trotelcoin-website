@@ -1,9 +1,26 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { Suspense } from "react";
+import Loading from "@/app/loading";
+import Hotjar from "@hotjar/browser";
+
+const siteId = 3583733;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 export default function Document() {
   return (
     <Html>
       <Head>
+        <title>TrotelCoin - Learn & earn crypto.</title>
+        <meta charSet="UTF-8"></meta>
+        <meta name="description" content="Learn & earn crypto"></meta>
+        <meta name="keywords" content="Learn, Earn, Crypto, TrotelCoin"></meta>
+        <meta name="author" content="Alexandre Trotel"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -15,10 +32,12 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
+      <Suspense fallback={<Loading></Loading>}>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Suspense>
     </Html>
   );
 }
