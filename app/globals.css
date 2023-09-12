@@ -1,24 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --text-white: rgb(243 244 246);
-  --bg-black: rgb(30 41 59);
+  --bg-black: #0f172a;
   --text-black: rgb(17 24 39);
 }
 
 @media (prefers-color-scheme: dark) {
-  html,
-  body {
-    color: var(--text-white);
-    background: var(--bg-black);
-  }
-
-  a {
-    color: var(--text-white);
-  }
 }
 
 * {
