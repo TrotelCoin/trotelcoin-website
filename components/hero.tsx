@@ -128,7 +128,7 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Buy $TROTEL on PancakeSwap.{" "}
+              Buy TrotelCoin on PancakeSwap.{" "}
               <a
                 href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                 target="_blank"
@@ -168,7 +168,7 @@ export default function Hero() {
               />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Acquire $TROTEL through the pursuit of knowledge, opening up
+              Acquire TrotelCoin through the pursuit of knowledge, opening up
               opportunities for groundbreaking developments in the realms of
               finance and technology.
             </p>

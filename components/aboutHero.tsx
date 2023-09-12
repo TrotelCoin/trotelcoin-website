@@ -163,24 +163,18 @@ export default function Example() {
                     We’re changing the way you learn crypto.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Earn $TROTEL rewards by gaining knowledge about
+                    Earn TrotelCoin rewards by gaining knowledge about
                     cryptocurrency. The goal is to empower you in managing your
                     finances and assist you in regaining your financial
                     independence.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
-                      href="https://app.trotelcoin.com"
-                      className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-900 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                      Launch App
-                    </a>
-                    <a
                       href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                       target="_blank"
                       className="text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Buy $TROTEL <span aria-hidden="true">→</span>
+                      Buy TrotelCoin <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
