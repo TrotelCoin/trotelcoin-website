@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add hotjar@latest
+  /usr/local/bin/node /usr/local/bin/yarn add @hotjar
 
 PATH: 
   /usr/local/go/bin:/usr/local/bin:/Users/alexandretrotel/usr/local/gnat/bin:/Users/alexandretrotel/opt/GNAT/2020/bin:/Users/alexandretrotel/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/opt/local/bin:/opt/local/sbin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/go/bin:/opt/X11/bin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/alexandretrotel/.cargo/bin:/Users/alexandretrotel/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin
@@ -14,8 +14,8 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/hotjar: Not found
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66145:18)
+  Error: https://registry.yarnpkg.com/@hotjar: Request "https://registry.yarnpkg.com/@hotjar" returned a 405
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66154:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:513:28)
       at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141862:10)
@@ -47,6 +47,7 @@ npm manifest:
       "next": "^13.4.19",
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
+      "react-hotjar": "^6.1.0",
       "react-router": "^6.15.0",
       "react-typed": "^1.2.0",
       "tailwindcss": "^3.3.3"
@@ -823,6 +824,11 @@ Lockfile:
     dependencies:
       loose-envify "^1.1.0"
       scheduler "^0.23.0"
+  
+  react-hotjar@^6.1.0:
+    version "6.1.0"
+    resolved "https://registry.yarnpkg.com/react-hotjar/-/react-hotjar-6.1.0.tgz#910dd5d002f5043a6f34ae7ada545b2aace1edae"
+    integrity sha512-V1UJixDMspAIrbGIFG282U7mH2aK1JBid0YR8F9oscb6lTkjMga+gst2gesxJDsqsax+k+lM1LqRXYzmUu8izA==
   
   react-is@^16.13.1:
     version "16.13.1"
