@@ -125,7 +125,7 @@ export default function FooterDark() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <Image
-              className="h-10"
+              className="h-10 w-auto"
               src="/trotelcoin-white.png"
               alt="TrotelCoin logo"
               width={100}
