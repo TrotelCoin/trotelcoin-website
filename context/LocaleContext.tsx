@@ -1,12 +1,29 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useMemo,
+} from "react";
 
-const LocaleContext = createContext();
+const LocaleContext = createContext({
+  locale: "en",
+  setLocale: (_: string) => {},
+});
 
-export function LocaleProvider({ children }) {
-  const [locale, setLocale] = useState("en"); // Default locale is 'en'
+export function LocaleProvider({ children }: { children: ReactNode }) {
+  const [locale, setLocale] = useState<string>("en");
+
+  const contextValue = useMemo(
+    () => ({
+      locale,
+      setLocale,
+    }),
+    [locale]
+  );
 
   return (
-    <LocaleContext.Provider value={{ locale, setLocale }}>
+    <LocaleContext.Provider value={contextValue}>
       {children}
     </LocaleContext.Provider>
   );
