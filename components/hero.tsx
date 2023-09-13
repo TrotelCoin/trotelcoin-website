@@ -19,7 +19,7 @@ const navigation = [
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t } = useTranslation("index");
 
   return (
     <div className="bg-white">
@@ -142,7 +142,7 @@ export default function Hero() {
                 className="font-semibold text-blue-500"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
-                Invest now <span aria-hidden="true">&rarr;</span>
+                {t("Invest now")} <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
@@ -156,14 +156,14 @@ export default function Hero() {
                   "Blockchain",
                   "Wallet",
                   "Ethereum",
-                  "dApps",
-                  "DAOs",
+                  "dApp",
+                  "DAO",
                   "DeFi",
                   "IPFS",
-                  "Stablecoins",
+                  "Stablecoin",
                   "Smart Contract",
                   "Airdrop",
-                  "NFTs",
+                  "NFT",
                   "Web3",
                   "EVM",
                 ]}
