@@ -26,21 +26,21 @@ const features = [
     name: "Choose your wallet.",
     description:
       "Begin by selecting a suitable wallet that suits your needs and preferences. Your wallet will serve as the secure hub for your TrotelCoin transactions.",
-    href: "https://docs.trotelcoin.com",
+    href: "https://docs.trotelcoin.com/get-started/choose-your-wallet",
     icon: WalletIcon,
   },
   {
     name: "Configure your wallet.",
     description:
       "Once you've chosen your wallet, configure it according to your preferences and security settings.",
-    href: "https://docs.trotelcoin.com",
+    href: "https://docs.trotelcoin.com/get-started/configure-your-wallet",
     icon: Cog6ToothIcon,
   },
   {
     name: "Get some TrotelCoin.",
     description:
       "Whether you earn, trade, or purchase TrotelCoin, having it in your wallet can accelerate and enrich your learning and earning opportunities.",
-    href: "https://docs.trotelcoin.com",
+    href: "https://docs.trotelcoin.com/get-started/get-some-trotelcoin",
     icon: CreditCardIcon,
   },
 ];

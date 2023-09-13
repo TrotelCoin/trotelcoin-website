@@ -9,9 +9,9 @@ const navigation = {
     {
       name: "Whitepaper",
       href: "https://docs.trotelcoin.com/overview/whitepaper",
-      target: "_blank",
+      target: "_blank"
     },
-    { name: "Documentation", href: "https://docs.trotelcoin.com" },
+    { name: "Documentation", href: "https://docs.trotelcoin.com", target: "_blank" },
     { name: "Get started", href: "./getStarted" },
     { name: "About", href: "./about" },
   ],
