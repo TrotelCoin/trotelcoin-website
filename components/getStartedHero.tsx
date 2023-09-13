@@ -432,7 +432,7 @@ export default function GetStartedHero() {
                             <p className="flex-auto">{feature.description}</p>
                             <p className="mt-6">
                               <a
-                                href={feature.href}
+                                href={feature.href} target="_blank"
                                 className="text-sm font-semibold leading-6 text-blue-600"
                               >
                                 Learn more <span aria-hidden="true">→</span>
