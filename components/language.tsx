@@ -1,11 +1,17 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { useLocale } from "@/context/LocaleContext";
 
 export default function Language() {
   const { locale, setLocale } = useLocale();
+  const router = useRouter();
 
   const handleChangeLocale = (newLocale: string) => {
     setLocale(newLocale);
+
+    router.push(`/${newLocale}${router.pathname}`, undefined, {
+      locale: newLocale,
+    });
   };
 
   return (
@@ -20,7 +26,7 @@ export default function Language() {
         defaultValue={locale}
         onChange={(e) => handleChangeLocale(e.target.value)}
       >
-        <option value="en">English</option>
+        <option value="">English</option>
         <option value="fr">Français</option>
       </select>
     </div>
