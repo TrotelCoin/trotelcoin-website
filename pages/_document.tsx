@@ -15,8 +15,6 @@ export default function Document() {
         <title>TrotelCoin - Learn & earn crypto.</title>
         <meta charSet="UTF-8"></meta>
         <meta name="description" content="Learn & earn crypto"></meta>
-        <meta name="keywords" content="Learn, Earn, Crypto, TrotelCoin"></meta>
-        <meta name="author" content="Alexandre Trotel"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
