@@ -350,7 +350,7 @@ export default function GetStartedHero() {
                                 tier.featured ? "text-gray-900" : "text-white"
                               }
                             >
-                              $TROTEL
+                              TROTEL
                             </p>
                           </div>
                         </div>
