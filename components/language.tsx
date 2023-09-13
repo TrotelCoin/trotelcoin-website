@@ -3,7 +3,10 @@ import { useRouter } from "next/router";
 import { useLocale } from "@/context/LocaleContext";
 
 export default function Language() {
-  const { locale, setLocale } = useLocale();
+  const { locale, setLocale } = useLocale() as {
+    locale: string;
+    setLocale: (locale: string) => void;
+  };
   const router = useRouter();
 
   const handleChangeLocale = (newLocale: string) => {
