@@ -30,10 +30,12 @@ export default function Example() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
-              <img
+              <Image
                 className="h-12 w-auto"
-                src="trotelcoin.svg"
+                src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -79,10 +81,12 @@ export default function Example() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
-                <img
+                <Image
                   className="h-12 w-auto dark:invisible"
-                  src="trotelcoin.svg"
+                  src="/trotelcoin.svg"
                   alt="TrotelCoin logo"
+                  width={100}
+                  height={100}
                 />
               </a>
               <button

@@ -8,6 +8,7 @@ import {
   CreditCardIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "./" },
@@ -184,10 +185,12 @@ export default function GetStartedHero() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
-              <img
+              <Image
                 className="h-12 w-auto"
-                src="trotelcoin-white.png"
+                src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -233,10 +236,12 @@ export default function GetStartedHero() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
-                <img
+                <Image
                   className="h-12 w-auto"
-                  src="trotelcoin-white.png"
+                  src="/trotelcoin-white.png"
                   alt="TrotelCoin logo"
+                  width={100}
+                  height={100}
                 />
               </a>
               <button

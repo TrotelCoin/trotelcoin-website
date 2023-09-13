@@ -1,5 +1,7 @@
 import { JSX, SVGProps } from "react";
 import Link from "next/link";
+import LanguageDark from "./languageDark";
+import Image from "next/image";
 
 const navigation = {
   trotelcoin: [
@@ -49,6 +51,11 @@ const navigation = {
     {
       name: "Discord",
       href: "https://discord.com/invite/uwqbRybYBz",
+      target: "_blank",
+    },
+    {
+      name: "YouTube",
+      href: "https://youtube.com/@TrotelCoin",
       target: "_blank",
     },
   ],
@@ -117,7 +124,13 @@ export default function FooterDark() {
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
-            <img className="h-10" src="trotelcoin-white.png" alt="TrotelCoin logo" />
+            <Image
+              className="h-10"
+              src="/trotelcoin-white.png"
+              alt="TrotelCoin logo"
+              width={100}
+              height={100}
+            />
             <p className="text-sm leading-6 text-gray-200">
               Learn & earn crypto.
             </p>
@@ -192,6 +205,9 @@ export default function FooterDark() {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="mt-10 md:mt-0">
+                <LanguageDark></LanguageDark>
               </div>
             </div>
           </div>

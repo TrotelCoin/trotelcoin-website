@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "../app/globals.css";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "./" },
@@ -25,10 +26,12 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <span className="sr-only">TrotelCoin</span>
-          <img
+          <Image
             className="h-12 w-auto dark:invisible"
-            src="trotelcoin.svg"
+            src="/trotelcoin.svg"
             alt="TrotelCoin logo"
+            width={100}
+            height={100}
           />
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -73,10 +76,12 @@ export default function Header() {
           <div className="flex items-center gap-x-6">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
-              <img
+              <Image
                 className="h-12 w-auto dark:invisible"
-                src="trotelcoin.svg"
+                src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
+                width={100}
+                height={100}
               />
             </a>
             <a

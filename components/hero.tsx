@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Typed from "react-typed";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "./" },
@@ -30,10 +31,12 @@ export default function Hero() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
-              <img
+              <Image
                 className="h-12 w-auto"
-                src="trotelcoin.svg"
+                src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
+                width={100}
+                height={100}
               />
             </a>
           </div>
@@ -79,10 +82,12 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
-                <img
+                <Image
                   className="h-12 w-auto"
-                  src="trotelcoin.svg"
+                  src="/trotelcoin.svg"
                   alt="TrotelCoin logo"
+                  width={100}
+                  height={100}
                 />
               </a>
               <button
