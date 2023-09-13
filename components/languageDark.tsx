@@ -1,13 +1,11 @@
-import { useRouter } from "next/router";
+import React from "react";
+import { useLocale } from "@/context/LocaleContext";
 
-export default function LanguageDark() {
-  const router = useRouter();
+export default function Language() {
+  const { locale, setLocale } = useLocale();
 
-  const handleChangeLanguage = (e: { target: { value: any } }) => {
-    const selectedLanguage = e.target.value;
-    const link = selectedLanguage === "English" ? "/" : "/fr";
-
-    router.replace(link);
+  const handleChangeLocale = (newLocale: string) => {
+    setLocale(newLocale);
   };
 
   return (
@@ -19,11 +17,11 @@ export default function LanguageDark() {
         id="language"
         name="language"
         className="mt-6 block w-auto rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-blue-600 sm:text-sm sm:leading-6"
-        defaultValue="English"
-        onChange={handleChangeLanguage}
+        defaultValue={locale}
+        onChange={(e) => handleChangeLocale(e.target.value)}
       >
-        <option>English</option>
-        <option>Français</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
       </select>
     </div>
   );
