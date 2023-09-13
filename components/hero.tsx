@@ -10,7 +10,7 @@ const navigation = [
   { name: "Home", href: "./" },
   {
     name: "Whitepaper",
-    href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
+    href: "https://docs.trotelcoin.com/overview/whitepaper",
     target: "_blank",
   },
   { name: "Get started", href: "/getStarted" },
@@ -187,7 +187,7 @@ export default function Hero() {
                 Launch App
               </a>
               <a
-                href="https://github.com/TrotelCoin/trotelcoin-wiki/wiki"
+                href="https://docs.trotelcoin.com"
                 target="_blank"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
