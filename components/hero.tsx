@@ -55,7 +55,7 @@ export default function Hero() {
           <div className="flex flex-1 items-center justify-end gap-x-6">
             <a
               href="https://app.trotelcoin.com"
-              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm border-2 border-transparent hover:bg-gray-100 hover:text-gray-900 hover:border-black hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-gray-800 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               {t("Launch App")}
             </a>
@@ -182,7 +182,7 @@ export default function Hero() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="https://app.trotelcoin.com"
-                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-900 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 Launch App
               </a>
