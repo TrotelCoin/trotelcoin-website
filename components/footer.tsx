@@ -59,6 +59,11 @@ const navigation = {
       href: "https://youtube.com/@TrotelCoin",
       target: "_blank",
     },
+    {
+      name: "Instagram",
+      href: "https://instagram.com/trotelcoin",
+      target: "_blank",
+    },
   ],
   social: [
     {
