@@ -57,6 +57,7 @@ const pricing = {
       mainFeatures: [
         "Free access to all educational courses and resources",
         "Participation in interactive quizzes and activities",
+        "Making governance decisions based on the quantity of TrotelCoin in your possession",
       ],
     },
     {
@@ -68,10 +69,8 @@ const pricing = {
       price: "5000",
       mainFeatures: [
         "All benefits from the Pioneer and Explorer Tiers",
-        "Direct involvement in shaping the future of TrotelCoin through governance decisions",
-        "Exclusive access to advanced courses, workshops, and personalized mentoring sessions",
         "Early access to experimental features and projects",
-        "Invitation to our annual crypto summit",
+        "Invitation to our annual crypto summit for free",
       ],
     },
     {
@@ -83,10 +82,8 @@ const pricing = {
       price: "1000",
       mainFeatures: [
         "All benefits from the Explorer Tier",
-        "Early access to governance discussions and voting rights",
-        "Priority access to new educational resources",
         "Exclusive updates on project developments",
-        "Access to additional in-depth content and tutorials",
+        "Access to courses that provide additional in-depth content and tutorials",
       ],
     },
   ],
