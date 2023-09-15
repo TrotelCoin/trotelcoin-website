@@ -65,7 +65,7 @@ const pricing = {
       id: "tier-expert",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: true,
-      description: "Holders of 5,000 TrotelCoin or more.",
+      description: "Holders of 5,000 TrotelCoin or more for 90 days.",
       price: "5000",
       mainFeatures: [
         "All benefits from the Beginner and Intermediate Tiers",
@@ -79,7 +79,7 @@ const pricing = {
       id: "tier-intermediate",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "Holders of 1,000 TrotelCoin or more.",
+      description: "Holders of 1,000 TrotelCoin or more for 90 days.",
       price: "1000",
       mainFeatures: [
         "All benefits from the Beginner Tier",
@@ -277,11 +277,10 @@ export default function GetStartedHero() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="relative z-10">
                 <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
-                  HODL TrotelCoin. Get Benefits.
+                  HODL TrotelCoin. Earn NFTs.
                 </h1>
                 <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-                  Keep your TrotelCoin investment for potential benefits and
-                  rewards.
+                  Keep your TrotelCoin investment for 90 days to get the NFTs below.
                 </p>
                 <div className="mt-16 flex justify-center">
                   <div className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"></div>
