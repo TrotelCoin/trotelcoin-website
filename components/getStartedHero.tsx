@@ -70,7 +70,8 @@ const pricing = {
       mainFeatures: [
         "All benefits from the Pioneer and Explorer Tiers",
         "Early access to experimental features and projects",
-        "Invitation to our annual crypto summit for free",
+        "Invitation to our annual crypto summit",
+        "Join an exclusive crypto community to network, collaborate on ventures, and explore curated TrotelCoin projects",
       ],
     },
     {
