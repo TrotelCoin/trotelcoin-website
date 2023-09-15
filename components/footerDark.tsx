@@ -44,8 +44,8 @@ const navigation = {
   ],
   socials: [
     {
-      name: "Twitter",
-      href: "https://twitter.com/trotelcoin",
+      name: "X / Twitter",
+      href: "https://x.com/trotelcoin",
       target: "_blank",
     },
     { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
@@ -81,8 +81,8 @@ const navigation = {
       ),
     },
     {
-      name: "Twitter",
-      href: "https://twitter.com/trotelcoin",
+      name: "X / Twitter",
+      href: "https://x.com/trotelcoin",
       target: "_blank",
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
