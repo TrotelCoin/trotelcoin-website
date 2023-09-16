@@ -12,6 +12,11 @@ const navigation = [
     href: "https://docs.trotelcoin.com/overview/whitepaper",
     target: "_blank",
   },
+  {
+    name: "Documentation",
+    href: "https://docs.trotelcoin.com",
+    target: "_blank",
+  },
   { name: "Get started", href: "/getStarted" },
   { name: "About", href: "/about" },
 ];
