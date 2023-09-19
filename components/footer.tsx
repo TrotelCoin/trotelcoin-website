@@ -175,7 +175,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <Language></Language>
+                {/* <Language></Language> */}
               </div>
             </div>
           </div>

@@ -175,7 +175,7 @@ export default function FooterDark() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <LanguageDark></LanguageDark>
+                {/* <LanguageDark></LanguageDark> */}
               </div>
             </div>
           </div>
