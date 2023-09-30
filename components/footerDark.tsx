@@ -9,9 +9,13 @@ const navigation = {
     {
       name: "Whitepaper",
       href: "https://docs.trotelcoin.com/overview/whitepaper",
-      target: "_blank"
+      target: "_blank",
     },
-    { name: "Documentation", href: "https://docs.trotelcoin.com", target: "_blank" },
+    {
+      name: "Documentation",
+      href: "https://docs.trotelcoin.com",
+      target: "_blank",
+    },
     { name: "Get started", href: "./getStarted" },
     { name: "About", href: "./about" },
   ],
@@ -49,11 +53,6 @@ const navigation = {
       target: "_blank",
     },
     { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
-    {
-      name: "Discord",
-      href: "https://discord.com/invite/uwqbRybYBz",
-      target: "_blank",
-    },
   ],
   social: [
     {
