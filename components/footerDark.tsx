@@ -31,11 +31,6 @@ const navigation = {
       target: "_blank",
     },
     {
-      name: "Flooz",
-      href: "https://flooz.xyz/trade/how-to-buy/0xf04ab1a43cBA1474160B7B8409387853D7Be02d5?network=bsc",
-      target: "_blank",
-    },
-    {
       name: "BSC Explorer",
       href: "https://bscscan.com/token/0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       target: "_blank",
