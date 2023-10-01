@@ -33,5 +33,6 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #3b82f6;
 }
