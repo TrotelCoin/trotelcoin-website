@@ -12,7 +12,6 @@ export default function Home() {
       <Token></Token>
       <Roadmap></Roadmap>
       <Footer></Footer>
-      <Banner></Banner>
     </div>
   );
 }
