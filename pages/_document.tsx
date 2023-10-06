@@ -18,7 +18,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        {metadata.title && <title>{metadata.title as string}</title>}
         <meta name="description" content={metadata.description as string} />
         <meta property="og:title" content={metadata.title as string} />
         <meta property="og:image" content="/trotelcoin-banner.png" />
