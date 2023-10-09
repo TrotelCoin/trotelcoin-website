@@ -31,10 +31,6 @@ export default function Token() {
           address: "0xf04ab1a43cba1474160b7b8409387853d7be02d5",
         });
 
-        const geckoResponse = await axios.get(
-          "https://api.geckoterminal.com/api/v2/networks/bsc/pools/0x3da23378d12ec40233a9f0a0e7c5194e2222b255"
-        );
-
         const tokenBalance = parseFloat(balanceResponse.data.result) / 1e18;
         const tokenPrice = response.raw.usdPrice;
 
@@ -76,7 +72,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 hover:bg-gray-800 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border-2 border-black">
             <p className="flex-none text-3xl font-bold tracking-tight text-white">
-              {(tokenPrice * 1e6).toFixed(0)} USD
+              {(tokenPrice * 1e5).toFixed(0)} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
