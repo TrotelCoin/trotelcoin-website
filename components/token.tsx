@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 export default function Token() {
   const [tokenBalance, setTokenBalance] = useState(0);
   const [tokenPrice, setTokenPrice] = useState(0);
-  const [tokenFDV, setTokenFDV] = useState(0);
 
   useEffect(() => {
     const fetchTokenInfo = async () => {
@@ -38,11 +37,9 @@ export default function Token() {
 
         const tokenBalance = parseFloat(balanceResponse.data.result) / 1e18;
         const tokenPrice = response.raw.usdPrice;
-        const tokenFDV = parseFloat(geckoResponse.data.data.attributes.fdv_usd);
 
         setTokenBalance(tokenBalance);
         setTokenPrice(tokenPrice);
-        setTokenFDV(tokenFDV);
       } catch (error) {
         console.error("Error fetching token information:", error);
       }
@@ -79,7 +76,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 hover:bg-gray-800 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border-2 border-black">
             <p className="flex-none text-3xl font-bold tracking-tight text-white">
-              {tokenFDV.toFixed(0)} USD
+              {(tokenPrice * 1e6).toFixed(0)} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
