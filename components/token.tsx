@@ -1,3 +1,4 @@
+import Moralis from "moralis/.";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
@@ -20,14 +21,22 @@ export default function Token() {
           },
         });
 
+        await Moralis.start({
+          apiKey: process.env.MORALIS_API_KEY,
+        });
+
+        const response = await Moralis.EvmApi.token.getTokenPrice({
+          chain: "0x38",
+          include: "percent_change",
+          address: "0xf04ab1a43cba1474160b7b8409387853d7be02d5",
+        });
+
         const geckoResponse = await axios.get(
           "https://api.geckoterminal.com/api/v2/networks/bsc/pools/0x3da23378d12ec40233a9f0a0e7c5194e2222b255"
         );
 
         const tokenBalance = parseFloat(balanceResponse.data.result) / 1e18;
-        const tokenPrice = parseFloat(
-          geckoResponse.data.data.attributes.base_token_price_usd
-        );
+        const tokenPrice = response.raw.usdPrice;
         const tokenFDV = parseFloat(geckoResponse.data.data.attributes.fdv_usd);
 
         setTokenBalance(tokenBalance);
