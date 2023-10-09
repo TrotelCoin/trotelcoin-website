@@ -22,7 +22,7 @@ export default function Token() {
         });
 
         await Moralis.start({
-          apiKey: process.env.MORALIS_API_KEY,
+          apiKey: "YOUR_API_KEY",
         });
 
         const response = await Moralis.EvmApi.token.getTokenPrice({
