@@ -20,10 +20,14 @@ export default function Token() {
           },
         });
 
-        await Moralis.start({
-          apiKey:
-            "IQ9YzKq3oTR3WPUAXZL6dKDDLb1kSokTmeysjrW39wEzILKxZyCJzX10cIodCPLJ",
-        });
+        // Check if Moralis is already started
+        if (!Moralis.Core.isStarted) {
+          // Initialize Moralis with the API key
+          await Moralis.start({
+            apiKey:
+              "IQ9YzKq3oTR3WPUAXZL6dKDDLb1kSokTmeysjrW39wEzILKxZyCJzX10cIodCPLJ",
+          });
+        }
 
         const response = await Moralis.EvmApi.token.getTokenPrice({
           chain: "0x38",
