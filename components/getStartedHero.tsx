@@ -70,8 +70,8 @@ const pricing = {
       id: "tier-expert",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: true,
-      description: "Holders of 5,000 TrotelCoin or more for 90 days.",
-      price: "5000",
+      description: "Holders of 50 TrotelCoin or more for 90 days.",
+      price: "50",
       mainFeatures: [
         "All benefits from the Beginner and Intermediate Tiers",
         "Early access to experimental features and projects",
@@ -84,8 +84,8 @@ const pricing = {
       id: "tier-intermediate",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "Holders of 1,000 TrotelCoin or more for 90 days.",
-      price: "1000",
+      description: "Holders of 10 TrotelCoin or more for 90 days.",
+      price: "10",
       mainFeatures: [
         "All benefits from the Beginner Tier",
         "Exclusive updates on project developments",
@@ -285,7 +285,8 @@ export default function GetStartedHero() {
                   HODL TrotelCoin. Earn NFTs.
                 </h1>
                 <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-                  Keep your TrotelCoin investment for 90 days to get the NFTs below.
+                  Keep your TrotelCoin investment for 90 days to get the NFTs
+                  below.
                 </p>
                 <div className="mt-16 flex justify-center">
                   <div className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"></div>
@@ -434,7 +435,8 @@ export default function GetStartedHero() {
                             <p className="flex-auto">{feature.description}</p>
                             <p className="mt-6">
                               <a
-                                href={feature.href} target="_blank"
+                                href={feature.href}
+                                target="_blank"
                                 className="text-sm font-semibold leading-6 text-blue-600"
                               >
                                 Learn more <span aria-hidden="true">→</span>
