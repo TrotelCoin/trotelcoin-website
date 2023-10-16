@@ -16,6 +16,11 @@ const navigation = [
     href: "https://docs.trotelcoin.com",
     target: "_blank",
   },
+  {
+    name: "Governance",
+    href: "https://snapshot.org/#/alexandretrotel.eth",
+    target: "_blank",
+  },
   { name: "Get started", href: "./getStarted" },
   { name: "About", href: "./about" },
 ];
@@ -111,6 +116,7 @@ export default function Header() {
                   <a
                     key={item.name}
                     href={item.href}
+                    target={item.target}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
