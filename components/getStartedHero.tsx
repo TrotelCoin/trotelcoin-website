@@ -71,7 +71,7 @@ const pricing = {
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: true,
       description: "Holders of 50 TrotelCoin or more for 90 days.",
-      price: "50",
+      price: "500",
       mainFeatures: [
         "All benefits from the Beginner and Intermediate Tiers",
         "Early access to experimental features and projects",
@@ -85,7 +85,7 @@ const pricing = {
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
       description: "Holders of 10 TrotelCoin or more for 90 days.",
-      price: "10",
+      price: "100",
       mainFeatures: [
         "All benefits from the Beginner Tier",
         "Exclusive updates on project developments",
