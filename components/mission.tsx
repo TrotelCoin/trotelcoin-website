@@ -15,7 +15,7 @@ export default function Mission() {
               </p>
               <div className="mt-10 m-auto max-w-xl text-base leading-7 text-gray-700">
                 <p>
-                  Nous fournissons une plateforme éducative complète qui qui
+                  Nous fournissons une plateforme éducative complète qui
                   simplifie les concepts complexes et offre des exemples
                   l'apprentissage des transactions, de DeFi, etc. Notre objectif
                   est de démocratiser l'accès à la finance décentralisée,

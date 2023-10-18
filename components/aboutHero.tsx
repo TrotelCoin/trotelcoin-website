@@ -35,7 +35,7 @@ export default function Example() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
               <Image
-                className="h-12 w-auto"
+                className=" w-auto"
                 src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
                 width={100}
@@ -85,7 +85,7 @@ export default function Example() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
                 <Image
-                  className="h-12 w-auto dark:invisible"
+                  className=" w-auto dark:invisible"
                   src="/trotelcoin.svg"
                   alt="TrotelCoin logo"
                   width={100}

@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <span className="sr-only">TrotelCoin</span>
           <Image
-            className="h-12 w-auto dark:invisible"
+            className=" w-auto dark:invisible"
             src="/trotelcoin.svg"
             alt="TrotelCoin logo"
             width={100}
@@ -86,7 +86,7 @@ export default function Header() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
               <Image
-                className="h-12 w-auto dark:invisible"
+                className=" w-auto dark:invisible"
                 src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
                 width={100}
