@@ -11,7 +11,7 @@ export default function Mission() {
               <p className="text-xl leading-8 text-gray-600">
                 La mission est de donner aux individus les connaissances et les
                 outils nécessaires pour naviguer et prospérer dans le monde du
-                Web3. outils pour naviguer et prospérer dans le monde du Web3.
+                Web3.
               </p>
               <div className="mt-10 m-auto max-w-xl text-base leading-7 text-gray-700">
                 <p>
