@@ -57,8 +57,7 @@ export default function Token() {
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
             TrotelCoin est un jeton conçu pour encourager votre engagement dans
-            la blockchain et les connaissances connexes. l'engagement dans la
-            blockchain et les connaissances qui y sont liées.
+            la blockchain et les connaissances connexes.
           </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">

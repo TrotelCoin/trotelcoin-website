@@ -14,14 +14,14 @@ const timeline = [
     dateTime: "2023-10",
   },
   {
-    name: "Lancement de la version bêta",
+    name: "Version bêta",
     description:
       "La version bêta est en ligne, et la plateforme fait l'objet de tests utilisateurs.",
     date: "Juin 2024",
     dateTime: "2024-06",
   },
   {
-    name: "Déploiement mondial de la plateforme",
+    name: "Déploiement mondial",
     description:
       "La plateforme est lancée à l'échelle mondiale, offrant un accès à l'apprentissage pour tous.",
     date: "Octobre 2024",

@@ -36,7 +36,7 @@ export default function Hero() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <Image
-                className=" w-auto"
+                className="h-12 w-auto"
                 src="/trotelcoin.svg"
                 alt="TrotelCoin logo"
                 width={100}
@@ -85,7 +85,7 @@ export default function Hero() {
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <Image
-                  className=" w-auto"
+                  className="h-12 w-auto"
                   src="/trotelcoin.svg"
                   alt="TrotelCoin logo"
                   width={100}

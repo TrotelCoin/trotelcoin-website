@@ -112,7 +112,7 @@ export default function GetStartedHero() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <Image
-                className=" w-auto"
+                className="h-12 w-auto"
                 src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
                 width={100}
@@ -162,7 +162,7 @@ export default function GetStartedHero() {
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
                 <Image
-                  className=" w-auto"
+                  className="h-12 w-auto"
                   src="/trotelcoin-white.png"
                   alt="TrotelCoin logo"
                   width={100}
