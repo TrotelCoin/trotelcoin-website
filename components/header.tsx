@@ -5,7 +5,7 @@ import "../app/globals.css";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Home", href: "./" },
+  { name: "Accueil", href: "./" },
   {
     name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
@@ -21,8 +21,8 @@ const navigation = [
     href: "https://snapshot.org/#/alexandretrotel.eth",
     target: "_blank",
   },
-  { name: "Get started", href: "./getStarted" },
-  { name: "About", href: "./about" },
+  { name: "Se lancer", href: "./getStarted" },
+  { name: "A propos", href: "./about" },
 ];
 
 export default function Header() {
@@ -61,7 +61,7 @@ export default function Header() {
             href="https://app.trotelcoin.com"
             className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm duration-200 border-2 border-transparent hover:border-black hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Launch App
+            Lancer l'app
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -70,7 +70,6 @@ export default function Header() {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="sr-only">Open main menu</span>
             <Bars3Icon className="h-6 w-6 text-gray-100" aria-hidden="true" />
           </button>
         </div>
@@ -98,14 +97,13 @@ export default function Header() {
               href="https://app.trotelcoin.com"
               className="ml-auto rounded-md bg-black px-3 py-2 text-sm font-semibold text-white duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Launch App
+              Lancer l'app
             </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="sr-only">Close menu</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>

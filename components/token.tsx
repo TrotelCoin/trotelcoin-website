@@ -53,11 +53,12 @@ export default function Token() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Tokenomics.
+            Tokénomie.
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            TrotelCoin serves as the token designed to incentivize your
-            engagement with blockchain and related knowledge.
+            TrotelCoin est un jeton conçu pour encourager votre engagement dans
+            la blockchain et les connaissances connexes. l'engagement dans la
+            blockchain et les connaissances qui y sont liées.
           </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
@@ -67,10 +68,11 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-gray-900">
-                Token price.
+                Prix du TrotelCoin.
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                The token price is determined by user demand.
+                Le prix des jetons est déterminé par la demande des
+                utilisateurs.
               </p>
             </div>
           </div>
@@ -80,11 +82,11 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
-                Market cap.
+                Capitalisation boursière.
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
-                The market cap signifies the overall value of TrotelCoin's token
-                within the market.
+                La capitalisation boursière représente la valeur globale du
+                jeton TrotelCoin sur le marché.
               </p>
             </div>
           </div>
@@ -94,10 +96,11 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
-                Remaining token rewards.
+                Récompenses restantes.
               </p>
               <p className="mt-2 text-base leading-7 text-blue-200">
-                These are the tokens that still await distribution as rewards.
+                Il s'agit des jetons qui n'ont pas encore été distribués en tant
+                que récompenses.
               </p>
             </div>
           </div>

@@ -17,7 +17,7 @@ export default function Banner() {
               href="https://www.mintme.com/fr/token/TrotelCoin"
               target="_blank"
             >
-              <strong className="font-semibold">Ongoing Airdrop</strong>
+              <strong className="font-semibold">Airdrop en cours</strong>
               <svg
                 viewBox="0 0 2 2"
                 className="mx-2 inline h-0.5 w-0.5 fill-current"
@@ -25,7 +25,7 @@ export default function Banner() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              Get TrotelCoin for free&nbsp;
+              Obtenez des TrotelCoin gratuitement&nbsp;
               <span aria-hidden="true">&rarr;</span>
             </a>
           </p>

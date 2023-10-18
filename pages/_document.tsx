@@ -50,7 +50,7 @@ export default function Document() {
         />
       </Head>
       <Suspense fallback={<Loading></Loading>}>
-        <body>
+        <body lang="fr">
           <Main />
           <NextScript />
         </body>

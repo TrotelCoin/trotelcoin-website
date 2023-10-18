@@ -12,9 +12,7 @@ export default function Language() {
 
   return (
     <div>
-      <h3 className="text-sm font-semibold leading-6 text-gray-900">
-        Language
-      </h3>
+      <h3 className="text-sm font-semibold leading-6 text-gray-900">Langue</h3>
       <select
         id="language"
         name="language"

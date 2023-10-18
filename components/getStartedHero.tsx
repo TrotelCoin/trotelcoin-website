@@ -11,7 +11,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Home", href: "./" },
+  { name: "Accueil", href: "./" },
   {
     name: "Whitepaper",
     href: "https://docs.trotelcoin.com/overview/whitepaper",
@@ -22,29 +22,29 @@ const navigation = [
     href: "https://docs.trotelcoin.com",
     target: "_blank",
   },
-  { name: "Get started", href: "/getStarted" },
-  { name: "About", href: "/about" },
+  { name: "Se lancer", href: "/getStarted" },
+  { name: "A propos", href: "/about" },
 ];
 
 const features = [
   {
-    name: "Choose your wallet.",
+    name: "Choisir son portefeuille.",
     description:
-      "Begin by selecting a suitable wallet that suits your needs and preferences. Your wallet will serve as the secure hub for your TrotelCoin transactions.",
+      "Commencez par choisir un portefeuille adapté à vos besoins et à vos préférences. Votre portefeuille servira d'un hub sécurisé pour vos transactions en TrotelCoin.",
     href: "https://docs.trotelcoin.com/get-started/choose-your-wallet",
     icon: WalletIcon,
   },
   {
-    name: "Configure your wallet.",
+    name: "Configurer son portefeuille.",
     description:
-      "Once you've chosen your wallet, configure it according to your preferences and security settings.",
+      "Une fois que vous avez choisi votre portefeuille, configurez-le en fonction de vos préférences et de vos paramètres de sécurité.",
     href: "https://docs.trotelcoin.com/get-started/configure-your-wallet",
     icon: Cog6ToothIcon,
   },
   {
-    name: "Get some TrotelCoin.",
+    name: "Obtenir des TrotelCoin.",
     description:
-      "Whether you earn, trade, or purchase TrotelCoin, having it in your wallet can accelerate and enrich your learning and earning opportunities.",
+      "Que vous gagniez, échangiez ou achetiez des TrotelCoin, le fait de les avoir dans votre portefeuille peut accélérer et enrichir vos opportunités d'apprentissage et de gain.",
     href: "https://docs.trotelcoin.com/get-started/get-some-trotelcoin",
     icon: CreditCardIcon,
   },
@@ -53,16 +53,16 @@ const features = [
 const pricing = {
   tiers: [
     {
-      name: "Beginner",
+      name: "Débutant",
       id: "tier-beginner",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "No Token Holding Requirement.",
+      description: "Pas d'obligation de détention.",
       price: "0",
       mainFeatures: [
-        "Free access to all educational courses and resources",
-        "Participation in interactive quizzes and activities",
-        "Making governance decisions based on the quantity of TrotelCoin in your possession",
+        "Accès gratuit à tous les cours éducatifs et aux ressources",
+        "Participation à des quiz interactifs et à des activités",
+        "Prise de décisions en matière de gouvernance basée sur la quantité de govTrotelCoin en votre possession",
       ],
     },
     {
@@ -70,102 +70,26 @@ const pricing = {
       id: "tier-expert",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: true,
-      description: "Holders of 50 TrotelCoin or more for 90 days.",
+      description: "Détenteur de 50 TrotelCoin.",
       price: "500",
       mainFeatures: [
-        "All benefits from the Beginner and Intermediate Tiers",
-        "Early access to experimental features and projects",
-        "Invitation to our annual crypto summit",
-        "Join an exclusive crypto community to network, collaborate on ventures, and explore curated TrotelCoin projects",
+        "Tous les avantages des niveaux Débutant et Intermédiaire",
+        "Accès anticipé aux fonctionnalités et projets expérimentaux",
+        "Invitation à notre sommet annuel sur les crypto",
+        "Rejoignez une communauté crypto exclusive pour créer des réseaux, collaborer à des projets et explorer les projets TrotelCoin",
       ],
     },
     {
-      name: "Intermediate",
+      name: "Intermédiaire",
       id: "tier-intermediate",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "Holders of 10 TrotelCoin or more for 90 days.",
+      description: "Détenteur de 10 TrotelCoin.",
       price: "100",
       mainFeatures: [
-        "All benefits from the Beginner Tier",
-        "Exclusive updates on project developments",
-        "Access to courses that provide additional in-depth content and tutorials",
-      ],
-    },
-  ],
-  sections: [
-    {
-      name: "Catered for business",
-      features: [
-        {
-          name: "Tax Savings",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Easy to use accounting",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Multi-accounts",
-          tiers: {
-            Starter: "3 accounts",
-            Scale: "Unlimited accounts",
-            Growth: "7 accounts",
-          },
-        },
-        {
-          name: "Invoicing",
-          tiers: {
-            Starter: "3 invoices",
-            Scale: "Unlimited invoices",
-            Growth: "10 invoices",
-          },
-        },
-        {
-          name: "Exclusive offers",
-          tiers: { Starter: false, Scale: true, Growth: true },
-        },
-        {
-          name: "6 months free advisor",
-          tiers: { Starter: false, Scale: true, Growth: true },
-        },
-        {
-          name: "Mobile and web access",
-          tiers: { Starter: false, Scale: true, Growth: false },
-        },
-      ],
-    },
-    {
-      name: "Other perks",
-      features: [
-        {
-          name: "24/7 customer support",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Instant notifications",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Budgeting tools",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Digital receipts",
-          tiers: { Starter: true, Scale: true, Growth: true },
-        },
-        {
-          name: "Pots to separate money",
-          tiers: { Starter: false, Scale: true, Growth: true },
-        },
-        {
-          name: "Free bank transfers",
-          tiers: { Starter: false, Scale: true, Growth: false },
-        },
-        {
-          name: "Business debit card",
-          tiers: { Starter: false, Scale: true, Growth: false },
-        },
+        "Tous les avantages du niveau débutant",
+        "Des mises à jour exclusives sur l'évolution des projets",
+        "L'accès à des cours qui fournissent un contenu approfondi et des tutoriels supplémentaires",
       ],
     },
   ],
@@ -187,7 +111,6 @@ export default function GetStartedHero() {
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">TrotelCoin</span>
               <Image
                 className="h-12 w-auto"
                 src="/trotelcoin-white.png"
@@ -214,7 +137,7 @@ export default function GetStartedHero() {
               href="https://app.trotelcoin.com"
               className="rounded-md bg-gray-100 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-white hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Launch App
+              Lancer l'app
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -223,7 +146,6 @@ export default function GetStartedHero() {
               className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-300"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6 text-gray-100" aria-hidden="true" />
             </button>
           </div>
@@ -282,11 +204,10 @@ export default function GetStartedHero() {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="relative z-10">
                 <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
-                  HODL TrotelCoin. Earn NFTs.
+                  HODL TrotelCoin. Gagnez des NFT.
                 </h1>
                 <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-8 text-white/60">
-                  Keep your TrotelCoin investment for 90 days to get the NFTs
-                  below.
+                  Achetez des TrotelCoin pour bénéficier des NFT ci-dessous.
                 </p>
                 <div className="mt-16 flex justify-center">
                   <div className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"></div>
@@ -368,7 +289,7 @@ export default function GetStartedHero() {
                             "rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                           )}
                         >
-                          Buy TrotelCoin
+                          Achetez des TrotelCoin
                         </a>
                       </div>
                       <div className="mt-8 flow-root sm:mt-10">
@@ -412,12 +333,13 @@ export default function GetStartedHero() {
                       HODL TrotelCoin.
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      Start learning now.
+                      Apprenez dès maintenant.
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                      You can begin your learning and earning journey without
-                      possessing any TrotelCoin. However, you can enhance and
-                      expedite your learning progress by owning TrotelCoin.
+                      Vous pouvez commencer à apprendre et à gagner de l'argent
+                      sans posséder posséder de TrotelCoin. Cependant, vous
+                      pouvez améliorer votre apprentissage en possédant des
+                      TrotelCoin.
                     </p>
                   </div>
                   <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -439,7 +361,7 @@ export default function GetStartedHero() {
                                 target="_blank"
                                 className="text-sm font-semibold leading-6 text-blue-600"
                               >
-                                Learn more <span aria-hidden="true">→</span>
+                                En savoir plus <span aria-hidden="true">→</span>
                               </a>
                             </p>
                           </dd>

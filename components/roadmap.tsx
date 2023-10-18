@@ -1,30 +1,30 @@
 const timeline = [
   {
-    name: "Creation of TrotelCoin",
+    name: "Création de TrotelCoin",
     description:
-      "A computer science student with a keen interest in cryptocurrencies and blockchain technology decided to establish TrotelCoin.",
-    date: "May 2023",
+      "Un étudiant en informatique passionné par les cryptomonnaies et la technologie blockchain a décidé de créer TrotelCoin.",
+    date: "Mai 2023",
     dateTime: "2023-05",
   },
   {
-    name: "Project defined.",
+    name: "Projet défini",
     description:
-      "The project's token distribution, whitepaper, and related details have been finalized.",
-    date: "Oct 2023",
+      "La distribution des jetons du projet, le livre blanc et les détails connexes ont été finalisés.",
+    date: "Octobre 2023",
     dateTime: "2023-10",
   },
   {
-    name: "Released beta.",
+    name: "Lancement de la version bêta",
     description:
-      "The beta version is live, and the platform is undergoing user testing.",
-    date: "Jun 2024",
+      "La version bêta est en ligne, et la plateforme fait l'objet de tests utilisateurs.",
+    date: "Juin 2024",
     dateTime: "2024-06",
   },
   {
-    name: "Worldwide platform rollout.",
+    name: "Déploiement mondial de la plateforme",
     description:
-      "The platform is globally launched, providing access to learning for everyone.",
-    date: "Oct 2024",
+      "La plateforme est lancée à l'échelle mondiale, offrant un accès à l'apprentissage pour tous.",
+    date: "Octobre 2024",
     dateTime: "2024-10",
   },
 ];
