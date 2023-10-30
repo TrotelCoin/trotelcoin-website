@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Accueil", href: "./" },
+  { name: "Home", href: "./" },
   {
     name: "Whitepaper",
     href: "https://docs.trotelcoin.com/overview/whitepaper",
@@ -18,8 +18,8 @@ const navigation = [
     href: "https://docs.trotelcoin.com",
     target: "_blank",
   },
-  { name: "Se lancer", href: "/getStarted" },
-  { name: "A propos", href: "/about" },
+  { name: "Get started", href: "/getStarted" },
+  { name: "About", href: "/about" },
 ];
 
 export default function Hero() {
@@ -61,7 +61,7 @@ export default function Hero() {
               href="https://app.trotelcoin.com"
               className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-gray-800 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Lancer l'app
+              Launch app
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -136,34 +136,34 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Achetez des TrotelCoin sur PancakeSwap.{" "}
+              Buy TrotelCoin on PancakeSwap.{" "}
               <a
                 href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                 target="_blank"
                 className="font-semibold text-blue-500"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
-                Investir maintenant <span aria-hidden="true">&rarr;</span>
+                Invest now <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Découvrez{" "}
+              Learn{" "}
               <Typed
                 strings={[
                   "Bitcoin",
-                  "la Blockchain",
+                  "Blockchain",
                   "Ethereum",
-                  "les dApps",
-                  "les DAOs",
-                  "la DeFi",
+                  "dApps",
+                  "DAOs",
+                  "DeFi",
                   "IPFS",
-                  "les Stablecoins",
-                  "les Smart Contracts",
-                  "les Airdrops",
-                  "les NFTs",
-                  "le Web3",
+                  "Stablecoins",
+                  "Smart Contracts",
+                  "Airdrops",
+                  "NFTs",
+                  "Web3",
                   "EVM",
                 ]}
                 typeSpeed={100}
@@ -174,23 +174,22 @@ export default function Hero() {
               />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Acquérir des TrotelCoin en vous ouvrant à des opportunités de
-              développements révolutionnaires dans les domaines de la finance et
-              de la technologie.
+              Acquiring TrotelCoin opens you up to revolutionary development
+              opportunities in the fields of finance and technology.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="https://app.trotelcoin.com"
                 className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                Lancer l'app
+                Launch app
               </a>
               <a
                 href="https://docs.trotelcoin.com"
                 target="_blank"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
-                En savoir plus <span aria-hidden="true">→</span>
+                Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>

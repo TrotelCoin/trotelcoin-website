@@ -5,7 +5,7 @@ import "../app/globals.css";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Accueil", href: "./" },
+  { name: "Home", href: "./" },
   {
     name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
@@ -16,13 +16,8 @@ const navigation = [
     href: "https://docs.trotelcoin.com",
     target: "_blank",
   },
-  {
-    name: "Governance",
-    href: "https://snapshot.org/#/alexandretrotel.eth",
-    target: "_blank",
-  },
-  { name: "Se lancer", href: "./getStarted" },
-  { name: "A propos", href: "./about" },
+  { name: "Get started", href: "./getStarted" },
+  { name: "About", href: "./about" },
 ];
 
 export default function Header() {
@@ -61,7 +56,7 @@ export default function Header() {
             href="https://app.trotelcoin.com"
             className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm duration-200 border-2 border-transparent hover:border-black hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Lancer l'app
+            Launch app
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -97,7 +92,7 @@ export default function Header() {
               href="https://app.trotelcoin.com"
               className="ml-auto rounded-md bg-black px-3 py-2 text-sm font-semibold text-white duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Lancer l'app
+              Launch app
             </a>
             <button
               type="button"

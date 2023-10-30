@@ -21,7 +21,7 @@ export default function Language() {
         onChange={(e) => handleChangeLocale(e.target.value)}
       >
         <option value="">English</option>
-        <option value="fr">Français</option>
+        <option value="fr">French</option>
       </select>
     </div>
   );

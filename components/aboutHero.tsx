@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 const navigation = [
-  { name: "Accueil", href: "./" },
+  { name: "Home", href: "./" },
   {
     name: "Whitepaper",
     href: "https://docs.trotelcoin.com/overview/whitepaper",
@@ -17,11 +17,11 @@ const navigation = [
     href: "https://docs.trotelcoin.com",
     target: "_blank",
   },
-  { name: "Se lancer", href: "/getStarted" },
-  { name: "A propos", href: "/about" },
+  { name: "Get started", href: "/getStarted" },
+  { name: "About", href: "/about" },
 ];
 
-export default function Example() {
+export default function aboutHero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -60,7 +60,7 @@ export default function Example() {
               href="https://app.trotelcoin.com"
               className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-gray-800 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Lancer l'app
+              Launch app
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -169,13 +169,12 @@ export default function Example() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                    Nous changeons la façon dont vous apprenez les crypto.
+                    We are changing the way you learn about cryptocurrencies.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Gagnez des récompenses en TrotelCoin en acquérant des
-                    connaissances sur les les crypto-monnaies. L&apos;objectif
-                    est de vous donner les moyens de gérer vos finances et de
-                    vous aider à retrouver votre indépendance financière.
+                    Earn rewards in TrotelCoin by acquiring knowledge about
+                    cryptocurrencies. The goal is to empower you to manage your
+                    finances and help you regain your financial independence.
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
@@ -183,7 +182,7 @@ export default function Example() {
                       target="_blank"
                       className="text-sm font-semibold leading-6 text-gray-900"
                     >
-                      Achetez des TrotelCoin <span aria-hidden="true">→</span>
+                      Buy TrotelCoin <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>

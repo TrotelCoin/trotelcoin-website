@@ -3,53 +3,52 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 
 const faqs = [
   {
-    question: "Qu'est-ce que TrotelCoin ?",
+    question: "What is TrotelCoin?",
     answer:
-      "TrotelCoin est une plateforme conçue pour offrir une manière interactive de comprendre comment fonctionnent les cryptomonnaies. Elle a été lancée en mai 2023 dans le but de fournir des ressources éducatives et des expériences pratiques liées aux cryptomonnaies.",
+      "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched in May 2023 with the aim of providing educational resources and practical experiences related to cryptocurrencies.",
   },
   {
-    question: "Qui a créé TrotelCoin ?",
+    question: "Who created TrotelCoin?",
     answer:
-      "TrotelCoin a été créé par un étudiant en ingénierie passionné par l'éducation sur la cryptomonnaie et son potentiel pour autonomiser les individus.",
+      "TrotelCoin was created by a passionate engineering student dedicated to educating about cryptocurrency and its potential to empower individuals.",
   },
   {
-    question: "Que propose la plateforme éducative de TrotelCoin ?",
+    question: "What does TrotelCoin's educational platform offer?",
     answer:
-      "La plateforme TrotelCoin offre des ressources éducatives complètes, des quiz interactifs et des activités pour aider les utilisateurs à comprendre les cryptomonnaies, la technologie de la blockchain et la finance décentralisée (DeFi).",
+      "The TrotelCoin platform offers comprehensive educational resources, interactive quizzes, and activities to help users understand cryptocurrencies, blockchain technology, and decentralized finance (DeFi).",
   },
   {
-    question: "Comment puis-je gagner des TrotelCoin sur la plateforme ?",
+    question: "How can I earn TrotelCoin on the platform?",
     answer:
-      "Vous pouvez gagner des TrotelCoin en participant à des quiz interactifs et des activités à mesure que vous progressez dans le processus d'apprentissage sur la plateforme TrotelCoin.",
+      "You can earn TrotelCoin by participating in interactive quizzes and activities as you progress through the learning process on the TrotelCoin platform.",
   },
   {
-    question: "Comment la token de TrotelCoin ($TROTEL) est-elle distribuée ?",
+    question: "How is the TrotelCoin token ($TROTEL) distributed?",
     answer:
-      "À son lancement, TrotelCoin a une offre totale de 100 000 tokens. Ces tokens sont alloués à diverses fins, notamment la liquidité sur PancakeSwap, les récompenses pour l'engagement sur la plateforme, les ventes privées et les initiatives stratégiques.",
-  },
-  {
-    question:
-      "Comment sont calculées les récompenses pour les utilisateurs sur la plateforme TrotelCoin ?",
-    answer:
-      "Les récompenses pour les utilisateurs sont calculées à l'aide d'une formule qui prend en compte le nombre de quiz répondus et une récompense de base pour les quiz. La récompense diminue à mesure que les utilisateurs répondent à davantage de quiz.",
+      "At its launch, TrotelCoin has a total supply of 100,000 tokens. These tokens are allocated for various purposes, including liquidity on PancakeSwap, rewards for engagement on the platform, private sales, and strategic initiatives.",
   },
   {
     question:
-      "Pourquoi la destruction de token n'est-elle pas mise en œuvre dans la stratégie du projet TrotelCoin ?",
+      "How are rewards calculated for users on the TrotelCoin platform?",
     answer:
-      "TrotelCoin a choisi de ne pas mettre en œuvre la destruction de token afin de maintenir l'offre de token existante et d'éviter d'éventuelles perturbations de l'écosystème. Cela garantit la stabilité de la valeur du token et son utilité continue au sein de l'écosystème du projet.",
+      "User rewards are calculated using a formula that considers the number of quizzes answered and a base reward for the quizzes. The reward decreases as users answer more quizzes.",
   },
   {
     question:
-      "Comment TrotelCoin prévient-il la fraude et les abus dans son système de quiz ?",
+      "Why is token burning not implemented in the TrotelCoin project strategy?",
     answer:
-      "TrotelCoin met en place un système de participation à un quiz unique et relie les numéros de téléphone aux portefeuilles pour prévenir d'éventuelles fraudes et abus. Il est également prévu de envisager l'utilisation de Worldcoin ID pour une authentification renforcée à l'avenir.",
+      "TrotelCoin has chosen not to implement token burning to maintain the existing token supply and avoid potential disruptions to the ecosystem. This ensures the stability of the token's value and its continued utility within the project's ecosystem.",
+  },
+  {
+    question: "How does TrotelCoin prevent fraud and abuse in its quiz system?",
+    answer:
+      "TrotelCoin implements a system of unique quiz participation and links phone numbers to wallets to prevent potential fraud and abuse. There are also plans to consider the use of Worldcoin ID for enhanced authentication in the future.",
   },
   {
     question:
-      "Où puis-je en savoir plus sur TrotelCoin et les détails de son projet ?",
+      "Where can I learn more about TrotelCoin and details of its project?",
     answer:
-      "Vous pouvez trouver plus d'informations sur TrotelCoin et les détails de son projet dans le livre blanc fourni et sur la plateforme officielle de TrotelCoin.",
+      "You can find more information about TrotelCoin and details of its project in the provided whitepaper and on the official TrotelCoin platform.",
   },
 ];
 
@@ -59,7 +58,7 @@ export default function FAQ() {
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-            Foire aux questions
+            FAQ
           </h2>
           <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
             {faqs.map((faq) => (

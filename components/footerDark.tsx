@@ -16,8 +16,8 @@ const navigation = {
       href: "https://docs.trotelcoin.com",
       target: "_blank",
     },
-    { name: "Se lancer", href: "./getStarted" },
-    { name: "A propos", href: "./about" },
+    { name: "Get started", href: "./getStarted" },
+    { name: "About", href: "./about" },
   ],
   ecosystem: [
     {
@@ -129,7 +129,7 @@ export default function FooterDark() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-100">
-                  Ecosystème
+                  Ecosystem
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.ecosystem.map((item) => (
@@ -149,7 +149,7 @@ export default function FooterDark() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-100">
-                  Réseaux sociaux
+                  Social networks
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.socials.map((item) => (
@@ -173,7 +173,7 @@ export default function FooterDark() {
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-300">
-            &copy; 2023 TrotelCoin. Tous droits réservés.
+            &copy; 2023 TrotelCoin. All rights reserved.
           </p>
         </div>
       </div>

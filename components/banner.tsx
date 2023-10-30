@@ -25,7 +25,7 @@ export default function Banner() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              Obtenez des TrotelCoin gratuitement&nbsp;
+              Get free TrotelCoin&nbsp;
               <span aria-hidden="true">&rarr;</span>
             </a>
           </p>

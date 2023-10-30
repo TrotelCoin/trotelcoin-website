@@ -53,11 +53,11 @@ export default function Token() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Tokénomie.
+            Tokenomic.
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            TrotelCoin est un jeton conçu pour encourager votre engagement dans
-            la blockchain et les connaissances connexes.
+            TrotelCoin is a token designed to encourage your engagement in
+            blockchain and related knowledge.
           </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
@@ -67,11 +67,10 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-gray-900">
-                Prix du TrotelCoin.
+                TrotelCoin price.
               </p>
               <p className="mt-2 text-base leading-7 text-gray-600">
-                Le prix des jetons est déterminé par la demande des
-                utilisateurs.
+                The token's price is determined by user demand.
               </p>
             </div>
           </div>
@@ -81,11 +80,11 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
-                Capitalisation boursière.
+                Market cap.
               </p>
               <p className="mt-2 text-base leading-7 text-gray-400">
-                La capitalisation boursière représente la valeur globale du
-                jeton TrotelCoin sur le marché.
+                The market capitalization represents the overall value of the
+                TrotelCoin token in the market.
               </p>
             </div>
           </div>
@@ -95,11 +94,10 @@ export default function Token() {
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-white">
-                Récompenses restantes.
+                Available rewards.
               </p>
               <p className="mt-2 text-base leading-7 text-blue-200">
-                Il s'agit des jetons qui n'ont pas encore été distribués en tant
-                que récompenses.
+                These are tokens that have not yet been distributed as rewards.
               </p>
             </div>
           </div>
