@@ -26,7 +26,7 @@ export default function aboutHero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-gray-900">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
@@ -37,7 +37,7 @@ export default function aboutHero() {
               <span className="sr-only">TrotelCoin</span>
               <Image
                 className="h-12 w-auto"
-                src="/trotelcoin.svg"
+                src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
                 width={100}
                 height={100}
@@ -50,7 +50,7 @@ export default function aboutHero() {
                 key={item.name}
                 href={item.href}
                 target={item.target}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
               >
                 {item.name}
               </Link>
@@ -59,7 +59,7 @@ export default function aboutHero() {
           <div className="flex flex-1 items-center justify-end gap-x-6">
             <a
               href="https://app.trotelcoin.com"
-              className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 shadow-sm hover:bg-gray-800 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-gray-900 dark:bg-white px-3 py-2 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm hover:bg-gray-800 dark:hover:bg-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Launch app
             </a>
@@ -67,10 +67,13 @@ export default function aboutHero() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <Bars3Icon className="h-6 w-6 text-gray-900" aria-hidden="true" />
+              <Bars3Icon
+                className="h-6 w-6 text-gray-900 dark:text-gray-100"
+                aria-hidden="true"
+              />
             </button>
           </div>
         </nav>
@@ -81,13 +84,13 @@ export default function aboutHero() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 sm:dark:ring-gray-100/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">TrotelCoin</span>
                 <Image
                   className="h-12 w-auto dark:invisible"
-                  src="/trotelcoin.svg"
+                  src="/trotelcoin-white.png"
                   alt="TrotelCoin logo"
                   width={100}
                   height={100}
@@ -95,7 +98,7 @@ export default function aboutHero() {
               </a>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -110,7 +113,7 @@ export default function aboutHero() {
                       key={item.name}
                       href={item.href}
                       target={item.target}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-950"
                     >
                       {item.name}
                     </Link>
@@ -125,7 +128,7 @@ export default function aboutHero() {
       <main>
         <div className="relative isolate">
           <svg
-            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+            className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 dark:stroke-gray-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
             aria-hidden="true"
           >
             <defs>
@@ -140,7 +143,11 @@ export default function aboutHero() {
                 <path d="M.5 200V.5H200" fill="none" />
               </pattern>
             </defs>
-            <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+            <svg
+              x="50%"
+              y={-1}
+              className="overflow-visible fill-gray-50 dark:fill-gray-950"
+            >
               <path
                 d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
                 strokeWidth={0}
@@ -169,10 +176,10 @@ export default function aboutHero() {
             <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
                     We are changing the way you learn about cryptocurrencies.
                   </h1>
-                  <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                  <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
                     Earn rewards in TrotelCoin by acquiring knowledge about
                     cryptocurrencies. The goal is to empower you to manage your
                     finances and help you regain your financial independence.
@@ -181,7 +188,7 @@ export default function aboutHero() {
                     <a
                       href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
                       target="_blank"
-                      className="text-sm font-semibold leading-6 text-gray-900"
+                      className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
                     >
                       Buy TrotelCoin <span aria-hidden="true">→</span>
                     </a>

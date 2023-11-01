@@ -35,7 +35,7 @@ export default function RootLayout({
         />
       </Head>
       <Suspense fallback="">
-        <body className={`${poppins.className}`}>{children}</body>
+        <body className={`${poppins.className} antialiased`}>{children}</body>
       </Suspense>
     </html>
   );

@@ -31,9 +31,9 @@ const timeline = [
 
 export default function Roadmap() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
+        <h2 className="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">
           Roadmap.
         </h2>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
@@ -41,7 +41,7 @@ export default function Roadmap() {
             <div key={item.name}>
               <time
                 dateTime={item.dateTime}
-                className="flex items-center text-sm font-semibold leading-6 text-blue-600"
+                className="flex items-center text-sm font-semibold leading-6 text-blue-600 dark:text-blue-200"
               >
                 <svg
                   viewBox="0 0 4 4"
@@ -52,14 +52,14 @@ export default function Roadmap() {
                 </svg>
                 {item.date}
                 <div
-                  className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                  className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/50 dark:bg-gray-100/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                   aria-hidden="true"
                 />
               </time>
-              <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+              <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
                 {item.name}
               </p>
-              <p className="mt-1 text-base leading-7 text-gray-600">
+              <p className="mt-1 text-base leading-7 text-gray-600 dark:text-gray-400">
                 {item.description}
               </p>
             </div>
