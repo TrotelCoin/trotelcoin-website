@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Loading from "./loading";
 import { Suspense } from "react";
 import Hotjar from "@hotjar/browser";
 import Head from "next/head";
+import { poppins } from "@/app/ui/fonts";
 
 const siteId = 3583733;
 const hotjarVersion = 6;
@@ -34,8 +34,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <Suspense fallback={<Loading></Loading>}>
-        <body>{children}</body>
+      <Suspense fallback="">
+        <body className={`${poppins.className}`}>{children}</body>
       </Suspense>
     </html>
   );

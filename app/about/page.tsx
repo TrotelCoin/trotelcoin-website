@@ -1,11 +1,10 @@
-"use client";
 import React from "react";
-import FAQ from "@/components/faq";
-import Footer from "@/components/footer";
-import AboutHero from "@/components/aboutHero";
-import Mission from "@/components/mission";
+import FAQ from "@/app/ui/about/faq";
+import Footer from "@/app/ui/footer";
+import AboutHero from "@/app/ui/about/aboutHero";
+import Mission from "@/app/ui/about/mission";
 import Head from "next/head";
-import { metadata } from "./_document";
+import { metadata } from "@/app/layout";
 
 export default function About() {
   return (

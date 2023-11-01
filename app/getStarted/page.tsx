@@ -1,9 +1,8 @@
-"use client";
 import React from "react";
-import FooterDark from "@/components/footerDark";
-import GetStartedHero from "@/components/getStartedHero";
+import Footer from "@/app/ui/footer";
+import GetStartedHero from "@/app/ui/getStarted/getStartedHero";
 import Head from "next/head";
-import { metadata } from "./_document";
+import { metadata } from "@/app/layout";
 
 export default function getStarted() {
   return (
@@ -11,7 +10,7 @@ export default function getStarted() {
       <Head>{metadata.title && <title>{metadata.title as string}</title>}</Head>
       <div>
         <GetStartedHero></GetStartedHero>
-        <FooterDark></FooterDark>
+        <Footer></Footer>
       </div>
     </>
   );

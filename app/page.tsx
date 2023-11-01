@@ -1,10 +1,9 @@
-"use client";
-import Hero from "@/components/hero";
-import Token from "@/components/token";
-import Roadmap from "@/components/roadmap";
-import Footer from "@/components/footer";
+import Hero from "@/app/ui/hero";
+import Token from "@/app/ui/token";
+import Roadmap from "@/app/ui/roadmap";
+import Footer from "@/app/ui/footer";
 import Head from "next/head";
-import { metadata } from "./_document";
+import { metadata } from "@/app/layout";
 
 export default function Home() {
   return (

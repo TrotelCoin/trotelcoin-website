@@ -1,6 +1,5 @@
 import { JSX, SVGProps } from "react";
 import Link from "next/link";
-import Language from "./language";
 import Image from "next/image";
 
 const navigation = {

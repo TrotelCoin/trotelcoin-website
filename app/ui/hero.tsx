@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Typed from "react-typed";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import Typed from "typed.js";
 
 const navigation = [
   { name: "Home", href: "./" },
@@ -24,7 +25,43 @@ const navigation = [
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { t } = useTranslation("index");
+  const typedTextRef = useRef(null);
+
+  useEffect(() => {
+    // Array of strings to display
+    const strings = [
+      "Bitcoin",
+      "Blockchain",
+      "Ethereum",
+      "dApps",
+      "DAOs",
+      "DeFi",
+      "IPFS",
+      "Stablecoins",
+      "Smart Contracts",
+      "Airdrops",
+      "NFTs",
+      "Web3",
+      "EVM",
+    ];
+
+    const options = {
+      strings: strings,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50,
+      cursorChar: ".",
+      showCursor: true,
+    };
+
+    if (typedTextRef.current) {
+      const typed = new Typed(typedTextRef.current, options);
+
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
 
   return (
     <div className="bg-white">
@@ -149,29 +186,7 @@ export default function Hero() {
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Learn{" "}
-              <Typed
-                strings={[
-                  "Bitcoin",
-                  "Blockchain",
-                  "Ethereum",
-                  "dApps",
-                  "DAOs",
-                  "DeFi",
-                  "IPFS",
-                  "Stablecoins",
-                  "Smart Contracts",
-                  "Airdrops",
-                  "NFTs",
-                  "Web3",
-                  "EVM",
-                ]}
-                typeSpeed={100}
-                loop
-                backSpeed={50}
-                cursorChar="."
-                showCursor={true}
-              />
+              Learn <span ref={typedTextRef} />
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Acquiring TrotelCoin opens you up to revolutionary development
