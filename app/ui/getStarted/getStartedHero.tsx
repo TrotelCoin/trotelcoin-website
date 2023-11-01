@@ -106,7 +106,7 @@ export default function GetStartedHero() {
 
   return (
     <div className="bg-white">
-      <header className="bg-gray-900">
+      <header className="bg-black">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
@@ -202,7 +202,7 @@ export default function GetStartedHero() {
 
       <main>
         <div className="isolate overflow-hidden">
-          <div className="flow-root bg-gray-900 py-16 sm:pt-32 lg:pb-0">
+          <div className="flow-root bg-black py-16 sm:pt-32 lg:pb-0">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="relative z-10">
                 <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
@@ -237,7 +237,7 @@ export default function GetStartedHero() {
                   </defs>
                 </svg>
                 <div
-                  className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-gray-800/80 lg:ring-1 lg:ring-white/10"
+                  className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-black/80 lg:ring-1 lg:ring-white/10"
                   aria-hidden="true"
                 />
                 {pricing.tiers.map((tier) => (
@@ -246,7 +246,7 @@ export default function GetStartedHero() {
                     className={classNames(
                       tier.featured
                         ? "z-10 bg-white shadow-xl ring-1 ring-gray-900/10"
-                        : "bg-gray-800/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
+                        : "bg-black/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
                       "relative rounded-2xl"
                     )}
                   >
@@ -326,9 +326,9 @@ export default function GetStartedHero() {
               </div>
             </div>
           </div>
-          <div className="relative bg-gray-50 dark:bg-gray-800 lg:pt-14">
+          <div className="relative bg-gray-50 dark:bg-black lg:pt-14">
             <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-              <div className="bg-gray-50 dark:bg-gray-800 py-24 sm:py-32">
+              <div className="bg-gray-50 dark:bg-black py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-200">

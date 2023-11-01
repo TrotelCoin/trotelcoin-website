@@ -51,7 +51,7 @@ export default function Token() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
+    <div className="bg-white dark:bg-black py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
@@ -63,42 +63,42 @@ export default function Token() {
           </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-blue-200 dark:bg-blue-100 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start border-2 border-black dark:border-transparent">
-            <p className="flex-none text-3xl font-bold tracking-tight text-black">
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-800 dark:bg-gray-900 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start border-2 border-black/10 dark:border-white/10">
+            <p className="flex-none text-3xl font-bold tracking-tight text-white">
               {tokenPrice.toFixed(3)} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-black">
+              <p className="text-lg font-semibold tracking-tight text-white">
                 TrotelCoin price.
               </p>
-              <p className="mt-2 text-base leading-7 text-gray-700">
+              <p className="mt-2 text-base leading-7 text-gray-300">
                 The token's price is determined by user demand.
               </p>
             </div>
           </div>
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-blue-200 dark:bg-blue-100 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border-2 border-black dark:border-transparent">
-            <p className="flex-none text-3xl font-bold tracking-tight text-black">
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-800 dark:bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border-2 border-black/10 dark:border-white/10">
+            <p className="flex-none text-3xl font-bold tracking-tight text-white">
               {(tokenPrice * 1e5).toFixed(0)} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-black">
+              <p className="text-lg font-semibold tracking-tight text-white">
                 Market cap.
               </p>
-              <p className="mt-2 text-base leading-7 text-gray-700">
+              <p className="mt-2 text-base leading-7 text-gray-300">
                 The market capitalization represents the overall value of the
                 TrotelCoin token in the market.
               </p>
             </div>
           </div>
-          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-blue-200 dark:bg-blue-100 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border-2 border-black dark:border-white dark:border-transparent">
-            <p className="flex-none text-3xl font-bold tracking-tight text-black">
+          <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-800 dark:bg-gray-900 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border-2 border-black/10 dark:border-white/10">
+            <p className="flex-none text-3xl font-bold tracking-tight text-white">
               {tokenBalance.toFixed(0)} TROTEL
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
-              <p className="text-lg font-semibold tracking-tight text-black">
+              <p className="text-lg font-semibold tracking-tight text-white">
                 Available rewards.
               </p>
-              <p className="mt-2 text-base leading-7 text-gray-700">
+              <p className="mt-2 text-base leading-7 text-gray-300">
                 These are tokens that have not yet been distributed as rewards.
               </p>
             </div>

@@ -24,7 +24,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-gray-900">
+    <header className="bg-white dark:bg-black">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"
@@ -54,7 +54,7 @@ export default function Header() {
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <a
             href="https://app.trotelcoin.com"
-            className="rounded-md bg-gray-900 px-3 py-2 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm duration-200 border-2 border-transparent hover:border-black hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm duration-200 border-2 border-transparent hover:border-black hover:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Launch app
           </a>

@@ -31,7 +31,7 @@ const timeline = [
 
 export default function Roadmap() {
   return (
-    <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
+    <div className="bg-white dark:bg-black py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">
           Roadmap.
@@ -52,7 +52,7 @@ export default function Roadmap() {
                 </svg>
                 {item.date}
                 <div
-                  className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/50 dark:bg-gray-100/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                  className="absolute -ml-2 h-px w-screen -translate-x-full bg-black/50 dark:bg-gray-100/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                   aria-hidden="true"
                 />
               </time>
