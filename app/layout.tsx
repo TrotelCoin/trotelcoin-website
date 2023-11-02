@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Hotjar from "@hotjar/browser";
-import Head from "next/head";
 import { poppins } from "@/app/ui/fonts";
 
 const siteId = 3583733;
@@ -10,8 +9,8 @@ const hotjarVersion = 6;
 
 Hotjar.init(siteId, hotjarVersion);
 
-export const metadata: Metadata = {
-  title: "TrotelCoin - Learn & earn crypto.",
+export const metadata = {
+  title: "TrotelCoin | Learn & earn crypto",
   description: "Learn & earn crypto",
 };
 
@@ -22,18 +21,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+      <head>
+        <title>{metadata.title}</title>
+        <meta
+          name="keywords"
+          content="trotelcoin, learn, earn, crypto, bitcoin, ethereum"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
+        <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta
+          name="keywords"
+          content="trotelcoin, learn, earn, crypto, bitcoin, ethereum"
         />
-      </Head>
+        <meta
+          property="og:image"
+          content="/assets/banner/trotelcoin-banner.png"
+        />
+        <meta
+          property="twitter:image"
+          content="/assets/banner/trotelcoin-banner.png"
+        ></meta>
+        <meta
+          property="twitter:card"
+          content="/assets/banner/trotelcoin-banner.png"
+        ></meta>
+        <meta property="twitter:title" content={metadata.title}></meta>
+        <meta
+          property="twitter:description"
+          content={metadata.description}
+        ></meta>
+        <meta property="og:url" content="https://app.trotelcoin.com" />
+        <meta charSet="UTF-8"></meta>
+        <meta name="theme-color" content="#fff" />
+        <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png"></link>
+        <link rel="icon" href="/favicon.ico"></link>
+      </head>
       <Suspense fallback="">
         <body className={`${poppins.className} antialiased`}>{children}</body>
       </Suspense>
