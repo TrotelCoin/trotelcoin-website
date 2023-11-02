@@ -3,6 +3,7 @@
 import Moralis from "moralis";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { unstable_noStore as noStore } from "next/cache";
 
 export default function Token() {
   const [tokenBalance, setTokenBalance] = useState(0);
@@ -10,6 +11,8 @@ export default function Token() {
 
   useEffect(() => {
     const fetchTokenInfo = async () => {
+      noStore();
+
       try {
         const balanceResponse = await axios.get("https://api.bscscan.com/api", {
           params: {
