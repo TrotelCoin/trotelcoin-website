@@ -26,8 +26,7 @@ export default function Token() {
         if (!Moralis.Core.isStarted) {
           // Initialize Moralis with the API key
           await Moralis.start({
-            apiKey:
-              "IQ9YzKq3oTR3WPUAXZL6dKDDLb1kSokTmeysjrW39wEzILKxZyCJzX10cIodCPLJ",
+            apiKey: process.env.MORALIS_API_KEY,
           });
         }
 
