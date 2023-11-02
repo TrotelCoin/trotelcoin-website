@@ -41,7 +41,7 @@ export default function Roadmap() {
             <div key={item.name}>
               <time
                 dateTime={item.dateTime}
-                className="flex items-center text-xs font-semibold leading-6 text-blue-600 dark:text-blue-200"
+                className="flex items-center text-sm font-semibold leading-6 text-blue-600 dark:text-blue-200"
               >
                 {item.date}
               </time>
