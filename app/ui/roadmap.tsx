@@ -41,22 +41,11 @@ export default function Roadmap() {
             <div key={item.name}>
               <time
                 dateTime={item.dateTime}
-                className="flex items-center text-sm font-semibold leading-6 text-blue-600 dark:text-blue-200"
+                className="flex items-center text-xs font-semibold leading-6 text-blue-600 dark:text-blue-200"
               >
-                <svg
-                  viewBox="0 0 4 4"
-                  className="mr-4 h-1 w-1 flex-none"
-                  aria-hidden="true"
-                >
-                  <circle cx={2} cy={2} r={2} fill="currentColor" />
-                </svg>
                 {item.date}
-                <div
-                  className="absolute -ml-2 h-px w-screen -translate-x-full bg-black/50 dark:bg-gray-100/50 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
-                  aria-hidden="true"
-                />
               </time>
-              <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
+              <p className="mt-1 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
                 {item.name}
               </p>
               <p className="mt-1 text-base leading-7 text-gray-600 dark:text-gray-400">
