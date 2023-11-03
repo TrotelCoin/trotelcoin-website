@@ -18,7 +18,7 @@ export default function Token() {
             contractaddress: "0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
             address: "0xa9ddd1a0856051554f89c09b39b7bb7facb61538",
             tag: "latest",
-            apiKey: "XB35XVQWJ47AS4IAMPTGFM233X1Q2UEAM1",
+            apiKey: process.env.BSCSCAN_API_KEY,
           },
         });
 
