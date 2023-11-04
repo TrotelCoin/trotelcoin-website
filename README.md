@@ -1,4 +1,4 @@
-# TrotelCoin Website 
+# TrotelCoin Website
 
 Welcome to the TrotelCoin Website repository! This repository contains the source code for the official website that showcases the TrotelCoin project, an educational platform dedicated to simplifying the complexities of cryptocurrencies and promoting widespread adoption.
 

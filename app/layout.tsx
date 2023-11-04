@@ -41,23 +41,20 @@ export default function RootLayout({
         <meta
           property="twitter:image"
           content="/assets/banner/trotelcoin-banner.png"
-        ></meta>
+        />
         <meta
           property="twitter:card"
           content="/assets/banner/trotelcoin-banner.png"
-        ></meta>
-        <meta property="twitter:title" content={metadata.title}></meta>
-        <meta
-          property="twitter:description"
-          content={metadata.description}
-        ></meta>
+        />
+        <meta property="twitter:title" content={metadata.title} />
+        <meta property="twitter:description" content={metadata.description} />
         <meta property="og:url" content="https://app.trotelcoin.com" />
         <meta charSet="UTF-8"></meta>
         <meta name="theme-color" content="#fff" />
         <meta name="apple-mobile-web-app-capable" content="yes"></meta>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png"></link>
-        <link rel="icon" href="/favicon.ico"></link>
+        <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <Suspense fallback="">
         <body className={`${poppins.className} antialiased`}>{children}</body>
