@@ -10,47 +10,20 @@ const faqs = [
       "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched in May 2023 with the aim of providing educational resources and practical experiences related to cryptocurrencies.",
   },
   {
-    question: "Who created TrotelCoin?",
-    answer:
-      "TrotelCoin was created by a passionate engineering student dedicated to educating about cryptocurrency and its potential to empower individuals.",
-  },
-  {
-    question: "What does TrotelCoin's educational platform offer?",
-    answer:
-      "The TrotelCoin platform offers comprehensive educational resources, interactive quizzes, and activities to help users understand cryptocurrencies, blockchain technology, and decentralized finance (DeFi).",
-  },
-  {
     question: "How can I earn TrotelCoin on the platform?",
     answer:
       "You can earn TrotelCoin by participating in interactive quizzes and activities as you progress through the learning process on the TrotelCoin platform.",
   },
   {
-    question: "How is the TrotelCoin token ($TROTEL) distributed?",
-    answer:
-      "At its launch, TrotelCoin has a total supply of 100,000 tokens. These tokens are allocated for various purposes, including liquidity on PancakeSwap, rewards for engagement on the platform, private sales, and strategic initiatives.",
-  },
-  {
     question:
       "How are rewards calculated for users on the TrotelCoin platform?",
     answer:
-      "User rewards are calculated using a formula that considers the number of quizzes answered and a base reward for the quizzes. The reward decreases as users answer more quizzes.",
-  },
-  {
-    question:
-      "Why is token burning not implemented in the TrotelCoin project strategy?",
-    answer:
-      "TrotelCoin has chosen not to implement token burning to maintain the existing token supply and avoid potential disruptions to the ecosystem. This ensures the stability of the token's value and its continued utility within the project's ecosystem.",
+      "User rewards are calculated using a formula that considers the number of quizzes answered. The reward decreases as users answer more quizzes.",
   },
   {
     question: "How does TrotelCoin prevent fraud and abuse in its quiz system?",
     answer:
       "TrotelCoin implements a system of unique quiz participation and links phone numbers to wallets to prevent potential fraud and abuse. There are also plans to consider the use of Worldcoin ID for enhanced authentication in the future.",
-  },
-  {
-    question:
-      "Where can I learn more about TrotelCoin and details of its project?",
-    answer:
-      "You can find more information about TrotelCoin and details of its project in the provided whitepaper and on the official TrotelCoin platform.",
   },
 ];
 

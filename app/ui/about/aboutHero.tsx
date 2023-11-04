@@ -177,7 +177,7 @@ export default function aboutHero() {
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                 <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
-                    We are changing the way you learn about cryptocurrencies.
+                    We are changing the way you learn about crypto.
                   </h1>
                   <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
                     Earn rewards in TrotelCoin by acquiring knowledge about
@@ -186,11 +186,11 @@ export default function aboutHero() {
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <a
-                      href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
+                      href="https://docs.trotelcoin.com"
                       target="_blank"
                       className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
                     >
-                      Buy TrotelCoin <span aria-hidden="true">→</span>
+                      Learn more <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
