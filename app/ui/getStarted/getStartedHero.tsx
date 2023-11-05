@@ -63,7 +63,6 @@ const pricing = {
       price: "0",
       mainFeatures: [
         "Free access to all educational courses and resources",
-        "Participation in interactive quizzes and activities",
         "Governance decision-making based on the amount of govTrotelCoin in your possession",
       ],
     },
@@ -76,9 +75,9 @@ const pricing = {
       price: "500",
       mainFeatures: [
         "All Beginner and Intermediate level advantages",
+        "Access to more courses providing in-depth content and additional tutorials",
         "Early access to experimental features and projects",
-        "Invitation to our annual crypto summit",
-        "Join an exclusive crypto community to network, collaborate on projects, and explore TrotelCoin initiatives",
+        "Join an exclusive crypto community to network, collaborate on projects and explore TrotelCoin projects",
       ],
     },
     {
@@ -90,8 +89,8 @@ const pricing = {
       price: "100",
       mainFeatures: [
         "All Beginner level benefits",
-        "Exclusive updates on project developments",
-        "Access to courses providing in-depth content and additional tutorials",
+        "Access to more courses providing in-depth content and additional tutorials",
+        "Gamification features to enhance your learning experience",
       ],
     },
   ],
@@ -332,13 +331,13 @@ export default function GetStartedHero() {
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                   <div className="mx-auto max-w-2xl lg:text-center">
                     <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-200">
-                      HODL TrotelCoin.
+                      HODL TrotelCoin
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
                       Learn now.
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
-                      You can start learning and earning money without owning
+                      You can start learning and earning crypto without owning
                       TrotelCoin. However, you can enhance your learning by
                       owning TrotelCoin.
                     </p>

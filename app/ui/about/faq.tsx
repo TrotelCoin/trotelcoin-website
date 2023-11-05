@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "What is TrotelCoin?",
     answer:
-      "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched in May 2023 with the aim of providing educational resources and practical experiences related to cryptocurrencies.",
+      "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched with the aim of providing educational resources and practical experiences related to cryptocurrencies.",
   },
   {
     question: "How can I earn TrotelCoin on the platform?",
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: "How does TrotelCoin prevent fraud and abuse in its quiz system?",
     answer:
-      "TrotelCoin implements a system of unique quiz participation and links phone numbers to wallets to prevent potential fraud and abuse. There are also plans to consider the use of Worldcoin ID for enhanced authentication in the future.",
+      "TrotelCoin implements a system of unique quiz participation and validation of captcha to prevent potential fraud and abuse. There are also plans to consider the use of Worldcoin ID for enhanced authentication in the future.",
   },
 ];
 

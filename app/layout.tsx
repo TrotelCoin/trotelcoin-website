@@ -1,13 +1,7 @@
-import "./globals.css";
-import type { Metadata } from "next";
 import { Suspense } from "react";
-import Hotjar from "@hotjar/browser";
 import { poppins } from "@/app/ui/fonts";
-
-const siteId = 3583733;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
+import Header from "@/app/ui/header";
+import "@/public/globals.css";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -55,9 +49,15 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="stylesheet" href="/globals.css"></link>
       </head>
       <Suspense fallback="">
-        <body className={`${poppins.className} antialiased`}>{children}</body>
+        <Header />
+        <body
+          className={`bg-white dark:bg-black ${poppins.className} antialiased`}
+        >
+          {children}
+        </body>
       </Suspense>
     </html>
   );

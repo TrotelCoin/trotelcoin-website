@@ -54,7 +54,7 @@ export default function Token() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-            Tokenomic.
+            Tokenomics.
           </h2>
           <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-200">
             TrotelCoin is a token designed to encourage your engagement in
