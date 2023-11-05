@@ -27,6 +27,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const closeMenu = () => setMobileMenuOpen(false);
+
   return (
     <header
       className={`${
@@ -135,6 +137,7 @@ export default function Header() {
                     key={item.name}
                     href={item.href}
                     target={item.target}
+                    onClick={closeMenu}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50"
                   >
                     {item.name}
