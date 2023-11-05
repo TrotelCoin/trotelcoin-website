@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const navigation = {
   trotelcoin: [
-    { name: "Home", href: "./" },
+    { name: "Home", href: "/" },
     {
       name: "Whitepaper",
       href: "https://docs.trotelcoin.com/overview/whitepaper",
@@ -15,8 +15,8 @@ const navigation = {
       href: "https://docs.trotelcoin.com",
       target: "_blank",
     },
-    { name: "Get started", href: "./getStarted" },
-    { name: "About", href: "./about" },
+    { name: "Get started", href: "/get-started" },
+    { name: "About", href: "/about" },
   ],
   ecosystem: [
     {
@@ -78,10 +78,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer
-      className="bg-white dark:bg-black"
-      aria-labelledby="footer-heading"
-    >
+    <footer className="bg-white dark:bg-black" aria-labelledby="footer-heading">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -92,7 +89,7 @@ export default function Footer() {
               width={100}
               height={100}
             />
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-200">
+            <p className="text-sm leading-6 text-stone-600 dark:text-stone-200">
               Learn & earn crypto.
             </p>
             <div className="flex space-x-6">
@@ -101,7 +98,7 @@ export default function Footer() {
                   key={item.name}
                   href={item.href}
                   target={item.target}
-                  className="text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-300"
+                  className="text-stone-400 hover:text-stone-500 dark:text-stone-200 dark:hover:text-stone-300"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -112,7 +109,7 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                <h3 className="text-sm font-semibold leading-6 text-stone-900 dark:text-stone-100">
                   TrotelCoin
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -121,7 +118,7 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
                       >
                         {item.name}
                       </Link>
@@ -130,7 +127,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                <h3 className="text-sm font-semibold leading-6 text-stone-900 dark:text-stone-100">
                   Ecosystem
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -139,7 +136,7 @@ export default function Footer() {
                       <a
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
                       >
                         {item.name}
                       </a>
@@ -150,7 +147,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
+                <h3 className="text-sm font-semibold leading-6 text-stone-900 dark:text-stone-100">
                   Social networks
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -159,7 +156,7 @@ export default function Footer() {
                       <a
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-stone-600 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100"
                       >
                         {item.name}
                       </a>
@@ -171,8 +168,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 dark:border-gray-100/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500 dark:text-gray-300">
+        <div className="mt-16 border-t border-stone-900/10 dark:border-stone-100/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-stone-500 dark:text-stone-300">
             &copy; 2023 TrotelCoin. All rights reserved.
           </p>
         </div>

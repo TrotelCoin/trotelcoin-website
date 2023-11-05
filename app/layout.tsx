@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { poppins } from "@/app/ui/fonts";
 import Header from "@/app/ui/header";
-import "@/public/globals.css";
+import "@/app/globals.css";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -52,10 +52,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="/globals.css"></link>
       </head>
       <Suspense fallback="">
-        <Header />
         <body
           className={`bg-white dark:bg-black ${poppins.className} antialiased`}
         >
+          <Header />
           {children}
         </body>
       </Suspense>

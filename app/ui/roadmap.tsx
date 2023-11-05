@@ -33,7 +33,7 @@ export default function Roadmap() {
   return (
     <div className="bg-white dark:bg-black py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-stone-900 dark:text-stone-100 sm:text-4xl">
           Roadmap.
         </h2>
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-4">
@@ -45,10 +45,10 @@ export default function Roadmap() {
               >
                 {item.date}
               </time>
-              <p className="mt-1 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
+              <p className="mt-1 text-lg font-semibold leading-8 tracking-tight text-stone-900 dark:text-stone-100">
                 {item.name}
               </p>
-              <p className="mt-1 text-base leading-7 text-gray-600 dark:text-gray-400">
+              <p className="mt-1 text-base leading-7 text-stone-600 dark:text-stone-400">
                 {item.description}
               </p>
             </div>
