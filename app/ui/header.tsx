@@ -42,7 +42,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <span className="sr-only">TrotelCoin</span>
           <Image
-            className="h-12 w-auto dark:invisible"
+            className="h-12 w-auto"
             src="/trotelcoin-white.png"
             alt="TrotelCoin logo"
             width={100}
@@ -57,8 +57,8 @@ export default function Header() {
               target={item.target}
               className={`text-sm font-semibold leading-6 ${
                 pathname === "/get-started"
-                  ? "text-stone-100"
-                  : "text-stone-900 dark:text-stone-100"
+                  ? "text-gray-100"
+                  : "text-gray-900 dark:text-gray-100"
               } `}
             >
               {item.name}
@@ -70,8 +70,8 @@ export default function Header() {
             href="https://app.trotelcoin.com"
             className={`${
               pathname === "/get-started"
-                ? "bg-white text-stone-900 hover:border-white hover:bg-stone-900 focus-visible:outline-white hover:text-stone-900"
-                : "bg-black text-stone-100 dark:text-stone-900 hover:border-black hover:bg-stone-900 hover:text-stone-100 focus-visible:outline-black"
+                ? "bg-white text-gray-900 hover:border-white hover:bg-gray-900 hover:text-gray-900"
+                : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:border-black dark:hover:border-white hover:bg-gray-900 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-900"
             } rounded-md  px-3 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
@@ -81,15 +81,15 @@ export default function Header() {
           <button
             type="button"
             className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ${
-              pathname === "/get-started" ? "text-stone-300" : "text-stone-700"
+              pathname === "/get-started" ? "text-gray-300" : "text-gray-700"
             }`}
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon
               className={`h-6 w-6 ${
                 pathname === "/get-started"
-                  ? "text-stone-100"
-                  : "text-stone-900 dark:text-stone-100"
+                  ? "text-gray-100"
+                  : "text-gray-900 dark:text-gray-100"
               }`}
               aria-hidden="true"
             />
@@ -103,12 +103,12 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 ring-stone-900/10 dark:ring-stone-100/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 ring-gray-900/10 dark:ring-gray-100/10">
           <div className="flex items-center gap-x-6">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
               <Image
-                className="h-12 w-auto dark:invisible"
+                className="h-12 w-auto"
                 src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
                 width={100}
@@ -117,20 +117,20 @@ export default function Header() {
             </Link>
             <a
               href="https://app.trotelcoin.com"
-              className="ml-auto rounded-md bg-black px-3 py-2 text-sm font-semibold text-white duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="ml-auto rounded-md bg-black dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
             >
               Launch app
             </a>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-stone-900 dark:text-stone-100"
+              className="-m-2.5 rounded-md p-2.5 text-gray-900 dark:text-gray-100"
               onClick={() => setMobileMenuOpen(false)}
             >
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-stone-500/10">
+            <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
                   <Link
@@ -138,7 +138,7 @@ export default function Header() {
                     href={item.href}
                     target={item.target}
                     onClick={closeMenu}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100"
                   >
                     {item.name}
                   </Link>

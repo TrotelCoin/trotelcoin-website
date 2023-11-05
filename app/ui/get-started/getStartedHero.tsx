@@ -124,7 +124,7 @@ export default function GetStartedHero() {
                   key={tier.id}
                   className={classNames(
                     tier.featured
-                      ? "z-10 bg-white shadow-xl ring-1 ring-stone-900/10"
+                      ? "z-10 bg-white shadow-xl ring-1 ring-gray-900/10"
                       : "bg-black/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
                     "relative rounded-2xl"
                   )}
@@ -133,7 +133,7 @@ export default function GetStartedHero() {
                     <h2
                       id={tier.id}
                       className={classNames(
-                        tier.featured ? "text-stone-900" : "text-white",
+                        tier.featured ? "text-gray-900" : "text-white",
                         "text-sm font-semibold leading-6"
                       )}
                     >
@@ -143,7 +143,7 @@ export default function GetStartedHero() {
                       <div className="mt-2 flex items-center gap-x-4">
                         <p
                           className={classNames(
-                            tier.featured ? "text-stone-900" : "text-white",
+                            tier.featured ? "text-gray-900" : "text-white",
                             "text-4xl font-bold tracking-tight"
                           )}
                         >
@@ -152,7 +152,7 @@ export default function GetStartedHero() {
                         <div className="text leading-5">
                           <p
                             className={
-                              tier.featured ? "text-stone-900" : "text-white"
+                              tier.featured ? "text-gray-900" : "text-white"
                             }
                           >
                             TROTEL
@@ -178,7 +178,7 @@ export default function GetStartedHero() {
                         role="list"
                         className={classNames(
                           tier.featured
-                            ? "divide-stone-900/5 border-stone-900/5 text-stone-600"
+                            ? "divide-gray-900/5 border-gray-900/5 text-gray-600"
                             : "divide-white/5 border-white/5 text-white",
                           "-my-2 divide-y border-t text-sm leading-6 lg:border-t-0"
                         )}
@@ -189,7 +189,7 @@ export default function GetStartedHero() {
                               className={classNames(
                                 tier.featured
                                   ? "text-blue-600"
-                                  : "text-stone-500",
+                                  : "text-gray-500",
                                 "h-6 w-5 flex-none"
                               )}
                               aria-hidden="true"
@@ -205,7 +205,7 @@ export default function GetStartedHero() {
             </div>
           </div>
         </div>
-        <div className="relative bg-stone-50 dark:bg-stone-900 lg:pt-14">
+        <div className="relative bg-gray-50 dark:bg-gray-900 lg:pt-14">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
             <div className="py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -213,10 +213,10 @@ export default function GetStartedHero() {
                   <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-200">
                     HODL TrotelCoin
                   </h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-stone-900 dark:text-stone-100 sm:text-4xl">
+                  <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
                     Learn now.
                   </p>
-                  <p className="mt-6 text-lg leading-8 text-stone-600 dark:text-stone-200">
+                  <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
                     You can start learning and earning crypto without owning
                     TrotelCoin. However, you can enhance your learning by owning
                     TrotelCoin.
@@ -226,14 +226,14 @@ export default function GetStartedHero() {
                   <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                     {features.map((feature) => (
                       <div key={feature.name} className="flex flex-col">
-                        <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-stone-900 dark:text-stone-100">
+                        <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
                           <feature.icon
                             className="h-5 w-5 flex-none text-blue-600 dark:text-blue-200"
                             aria-hidden="true"
                           />
                           {feature.name}
                         </dt>
-                        <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-stone-600 dark:text-stone-200">
+                        <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-200">
                           <p className="flex-auto">{feature.description}</p>
                           <p className="mt-6">
                             <a

@@ -58,7 +58,7 @@ export default function Hero() {
       </div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-stone-600 dark:text-stone-200 ring-1 ring-stone-900/10 dark:ring-stone-100/10 hover:ring-stone-900/20 dark:hover:ring-stone-100/20">
+          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
             Buy TrotelCoin on PancakeSwap.{" "}
             <a
               href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
@@ -71,24 +71,24 @@ export default function Hero() {
           </div>
         </div>
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100 sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
             Learn <span ref={typedTextRef} />
           </h1>
-          <p className="mt-6 text-lg leading-8 text-stone-600 dark:text-stone-200">
+          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
             Acquiring TrotelCoin opens you up to revolutionary development
             opportunities in the fields of finance and technology.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="https://app.trotelcoin.com"
-              className="rounded-md bg-blue-600 hover:bg-blue-600/80 dark:bg-blue-200 px-3.5 py-2.5 text-sm font-semibold text-stone-100 dark:text-stone-900 shadow-sm dark:hover:bg-blue-200/80 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
+              className="rounded-md bg-blue-600 hover:bg-blue-600/80 dark:bg-blue-200 px-3.5 py-2.5 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm dark:hover:bg-blue-200/80 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
             >
               Launch app
             </a>
             <a
               href="https://docs.trotelcoin.com"
               target="_blank"
-              className="text-sm font-semibold leading-6 text-stone-900 dark:text-stone-100"
+              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
             >
               Learn more <span aria-hidden="true">→</span>
             </a>

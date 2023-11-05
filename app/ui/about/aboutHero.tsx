@@ -5,7 +5,7 @@ export default function aboutHero() {
     <main>
       <div className="relative isolate">
         <svg
-          className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-stone-200 dark:stroke-stone-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
+          className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 dark:stroke-gray-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           aria-hidden="true"
         >
           <defs>
@@ -23,7 +23,7 @@ export default function aboutHero() {
           <svg
             x="50%"
             y={-1}
-            className="overflow-visible fill-stone-50 dark:fill-stone-950"
+            className="overflow-visible fill-gray-50 dark:fill-gray-950"
           >
             <path
               d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -53,10 +53,10 @@ export default function aboutHero() {
           <div className="mx-auto max-w-7xl px-6 py-32 sm:py-48 lg:py-10">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100 sm:text-6xl">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
                   We are changing the way you learn about crypto.
                 </h1>
-                <p className="relative mt-6 text-lg leading-8 text-stone-600 dark:text-stone-200 sm:max-w-md lg:max-w-none">
+                <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
                   Earn rewards in TrotelCoin by acquiring knowledge about
                   cryptocurrencies. The goal is to empower you to manage your
                   finances and help you regain your financial independence.
@@ -65,7 +65,7 @@ export default function aboutHero() {
                   <a
                     href="https://docs.trotelcoin.com"
                     target="_blank"
-                    className="text-sm font-semibold leading-6 text-stone-900 dark:text-stone-100"
+                    className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
                   >
                     Learn more <span aria-hidden="true">→</span>
                   </a>
@@ -81,7 +81,7 @@ export default function aboutHero() {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-stone-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
                 </div>
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
@@ -93,7 +93,7 @@ export default function aboutHero() {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-stone-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div className="relative">
                     <Image
@@ -103,7 +103,7 @@ export default function aboutHero() {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-stone-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
                 </div>
                 <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
@@ -115,7 +115,7 @@ export default function aboutHero() {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-stone-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
                   <div className="relative">
                     <Image
@@ -125,7 +125,7 @@ export default function aboutHero() {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-stone-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
                 </div>
               </div>
