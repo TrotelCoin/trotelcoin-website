@@ -8,7 +8,7 @@ const trotelCoinRewardsAddress = "0xA9Ddd1a0856051554f89C09B39B7bB7fAcB61538";
 const trotelCoinAddress = "0xf04ab1a43cBA1474160B7B8409387853D7Be02d5";
 
 export default function Token() {
-  const [tokenPrice, setTokenPrice] = useState(0);
+  const [tokenPrice, setTokenPrice] = useState<number | null>(0);
 
   const { data: tokenBalance } = useBalance({
     address: trotelCoinRewardsAddress,
@@ -22,13 +22,12 @@ export default function Token() {
     const fetchTokenPrice = async () => {
       try {
         const response = await fetch("/api/moralis/tokenPrice");
-
         const data = await response.json();
-
         setTokenPrice(data.tokenPrice);
         localStorage.setItem("tokenPrice", String(data.tokenPrice));
       } catch (error) {
         console.error("Error fetching token information:", error);
+        setTokenPrice(0);
       }
     };
 
@@ -65,10 +64,7 @@ export default function Token() {
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {tokenPrice == null || tokenPrice == undefined
-                ? "0"
-                : tokenPrice.toFixed(3)}{" "}
-              USD
+              {tokenPrice === null ? "0" : tokenPrice.toFixed(3)} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-black dark:text-white">
@@ -81,7 +77,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {tokenPrice == null || tokenPrice == undefined
+              {tokenPrice === null
                 ? "0"
                 : format((tokenPrice * 1e5).toFixed(0))}{" "}
               USD
@@ -98,7 +94,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {tokenBalance == null || tokenBalance == undefined
+              {tokenBalance === null || tokenBalance === undefined
                 ? "0"
                 : format(parseFloat(tokenBalance.formatted).toFixed(0))}{" "}
               TROTEL
