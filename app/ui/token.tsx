@@ -1,46 +1,32 @@
 "use client";
 
 import Moralis from "moralis";
-import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useBalance } from "wagmi";
+import { bsc } from "wagmi/chains";
+
+const trotelCoinRewardsAddress = "0xA9Ddd1a0856051554f89C09B39B7bB7fAcB61538";
+const trotelCoinAddress = "0xf04ab1a43cBA1474160B7B8409387853D7Be02d5";
 
 export default function Token() {
-  const [tokenBalance, setTokenBalance] = useState(0);
   const [tokenPrice, setTokenPrice] = useState(0);
+
+  const { data: tokenBalance } = useBalance({
+    address: trotelCoinRewardsAddress,
+    token: trotelCoinAddress,
+    chainId: bsc.id,
+    watch: true,
+    enabled: true,
+  });
 
   useEffect(() => {
     const fetchTokenInfo = async () => {
       try {
-        const balanceResponse = await axios.get("https://api.bscscan.com/api", {
-          params: {
-            module: "account",
-            action: "tokenbalance",
-            contractaddress: "0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
-            address: "0xa9ddd1a0856051554f89c09b39b7bb7facb61538",
-            tag: "latest",
-            apiKey: process.env.BSCSCAN_API_KEY,
-          },
-        });
+        const response = await fetch("/api/moralis/tokenPrice");
 
-        // Check if Moralis is already started
-        if (!Moralis.Core.isStarted) {
-          // Initialize Moralis with the API key
-          await Moralis.start({
-            apiKey: process.env.NEXT_PUBLIC_MORALIS_API_KEY,
-          });
-        }
+        const data = await response.json();
 
-        const response = await Moralis.EvmApi.token.getTokenPrice({
-          chain: "0x38",
-          include: "percent_change",
-          address: "0xf04ab1a43cba1474160b7b8409387853d7be02d5",
-        });
-
-        const tokenBalance = parseFloat(balanceResponse.data.result) / 1e18;
-        const tokenPrice = response.raw.usdPrice;
-
-        setTokenBalance(tokenBalance);
-        setTokenPrice(tokenPrice);
+        setTokenPrice(data.tokenPrice);
       } catch (error) {
         console.error("Error fetching token information:", error);
       }
@@ -102,7 +88,8 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {format(tokenBalance.toFixed(0))} TROTEL
+              {format(parseFloat(tokenBalance?.formatted as string).toFixed(0))}{" "}
+              TROTEL
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-black dark:text-white">
