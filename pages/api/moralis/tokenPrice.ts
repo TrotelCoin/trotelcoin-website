@@ -13,7 +13,7 @@ export default async function handler(
     }
 
     const response = await Moralis.EvmApi.token.getTokenPrice({
-      chain: "bsc",
+      chain: "0x38",
       address: "0xf04ab1a43cba1474160b7b8409387853d7be02d5",
       include: "percent_change",
     });
