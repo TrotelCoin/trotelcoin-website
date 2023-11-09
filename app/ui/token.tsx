@@ -77,7 +77,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {(tokenPrice * 1e5).toFixed(0)} USD
+              {(tokenPrice * 1e5).toFixed(0).toLocaleString()} USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-black dark:text-white">
@@ -91,7 +91,7 @@ export default function Token() {
           </div>
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p className="flex-none text-3xl font-bold tracking-tight text-black dark:text-white">
-              {tokenBalance.toFixed(0)} TROTEL
+              {tokenBalance.toFixed(0).toLocaleString()} TROTEL
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-black dark:text-white">
