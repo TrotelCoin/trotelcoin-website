@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { poppins } from "@/app/ui/fonts";
 import Header from "@/app/ui/header";
 import "@/app/globals.css";
+import Wagmi from "@/app/wagmi";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -51,14 +52,16 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="/globals.css"></link>
       </head>
-      <Suspense fallback="">
-        <body
-          className={`bg-white dark:bg-black ${poppins.className} antialiased`}
-        >
-          <Header />
-          {children}
-        </body>
-      </Suspense>
+      <Wagmi>
+        <Suspense fallback="">
+          <body
+            className={`bg-white dark:bg-black ${poppins.className} antialiased`}
+          >
+            <Header />
+            {children}
+          </body>
+        </Suspense>
+      </Wagmi>
     </html>
   );
 }
