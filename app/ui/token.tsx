@@ -27,7 +27,6 @@ export default function Token() {
         });
         const data = await response.json();
         setTokenPrice(data.tokenPrice);
-        localStorage.setItem("tokenPrice", String(data.tokenPrice));
       } catch (error) {
         setError("Error fetching token information");
         setTokenPrice(0);
