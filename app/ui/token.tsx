@@ -82,7 +82,7 @@ export default function Token() {
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p
               className={`flex-none text-3xl font-bold tracking-tight text-black dark:text-white ${
-                error !== "" || tokenPrice === null ? "animate-pulse" : ""
+                error !== "" || !tokenPrice ? "animate-pulse" : ""
               }`}
             >
               {error !== ""
