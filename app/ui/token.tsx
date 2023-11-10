@@ -21,7 +21,9 @@ export default function Token() {
   useEffect(() => {
     const fetchTokenPrice = async () => {
       try {
-        const response = await fetch("/api/moralis/tokenPrice");
+        const response = await fetch("/api/moralis/tokenPrice", {
+          cache: "no-store",
+        });
         const data = await response.json();
         setTokenPrice(data.tokenPrice);
         localStorage.setItem("tokenPrice", String(data.tokenPrice));
