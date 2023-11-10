@@ -64,14 +64,10 @@ export default function Token() {
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p
               className={`flex-none text-3xl font-bold tracking-tight text-black dark:text-white ${
-                error !== "" || tokenPrice === null ? "animate-pulse" : ""
+                error !== "" || !tokenPrice ? "animate-pulse" : ""
               }`}
             >
-              {error !== ""
-                ? "0"
-                : tokenPrice === null
-                ? "0"
-                : tokenPrice.toFixed(3)}{" "}
+              {error !== "" ? "0" : !tokenPrice ? "0" : tokenPrice.toFixed(3)}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
@@ -91,7 +87,7 @@ export default function Token() {
             >
               {error !== ""
                 ? "0"
-                : tokenPrice === null
+                : !tokenPrice
                 ? "0"
                 : format((tokenPrice * 1e5).toFixed(0))}{" "}
               USD
