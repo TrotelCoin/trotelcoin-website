@@ -46,17 +46,6 @@ export default function Token() {
     fetchTokenPrice();
   }, []);
 
-  function format(number: string): string {
-    const numberFixed = parseFloat(number).toFixed(0).toString();
-
-    const formattedNumber: string = numberFixed.replace(
-      /\B(?=(\d{3})+(?!\d))/g,
-      " "
-    );
-
-    return formattedNumber;
-  }
-
   return (
     <div className="bg-white dark:bg-black py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -98,11 +87,9 @@ export default function Token() {
                 ? "0"
                 : !tokenPrice
                 ? "0"
-                : format(
-                    (tokenPrice * parseFloat(totalSupply?.toString() as string))
-                      .toFixed(5)
-                      .toString()
-                  )}{" "}
+                : (
+                    tokenPrice * parseFloat(totalSupply?.toString() as string)
+                  ).toFixed(5)}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
@@ -125,7 +112,7 @@ export default function Token() {
             >
               {tokenRewards === null || tokenRewards === undefined
                 ? "0"
-                : format(parseFloat(tokenRewards).toFixed(0))}{" "}
+                : parseFloat(tokenRewards).toFixed(0)}{" "}
               TROTEL
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
