@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
-            Buy TrotelCoin on PancakeSwap.{" "}
+            Buy TrotelCoin on Uniswap.{" "}
             <a
               href="https://app.uniswap.org/tokens/polygon/0x2275059f310e31c2f43b24a9932882196659e1c4"
               target="_blank"
