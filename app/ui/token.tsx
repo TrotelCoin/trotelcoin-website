@@ -1,23 +1,32 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useBalance } from "wagmi";
-import { bsc } from "wagmi/chains";
+import { useBlockNumber, useContractRead } from "wagmi";
+import { polygon } from "wagmi/chains";
+import TrotelCoinABI from "@/abi/trotelCoinABI";
 
-const trotelCoinRewardsAddress = "0xA9Ddd1a0856051554f89C09B39B7bB7fAcB61538";
-const trotelCoinAddress = "0xf04ab1a43cBA1474160B7B8409387853D7Be02d5";
+const trotelCoinAddress = "0x2275059f310E31C2F43B24A9932882196659e1C4";
 
 export default function Token() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [error, setError] = useState<string>("");
+  const [tokenRewards, setTokenRewards] = useState<string>("0");
 
-  const { data: tokenBalance } = useBalance({
-    address: trotelCoinRewardsAddress,
-    token: trotelCoinAddress,
-    chainId: bsc.id,
+  const { data: blockNumber } = useBlockNumber();
+
+  console.log(blockNumber);
+
+  const { data: totalSupply } = useContractRead({
+    address: trotelCoinAddress,
+    abi: TrotelCoinABI,
+    functionName: "getPastTotalSupply",
+    args: [blockNumber as bigint],
+    chainId: polygon.id,
     watch: true,
-    enabled: true,
+    enabled: Boolean(blockNumber),
   });
+
+  console.log(totalSupply);
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
@@ -89,7 +98,11 @@ export default function Token() {
                 ? "0"
                 : !tokenPrice
                 ? "0"
-                : format((tokenPrice * 1e5).toFixed(0))}{" "}
+                : format(
+                    (tokenPrice * parseFloat(totalSupply?.toString() as string))
+                      .toFixed(5)
+                      .toString()
+                  )}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
@@ -105,22 +118,22 @@ export default function Token() {
           <div className="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl backdrop-blur-xl bg-gray-50 dark:bg-gray-900 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50">
             <p
               className={`flex-none text-3xl font-bold tracking-tight text-black dark:text-white ${
-                tokenBalance === null || tokenBalance === undefined
+                tokenRewards === null || tokenRewards === undefined
                   ? "animate-pulse"
                   : ""
               }`}
             >
-              {tokenBalance === null || tokenBalance === undefined
+              {tokenRewards === null || tokenRewards === undefined
                 ? "0"
-                : format(parseFloat(tokenBalance.formatted).toFixed(0))}{" "}
+                : format(parseFloat(tokenRewards).toFixed(0))}{" "}
               TROTEL
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
               <p className="text-lg font-semibold tracking-tight text-black dark:text-white">
-                Available rewards.
+                Rewards distributed.
               </p>
               <p className="mt-2 text-base leading-7 text-gray-700 dark:text-gray-300">
-                These are tokens that have not yet been distributed as rewards.
+                These are tokens that have been distributed as rewards.
               </p>
             </div>
           </div>
