@@ -10,6 +10,11 @@ import { usePathname } from "next/navigation";
 const navigation = [
   { name: "Home", href: "/" },
   {
+    name: "Governance",
+    href: "https://vote.trotelcoin.com/#/alexandretrotel.eth",
+    target: "_blank",
+  },
+  {
     name: "Whitepaper",
     href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
     target: "_blank",
