@@ -36,7 +36,7 @@ const pricing = {
       id: "tier-beginner",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "No holding requirement.",
+      description: "Free.",
       price: "0",
       mainFeatures: [
         "Free access to all educational courses and resources",
@@ -48,8 +48,8 @@ const pricing = {
       id: "tier-expert",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: true,
-      description: "Holder of 50 TrotelCoin.",
-      price: "500",
+      description: "Price of 50k TrotelCoin.",
+      price: "50000",
       mainFeatures: [
         "All Beginner and Intermediate level advantages",
         "Access to more courses providing in-depth content and additional tutorials",
@@ -62,8 +62,8 @@ const pricing = {
       id: "tier-intermediate",
       href: "https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5",
       featured: false,
-      description: "Holder of 10 TrotelCoin.",
-      price: "100",
+      description: "Price of 10k TrotelCoin.",
+      price: "10000",
       mainFeatures: [
         "All Beginner level benefits",
         "Access to more courses providing in-depth content and additional tutorials",
