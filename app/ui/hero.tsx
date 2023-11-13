@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
             Buy TrotelCoin on PancakeSwap.{" "}
             <a
-              href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
+              href="https://app.uniswap.org/tokens/polygon/0x2275059f310e31c2f43b24a9932882196659e1c4"
               target="_blank"
               className="font-semibold text-blue-600 dark:text-blue-200"
             >
