@@ -12,8 +12,8 @@ export default async function handler(
     const data = await response.json();
 
     if (data.status === "1" && data.result) {
-      const numericalValue = parseFloat(data.result);
-      res.status(200).json({ numericalValue });
+      const numericalValue = parseFloat(data.result) * 1e-18;
+      res.status(200).json(numericalValue);
     } else {
       res.status(500).json({ error: "Invalid response from the API" });
     }
