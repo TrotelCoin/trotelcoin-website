@@ -16,7 +16,7 @@ export default async function handler(
     });
 
     if (token) {
-      res.status(200).json(token?.totalSupply.formatted);
+      res.status(200).json(parseFloat(token.totalSupply.formatted));
     } else {
       res.status(500).json({ error: "Invalid response from the API" });
     }
