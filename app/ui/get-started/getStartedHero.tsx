@@ -36,7 +36,7 @@ const pricing = {
       id: "tier-beginner",
       href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: false,
-      description: "Free.",
+      description: "No holding requirement.",
       price: "0",
       mainFeatures: [
         "Free access to all educational courses and resources",
@@ -48,7 +48,7 @@ const pricing = {
       id: "tier-expert",
       href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: true,
-      description: "Price of 50k TrotelCoin.",
+      description: "Hold 50k TrotelCoin.",
       price: "50000",
       mainFeatures: [
         "All Beginner and Intermediate level advantages",
@@ -62,7 +62,7 @@ const pricing = {
       id: "tier-intermediate",
       href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: false,
-      description: "Price of 10k TrotelCoin.",
+      description: "Hold 10k TrotelCoin.",
       price: "10000",
       mainFeatures: [
         "All Beginner level benefits",
