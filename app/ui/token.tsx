@@ -31,7 +31,7 @@ export default function Token() {
           cache: "no-store",
         });
         const data = await response.json();
-        setTokenPrice(data.totalSupply);
+        setTotalSupply(data.totalSupply);
       } catch (error) {
         setError("Error fetching token information");
         setTotalSupply(0);
@@ -42,6 +42,8 @@ export default function Token() {
     fetchTokenPrice();
     fetchTotalSupply();
   }, []);
+
+  console.log("totalSupply", totalSupply);
 
   return (
     <div className="bg-white dark:bg-black py-24 sm:py-32">
