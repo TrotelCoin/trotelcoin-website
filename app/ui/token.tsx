@@ -5,7 +5,7 @@ import { useBlockNumber, useContractRead } from "wagmi";
 import { polygon } from "wagmi/chains";
 import TrotelCoinABI from "@/abi/trotelCoinABI";
 
-const trotelCoinAddress = "0x2275059f310E31C2F43B24A9932882196659e1C4";
+const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
 
 export default function Token() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
