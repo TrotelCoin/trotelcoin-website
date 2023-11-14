@@ -1,30 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useBlockNumber, useContractRead } from "wagmi";
-import { polygon } from "wagmi/chains";
-import TrotelCoinABI from "@/abi/trotelCoinABI";
 
 const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
 
 export default function Token() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
+  const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [error, setError] = useState<string>("");
   const [tokenRewards, setTokenRewards] = useState<string>("0");
-
-  const { data: blockNumber } = useBlockNumber();
-
-  console.log(blockNumber);
-
-  const { data: totalSupply } = useContractRead({
-    address: trotelCoinAddress,
-    abi: TrotelCoinABI,
-    functionName: "getPastTotalSupply",
-    args: [blockNumber as bigint],
-    chainId: polygon.id,
-    watch: true,
-    enabled: Boolean(blockNumber),
-  });
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
@@ -41,7 +25,22 @@ export default function Token() {
       }
     };
 
+    const fetchTotalSupply = async () => {
+      try {
+        const response = await fetch("/api/moralis/totalSupply", {
+          cache: "no-store",
+        });
+        const data = await response.json();
+        setTokenPrice(data.totalSupply);
+      } catch (error) {
+        setError("Error fetching token information");
+        setTotalSupply(0);
+        console.error("Error fetching token information:", error);
+      }
+    };
+
     fetchTokenPrice();
+    fetchTotalSupply();
   }, []);
 
   return (
@@ -83,12 +82,11 @@ export default function Token() {
             >
               {error !== ""
                 ? "0"
-                : !tokenPrice
+                : !tokenPrice || !totalSupply
                 ? "0"
-                : (
-                    tokenPrice *
-                    parseFloat(Number(totalSupply)?.toString() as string)
-                  ).toFixed(5)}{" "}
+                : (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(
+                    5
+                  )}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
