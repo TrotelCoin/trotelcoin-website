@@ -87,7 +87,7 @@ export default function Token() {
                 : !tokenPrice || !totalSupply
                 ? "0"
                 : (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(
-                    5
+                    0
                   )}{" "}
               USD
             </p>
