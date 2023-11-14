@@ -18,6 +18,8 @@ export default function Token() {
     enabled: true,
   });
 
+  console.log(token);
+
   useEffect(() => {
     const fetchTokenPrice = async () => {
       try {
@@ -78,7 +80,7 @@ export default function Token() {
                 : !tokenPrice || !token
                 ? "0"
                 : (
-                    tokenPrice * parseFloat(token?.totalSupply.formatted)
+                    tokenPrice * parseFloat(token.totalSupply.formatted)
                   ).toFixed(0)}{" "}
               USD
             </p>
