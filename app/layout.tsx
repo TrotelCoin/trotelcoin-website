@@ -3,6 +3,7 @@ import Header from "@/app/ui/header";
 import "@/app/globals.css";
 import Wagmi from "@/app/wagmi";
 import NextTopLoader from "nextjs-toploader";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -69,6 +70,7 @@ export default function RootLayout({
           />
           <Header />
           {children}
+          <Analytics />
         </body>
       </Wagmi>
     </html>
