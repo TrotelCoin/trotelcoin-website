@@ -1,14 +1,22 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { polygon } from "wagmi/chains";
+import { useToken } from "wagmi";
+import { watch } from "fs";
 
 const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
 
 export default function Token() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
-  const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [error, setError] = useState<string>("");
   const [tokenRewards, setTokenRewards] = useState<string>("0");
+
+  const { data: token } = useToken({
+    chainId: polygon.id,
+    address: trotelCoinAddress,
+    enabled: true,
+  });
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
@@ -25,25 +33,8 @@ export default function Token() {
       }
     };
 
-    const fetchTotalSupply = async () => {
-      try {
-        const response = await fetch("/api/totalSupply", {
-          cache: "no-store",
-        });
-        const totalSupply = await response.json();
-        setTotalSupply(totalSupply);
-      } catch (error) {
-        setError("Error fetching token information");
-        setTotalSupply(0);
-        console.error("Error fetching token information:", error);
-      }
-    };
-
     fetchTokenPrice();
-    fetchTotalSupply();
   }, []);
-
-  console.log("totalSupply", totalSupply);
 
   return (
     <div className="bg-white dark:bg-black py-24 sm:py-32">
@@ -84,11 +75,11 @@ export default function Token() {
             >
               {error !== ""
                 ? "0"
-                : !tokenPrice || !totalSupply
+                : !tokenPrice || !token
                 ? "0"
-                : (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(
-                    0
-                  )}{" "}
+                : (
+                    tokenPrice * parseFloat(token?.totalSupply.formatted)
+                  ).toFixed(0)}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
