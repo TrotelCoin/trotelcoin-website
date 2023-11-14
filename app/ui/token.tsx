@@ -27,7 +27,7 @@ export default function Token() {
 
     const fetchTotalSupply = async () => {
       try {
-        const response = await fetch("/api/moralis/totalSupply", {
+        const response = await fetch("/api/totalSupply", {
           cache: "no-store",
         });
         const data = await response.json();
