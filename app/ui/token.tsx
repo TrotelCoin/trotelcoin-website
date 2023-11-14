@@ -26,8 +26,6 @@ export default function Token() {
     enabled: Boolean(blockNumber),
   });
 
-  console.log(totalSupply);
-
   useEffect(() => {
     const fetchTokenPrice = async () => {
       try {
@@ -65,7 +63,7 @@ export default function Token() {
                 error !== "" || !tokenPrice ? "animate-pulse" : ""
               }`}
             >
-              {error !== "" ? "0" : !tokenPrice ? "0" : tokenPrice.toFixed(3)}{" "}
+              {error !== "" ? "0" : !tokenPrice ? "0" : tokenPrice.toFixed(5)}{" "}
               USD
             </p>
             <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
@@ -88,7 +86,8 @@ export default function Token() {
                 : !tokenPrice
                 ? "0"
                 : (
-                    tokenPrice * parseFloat(totalSupply?.toString() as string)
+                    tokenPrice *
+                    parseFloat(Number(totalSupply)?.toString() as string)
                   ).toFixed(5)}{" "}
               USD
             </p>
