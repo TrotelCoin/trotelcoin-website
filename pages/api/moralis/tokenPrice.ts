@@ -1,5 +1,6 @@
 import Moralis from "moralis";
 import { NextApiRequest, NextApiResponse } from "next";
+import { polygon } from "viem/chains";
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,8 +14,8 @@ export default async function handler(
     }
 
     const response = await Moralis.EvmApi.token.getTokenPrice({
-      chain: "0x38",
-      address: "0x2275059f310e31c2f43b24a9932882196659e1c4",
+      chain: polygon.id,
+      address: "0x85057d5a8d063f9075ba963101d76352051675e5",
       include: "percent_change",
     });
 

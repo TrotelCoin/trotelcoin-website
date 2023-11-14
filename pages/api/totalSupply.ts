@@ -6,7 +6,7 @@ export default async function handler(
 ) {
   try {
     const apiKey = process.env.POLYGONSCAN_API_KEY;
-    const apiUrl = `https://api.polygonscan.com/api?module=stats&action=tokensupply&contractaddress=0x2275059f310E31C2F43B24A9932882196659e1C4&apikey=${apiKey}`;
+    const apiUrl = `https://api.polygonscan.com/api?module=stats&action=tokensupply&contractaddress=0x85057d5a8d063f9075ba963101d76352051675e5&apikey=${apiKey}`;
 
     const response = await fetch(apiUrl);
     const data = await response.json();
