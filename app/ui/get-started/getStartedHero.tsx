@@ -34,7 +34,7 @@ const pricing = {
     {
       name: "Beginner",
       id: "tier-beginner",
-      href: "https://app.uniswap.org/tokens/polygon/0x2275059f310e31c2f43b24a9932882196659e1c4",
+      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: false,
       description: "Free.",
       price: "0",
@@ -46,7 +46,7 @@ const pricing = {
     {
       name: "Expert",
       id: "tier-expert",
-      href: "https://app.uniswap.org/tokens/polygon/0x2275059f310e31c2f43b24a9932882196659e1c4",
+      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: true,
       description: "Price of 50k TrotelCoin.",
       price: "50000",
@@ -60,7 +60,7 @@ const pricing = {
     {
       name: "Intermediate",
       id: "tier-intermediate",
-      href: "https://app.uniswap.org/tokens/polygon/0x2275059f310e31c2f43b24a9932882196659e1c4",
+      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       featured: false,
       description: "Price of 10k TrotelCoin.",
       price: "10000",
