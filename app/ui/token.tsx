@@ -30,8 +30,8 @@ export default function Token() {
         const response = await fetch("/api/totalSupply", {
           cache: "no-store",
         });
-        const data = await response.json();
-        setTotalSupply(data.totalSupply);
+        const totalSupply = await response.json();
+        setTotalSupply(totalSupply);
       } catch (error) {
         setError("Error fetching token information");
         setTotalSupply(0);
