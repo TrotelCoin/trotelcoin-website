@@ -205,7 +205,7 @@ export default function GetStartedHero() {
             </div>
           </div>
         </div>
-        <div className="relative bg-gray-50 dark:bg-gray-900 lg:pt-14">
+        <div className="relative bg-gray-50 dark:bg-slate-800 lg:pt-14">
           <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
             <div className="py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
