@@ -40,7 +40,7 @@ const pricing = {
       price: "0",
       mainFeatures: [
         "Free access to all educational courses and resources",
-        "Governance decision-making based on the amount of govTrotelCoin in your possession",
+        "Governance decision-making based on the amount of TrotelCoin in your possession",
       ],
     },
     {
