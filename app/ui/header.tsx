@@ -75,8 +75,8 @@ export default function Header() {
             href="https://app.trotelcoin.com"
             className={`${
               pathname === "/get-started"
-                ? "bg-white text-gray-900 hover:border-white hover:bg-slate-800 hover:text-gray-900"
-                : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:border-black dark:hover:border-white hover:bg-slate-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-900"
+                ? "bg-white text-gray-900 hover:border-white hover:bg-slate-900 hover:text-gray-900"
+                : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:border-black dark:hover:border-white hover:bg-slate-900 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-900"
             } rounded-md  px-3 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
