@@ -16,7 +16,7 @@ const navigation = [
   },
   {
     name: "Whitepaper",
-    href: "https://github.com/TrotelCoin/trotelcoin-wiki/wiki/Whitepaper",
+    href: "https://docs.trotelcoin.com/overview/whitepaper",
     target: "_blank",
   },
   {
