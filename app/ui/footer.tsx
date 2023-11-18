@@ -46,6 +46,11 @@ const navigation = {
       href: "https://x.com/trotelcoin",
       target: "_blank",
     },
+    {
+      name: "Discord",
+      href: "https://discord.gg/a33hjU5Usb",
+      target: "_blank",
+    },
     { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
   ],
   social: [
