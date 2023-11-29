@@ -160,7 +160,7 @@ export default function GetStartedHero() {
                         </div>
                       </div>
                       <a
-                        href="https://pancakeswap.finance/swap?outputCurrency=0xf04ab1a43cBA1474160B7B8409387853D7Be02d5"
+                        href="https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5"
                         target="_blank"
                         aria-describedby={tier.id}
                         className={classNames(
