@@ -14,7 +14,7 @@ const BuySection = () => {
     } else {
       setTheme("light");
     }
-  }, []);
+  }, [window.matchMedia("(prefers-color-scheme: dark)").matches]);
 
   return (
     <>
