@@ -161,7 +161,6 @@ export default function GetStartedHero() {
                       </div>
                       <a
                         href="/buy"
-                        target="_blank"
                         aria-describedby={tier.id}
                         className={classNames(
                           tier.featured
