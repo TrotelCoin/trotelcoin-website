@@ -42,7 +42,7 @@ const BuySection = () => {
                 ></iframe>
               ) : (
                 <iframe
-                  height={725}
+                  height={722}
                   style={{
                     overflow: "auto",
                     scrollbarWidth: "none",
@@ -57,7 +57,7 @@ const BuySection = () => {
             <div className="w-full md:w-1/3 min-w-min">
               {theme === "light" ? (
                 <iframe
-                  height={725}
+                  height={722}
                   style={{
                     overflow: "auto",
                     scrollbarWidth: "none",
