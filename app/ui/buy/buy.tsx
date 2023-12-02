@@ -6,15 +6,16 @@ const BuySection = () => {
   const [theme, setTheme] = useState<string | null>(null);
 
   useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
+    if (typeof window !== "undefined") {
+      const match = window.matchMedia("(prefers-color-scheme: dark)");
+      const handleChange = () => setTheme(match.matches ? "dark" : "light");
+
+      match.addEventListener("change", handleChange);
+      handleChange();
+
+      return () => match.removeEventListener("change", handleChange);
     }
-  }, [window.matchMedia("(prefers-color-scheme: dark)").matches]);
+  }, []);
 
   return (
     <>
