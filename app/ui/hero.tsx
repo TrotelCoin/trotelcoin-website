@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import Link from "next/link";
 
 export default function Hero() {
   const typedTextRef = useRef(null);
@@ -59,15 +60,14 @@ export default function Hero() {
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
-            Buy TrotelCoin on Uniswap.{" "}
-            <a
-              href="https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5"
-              target="_blank"
+            Buy TrotelCoin now !{" "}
+            <Link
+              href="/buy"
               className="font-semibold text-blue-600 dark:text-blue-200"
             >
               <span className="absolute inset-0" aria-hidden="true" />
               Invest now <span aria-hidden="true">&rarr;</span>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="text-center">
