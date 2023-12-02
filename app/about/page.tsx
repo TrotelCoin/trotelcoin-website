@@ -1,6 +1,5 @@
 import React from "react";
 import FAQ from "@/app/ui/about/faq";
-import Footer from "@/app/ui/footer";
 import AboutHero from "@/app/ui/about/aboutHero";
 
 export default function About() {
@@ -9,7 +8,6 @@ export default function About() {
       <main>
         <AboutHero></AboutHero>
         <FAQ></FAQ>
-        <Footer></Footer>
       </main>
     </>
   );

@@ -20,6 +20,7 @@ const navigation = {
       href: "https://docs.trotelcoin.com",
       target: "_blank",
     },
+    { name: "Buy TrotelCoin", href: "/buy" },
     { name: "Get started", href: "/get-started" },
     { name: "About", href: "/about" },
   ],

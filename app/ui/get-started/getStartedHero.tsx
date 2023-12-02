@@ -34,7 +34,7 @@ const pricing = {
     {
       name: "Beginner",
       id: "tier-beginner",
-      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
+      href: "/buy",
       featured: false,
       description: "No holding requirement.",
       price: "0",
@@ -46,7 +46,7 @@ const pricing = {
     {
       name: "Expert",
       id: "tier-expert",
-      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
+      href: "/buy",
       featured: true,
       description: "Hold 50k TrotelCoin.",
       price: "50000",
@@ -60,7 +60,7 @@ const pricing = {
     {
       name: "Intermediate",
       id: "tier-intermediate",
-      href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
+      href: "/buy",
       featured: false,
       description: "Hold 10k TrotelCoin.",
       price: "10000",
@@ -160,7 +160,7 @@ export default function GetStartedHero() {
                         </div>
                       </div>
                       <a
-                        href="https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5"
+                        href="/buy"
                         target="_blank"
                         aria-describedby={tier.id}
                         className={classNames(

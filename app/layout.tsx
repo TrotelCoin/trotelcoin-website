@@ -1,5 +1,6 @@
 import { poppins } from "@/app/ui/fonts";
 import Header from "@/app/ui/header";
+import Footer from "@/app/ui/footer";
 import "@/app/globals.css";
 import Wagmi from "@/app/wagmi";
 import NextTopLoader from "nextjs-toploader";
@@ -71,6 +72,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Analytics />
+          <Footer />
         </body>
       </Wagmi>
     </html>
