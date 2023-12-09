@@ -48,6 +48,11 @@ const navigation = {
       target: "_blank",
     },
     { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
+    {
+      name: "YouTube",
+      href: "https://youtube.com/@TrotelCoin",
+      target: "_blank",
+    },
   ],
   social: [
     {
