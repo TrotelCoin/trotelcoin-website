@@ -125,7 +125,7 @@ export default function GetStartedHero() {
                   className={classNames(
                     tier.featured
                       ? "z-10 bg-white shadow-xl ring-1 ring-gray-900/10"
-                      : "bg-slate-950/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
+                      : "bg-slate-800/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
                     "relative rounded-2xl"
                   )}
                 >
