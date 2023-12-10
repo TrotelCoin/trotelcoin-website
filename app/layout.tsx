@@ -56,7 +56,7 @@ export default function RootLayout({
       </head>
       <Wagmi>
         <body
-          className={`bg-white dark:bg-black ${poppins.className} antialiased`}
+          className={`bg-white dark:bg-slate-950 ${poppins.className} antialiased`}
         >
           <NextTopLoader
             color="#3b82f6"

@@ -81,7 +81,7 @@ export default function GetStartedHero() {
   return (
     <>
       <div className="isolate overflow-hidden">
-        <div className="flow-root bg-black py-16 sm:pt-32 lg:pb-0">
+        <div className="flow-root bg-slate-950 py-16 sm:pt-32 lg:pb-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="relative z-10">
               <h1 className="mx-auto max-w-4xl text-center text-5xl font-bold tracking-tight text-white">
@@ -116,7 +116,7 @@ export default function GetStartedHero() {
                 </defs>
               </svg>
               <div
-                className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-black/80 lg:ring-1 lg:ring-white/10"
+                className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-slate-950/80 lg:ring-1 lg:ring-white/10"
                 aria-hidden="true"
               />
               {pricing.tiers.map((tier) => (
@@ -125,7 +125,7 @@ export default function GetStartedHero() {
                   className={classNames(
                     tier.featured
                       ? "z-10 bg-white shadow-xl ring-1 ring-gray-900/10"
-                      : "bg-black/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
+                      : "bg-slate-950/80 ring-1 ring-white/10 lg:bg-transparent lg:pb-14 lg:ring-0",
                     "relative rounded-2xl"
                   )}
                 >

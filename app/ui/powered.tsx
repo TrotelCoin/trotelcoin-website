@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Powered() {
   return (
-    <div className="bg-white dark:bg-black py-24 sm:py-32">
+    <div className="bg-white dark:bg-slate-950 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">
           Powered by.
