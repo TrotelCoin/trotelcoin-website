@@ -116,7 +116,7 @@ export default function GetStartedHero() {
                 </defs>
               </svg>
               <div
-                className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-slate-950/80 lg:ring-1 lg:ring-white/10"
+                className="hidden lg:absolute lg:inset-x-px lg:bottom-0 lg:top-4 lg:block lg:rounded-t-2xl lg:bg-slate-800 lg:ring-1 lg:ring-white/10"
                 aria-hidden="true"
               />
               {pricing.tiers.map((tier) => (
