@@ -11,9 +11,9 @@ export default function Powered() {
 
   return (
     <>
-      <div ref={ref} className="bg-white dark:bg-black py-12 sm:py-16">
+      <div className="bg-white dark:bg-black py-12 sm:py-16">
         {inView ? (
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
+          <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900 dark:text-gray-100">
               Powered by.
             </h2>
