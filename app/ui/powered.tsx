@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 export default function Powered() {
   const { ref, inView } = useInView({
     triggerOnce: true,
+    delay: 500,
   });
 
   return (

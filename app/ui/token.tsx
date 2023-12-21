@@ -14,6 +14,7 @@ export default function Token() {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
+    delay: 500,
   });
 
   useEffect(() => {

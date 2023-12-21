@@ -3,7 +3,7 @@ import Header from "@/app/ui/header";
 import Footer from "@/app/ui/footer";
 import "@/app/globals.css";
 import Wagmi from "@/app/wagmi";
-import NextTopLoader from "nextjs-toploader";
+import AnimatedCursor from "react-animated-cursor";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
@@ -58,6 +58,7 @@ export default function RootLayout({
         <body
           className={`bg-white dark:bg-black ${poppins.className} antialiased`}
         >
+          <AnimatedCursor color="59, 130, 246" innerSize={12} innerScale={1.6} outerSize={6} outerScale={0.8} />
           <Header />
           {children}
           <Analytics />

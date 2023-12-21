@@ -49,6 +49,7 @@ const features = [
 export default function Features() {
   const { ref, inView } = useInView({
     triggerOnce: true,
+    delay: 500,
   });
 
   return (

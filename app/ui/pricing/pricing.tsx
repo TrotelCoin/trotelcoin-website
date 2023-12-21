@@ -38,6 +38,7 @@ const tiers = [
 const Pricing = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
+    delay: 500,
   });
 
   return (
