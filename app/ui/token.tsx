@@ -55,8 +55,8 @@ export default function Token() {
       name: "TrotelCoin Price",
       value:
         tokenPrice !== null && error === "" && tokenPrice
-          ? `${tokenPrice?.toFixed(5)}`
-          : "0",
+          ? `$${tokenPrice?.toFixed(5)}`
+          : "$0",
     },
     {
       id: 2,
@@ -67,8 +67,8 @@ export default function Token() {
         error === "" &&
         tokenPrice &&
         totalSupply
-          ? `${(tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)}`
-          : "0",
+          ? `$${(tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)}`
+          : "$0",
     },
     {
       id: 3,
