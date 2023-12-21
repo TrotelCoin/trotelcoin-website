@@ -10,7 +10,7 @@ const tiers = [
     name: "Intermediate",
     id: "tier-intermediate",
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
-    priceMonthly: "10k TROTEL",
+    price: "10 000",
     description:
       "Are you ready to take your crypto knowledge to the next level?",
     features: [
@@ -24,7 +24,7 @@ const tiers = [
     name: "Expert",
     id: "tier-expert",
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
-    priceMonthly: "50k TROTEL",
+    price: "50 000",
     description: "Don't lose money ever again. Learn how to secure your funds.",
     features: [
       "All the benefits of intermediate level",
@@ -94,7 +94,7 @@ const Pricing = () => {
                       </h3>
                       <div className="mt-4 flex items-baseline gap-x-2">
                         <span className="text-5xl font-bold tracking-tight text-gray-900">
-                          {tier.priceMonthly}
+                          {tier.price} <span className="text-xs">TROTEL</span>
                         </span>
                       </div>
                       <p className="mt-6 text-base leading-7 text-gray-600">
