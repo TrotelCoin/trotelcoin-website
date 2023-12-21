@@ -129,7 +129,7 @@ export default function Header() {
             </Link>
             <a
               href="https://app.trotelcoin.com"
-              className="ml-auto rounded-full bg-black dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
+              className="ml-auto rounded-full bg-black dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
             >
               Launch app
             </a>
