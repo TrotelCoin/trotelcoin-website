@@ -84,7 +84,7 @@ export default function Header() {
               pathname === "/pricing"
                 ? "bg-white text-gray-900 hover:bg-gray-200 hover:text-gray-900"
                 : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-200 hover:text-gray-100 dark:hover:text-gray-900"
-            } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+            } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
           </Link>
@@ -127,12 +127,12 @@ export default function Header() {
                 height={100}
               />
             </Link>
-            <a
+            <Link
               href="https://app.trotelcoin.com"
               className="ml-auto rounded-full bg-black dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
             >
               Launch app
-            </a>
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-900 dark:text-gray-100"
