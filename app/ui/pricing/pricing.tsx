@@ -94,7 +94,7 @@ const Pricing = () => {
                       </h3>
                       <div className="mt-4 flex items-baseline gap-x-2">
                         <span className="text-5xl font-bold tracking-tight text-gray-900">
-                          {tier.price} <span className="text-sm">TROTEL</span>
+                          {tier.price} <span className="text-base">TROTEL</span>
                         </span>
                       </div>
                       <p className="mt-6 text-base leading-7 text-gray-600">
