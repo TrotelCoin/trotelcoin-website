@@ -35,3 +35,22 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+@keyframes rainbow {
+  0%,
+  100% {
+    background-color: #ffedd5;
+  }
+  25% {
+    background-color: #fce7f3;
+  }
+  50% {
+    background-color: #dbeafe;
+  }
+  75% {
+    background-color: #dcfce7;
+  }
+}
+.rainbow-button {
+  animation: rainbow 5s linear infinite;
+}

@@ -3,6 +3,8 @@ import {
   Cog6ToothIcon,
   CreditCardIcon,
 } from "@heroicons/react/20/solid";
+import "animate.css";
+import Link from "next/link";
 
 const features = [
   {
@@ -79,7 +81,7 @@ function classNames(...classes: string[]) {
 export default function GetStartedHero() {
   return (
     <>
-      <div className="isolate overflow-hidden">
+      <div className="isolate overflow-hidden animate__animated animate__fadeIn">
         <div className="relative bg-white dark:bg-black">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="py-24 sm:py-32">
@@ -111,13 +113,13 @@ export default function GetStartedHero() {
                         <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-200">
                           <p className="flex-auto">{feature.description}</p>
                           <p className="mt-6">
-                            <a
+                            <Link
                               href={feature.href}
                               target="_blank"
-                              className="text-sm font-semibold leading-6 text-blue-600 dark:text-blue-200 hover:text-blue-500 dark:hover:text-blue-100"
+                              className="text-sm font-semibold leading-6 text-blue-600 dark:text-blue-200 hover:text-blue-500 dark:hover:text-blue-300"
                             >
                               Learn more <span aria-hidden="true">→</span>
-                            </a>
+                            </Link>
                           </p>
                         </dd>
                       </div>

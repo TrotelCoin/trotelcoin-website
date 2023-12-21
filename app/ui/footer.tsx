@@ -35,6 +35,11 @@ const navigation = {
       href: "https://polygonscan.com/token/0x85057d5a8d063f9075ba963101d76352051675e5",
       target: "_blank",
     },
+    {
+      name: "Coinbrain",
+      href: "https://coinbrain.com/coins/poly-0x85057d5a8d063f9075ba963101d76352051675e5",
+      target: "_blank",
+    },
   ],
   socials: [
     {
@@ -84,10 +89,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer
-      className="bg-white dark:bg-black"
-      aria-labelledby="footer-heading"
-    >
+    <footer className="bg-white dark:bg-black" aria-labelledby="footer-heading">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -98,7 +100,7 @@ export default function Footer() {
               width={100}
               height={100}
             />
-            <p className="text-sm leading-6 text-gray-600 dark:text-gray-200">
+            <p className="text-sm leading-6 text-gray-700 dark:text-gray-200">
               Learn & earn crypto.
             </p>
             <div className="flex space-x-6">
@@ -107,7 +109,7 @@ export default function Footer() {
                   key={item.name}
                   href={item.href}
                   target={item.target}
-                  className="text-gray-400 hover:text-gray-500 dark:text-gray-200 dark:hover:text-gray-300"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -127,7 +129,7 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
@@ -165,7 +167,7 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
@@ -205,7 +207,7 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
-                        className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+                        className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
@@ -233,12 +235,12 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">{/* <Language></Language> */}</div>
+              <div className="mt-10 md:mt-0">{/* <Language /> */}</div>
             </div>
           </div>
         </div>
         <div className="mt-16 border-t border-gray-900/10 dark:border-gray-100/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500 dark:text-gray-300">
+          <p className="text-xs leading-5 text-gray-700 dark:text-gray-300">
             &copy; 2023 TrotelCoin. All rights reserved.
           </p>
         </div>

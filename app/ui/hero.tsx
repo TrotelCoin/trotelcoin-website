@@ -59,7 +59,7 @@ export default function Hero() {
         />
       </div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
             TrotelCoin helps you learning about web3.{" "}
             <Link
@@ -79,19 +79,19 @@ export default function Hero() {
             Discover the world of web3 by taking courses & answering quizzes.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <Link
               href="https://app.trotelcoin.com"
-              className="rounded-md bg-blue-600 hover:bg-blue-800 dark:bg-blue-200 px-3.5 py-2.5 text-sm font-semibold text-gray-100 dark:text-gray-900 shadow-sm dark:hover:bg-blue-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
+              className="rainbow-button rounded-full hover:shadow-lg hover:scale-105 duration-100 border border-black shadow-md bg-blue-600 hover:bg-blue-800 dark:bg-blue-200 px-4 py-2 text-sm font-semibold text-gray-900 dark:hover:bg-blue-300 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
             >
               Launch app
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://docs.trotelcoin.com"
               target="_blank"
               className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
             >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

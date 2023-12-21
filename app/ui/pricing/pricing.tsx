@@ -2,6 +2,8 @@
 
 import { CheckIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import "animate.css";
+import { useInView } from "react-intersection-observer";
 
 const tiers = [
   {
@@ -34,11 +36,15 @@ const tiers = [
 ];
 
 const Pricing = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <>
-      <div className="isolate overflow-hidden bg-black">
+      <div ref={ref} className="isolate overflow-hidden bg-black">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
-          <div className="mx-auto max-w-4xl">
+          <div className="mx-auto max-w-4xl animate__animated animate__fadeIn">
             <h2 className="text-base font-semibold leading-7 text-blue-200">
               Pricing
             </h2>
@@ -77,7 +83,7 @@ const Pricing = () => {
                 {tiers.map((tier) => (
                   <div
                     key={tier.id}
-                    className="flex flex-col justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
+                    className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
                   >
                     <div>
                       <h3
@@ -119,23 +125,25 @@ const Pricing = () => {
                     </Link>
                   </div>
                 ))}
-                <div className="flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
-                  <div className="lg:min-w-0 lg:flex-1">
-                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
-                      Are you eligible?
-                    </h3>
-                    <p className="mt-1 text-base leading-7 text-gray-700">
-                      Claim the NFT that corresponds to your TrotelCoin
-                      holdings.
-                    </p>
+                {inView ? (
+                  <div className="flex flex-col animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
+                    <div className="lg:min-w-0 lg:flex-1">
+                      <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
+                        Are you eligible?
+                      </h3>
+                      <p className="mt-1 text-base leading-7 text-gray-700">
+                        Claim the NFT that corresponds to your TrotelCoin
+                        holdings.
+                      </p>
+                    </div>
+                    <Link
+                      href="#"
+                      className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-600 hover:ring-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    >
+                      Coming soon <span aria-hidden="true">&rarr;</span>
+                    </Link>
                   </div>
-                  <Link
-                    href=""
-                    className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-600 hover:ring-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                  >
-                    Claim the NFT <span aria-hidden="true">&rarr;</span>
-                  </Link>
-                </div>
+                ) : null}
               </div>
             </div>
           </div>

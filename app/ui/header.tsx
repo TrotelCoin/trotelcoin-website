@@ -27,7 +27,7 @@ export default function Header() {
       }`}
     >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
+        className="mx-auto animate__animated animate__fadeIn flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -43,29 +43,39 @@ export default function Header() {
         <div
           className={`hidden lg:flex backdrop-blur-xl items-center ${
             pathname === "/pricing" ? "bg-white" : "bg-black dark:bg-white"
-          } py-2 px-3 rounded-xl lg:gap-x-12`}
+          } py-2 px-3 rounded-full lg:gap-x-8`}
         >
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`text-sm font-semibold leading-6 py-1 px-3 ${
-                pathname !== item.href && pathname === "/pricing"
-                  ? "text-gray-900 dark:text-gray-100"
-                  : null
-              } text-gray-100 dark:text-gray-900 ${
-                pathname === item.href && pathname === "/pricing"
-                  ? "bg-black dark:bg-white text-gray-100 dark:text-gray-900 shadow-lg py-1 px-3 rounded-lg"
-                  : null
-              } ${
-                pathname === item.href && pathname !== "/pricing"
-                  ? "text-gray-900 dark:text-gray-100 bg-white dark:bg-black shadow-lg rounded-lg"
-                  : null
-              }  `}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const defaultClasses =
+              "text-sm font-semibold leading-6 py-1 px-3 hover:shadow-lg rounded-full";
+            let dynamicClasses = "";
+
+            if (pathname !== item.href && pathname !== "/pricing") {
+              dynamicClasses =
+                "text-gray-100 dark:text-gray-900 hover:bg-white hover:text-gray-900 dark:hover:bg-black dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+            } else if (pathname !== item.href && pathname === "/pricing") {
+              dynamicClasses =
+                "text-gray-900 dark:text-gray-900 hover:bg-black hover:text-gray-100 dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+            } else if (pathname === item.href && pathname === "/pricing") {
+              dynamicClasses =
+                "bg-black dark:bg-black text-gray-100 dark:text-gray-100 hover:text-gray-100 hover:bg-black dark:hover:bg-black dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+            } else if (pathname === item.href && pathname !== "/pricing") {
+              dynamicClasses =
+                "text-gray-900 dark:text-gray-100 bg-white dark:bg-black shadow-lg rounded-full";
+            }
+
+            const combinedClasses = `${defaultClasses} ${dynamicClasses}`;
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={combinedClasses}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </div>
         <div className="flex flex-1 items-center justify-end gap-x-6">
           <Link
@@ -74,7 +84,7 @@ export default function Header() {
               pathname === "/pricing"
                 ? "bg-white text-gray-900 hover:bg-gray-200 hover:text-gray-900"
                 : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-200 hover:text-gray-100 dark:hover:text-gray-900"
-            } rounded-md  px-3 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+            } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
           </Link>
