@@ -23,7 +23,7 @@ export default function aboutHero() {
           <svg
             x="50%"
             y={-1}
-            className="overflow-visible fill-gray-50 dark:fill-gray-950"
+            className="overflow-visible fill-gray-50 dark:fill-black"
           >
             <path
               d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -54,18 +54,17 @@ export default function aboutHero() {
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
-                  We are changing the way you learn about crypto.
+                  We're changing the way you learn about crypto.
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
                   Earn rewards in TrotelCoin by acquiring knowledge about
-                  cryptocurrencies. The goal is to empower you to manage your
-                  finances and help you regain your financial independence.
+                  cryptocurrencies.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a
                     href="https://docs.trotelcoin.com"
                     target="_blank"
-                    className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
+                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
                   >
                     Learn more <span aria-hidden="true">→</span>
                   </a>
@@ -79,7 +78,7 @@ export default function aboutHero() {
                       width={500}
                       height={500}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-slate-950/5 object-cover shadow-lg"
+                      className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -91,7 +90,7 @@ export default function aboutHero() {
                       width={500}
                       height={500}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-slate-950/5 object-cover shadow-lg"
+                      className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -101,7 +100,7 @@ export default function aboutHero() {
                       width={500}
                       height={500}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-slate-950/5 object-cover shadow-lg"
+                      className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -113,7 +112,7 @@ export default function aboutHero() {
                       width={500}
                       height={500}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-slate-950/5 object-cover shadow-lg"
+                      className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>
@@ -123,7 +122,7 @@ export default function aboutHero() {
                       width={100}
                       height={100}
                       alt=""
-                      className="aspect-[2/3] w-full rounded-xl bg-slate-950/5 object-cover shadow-lg"
+                      className="aspect-[2/3] w-full rounded-xl bg-black/5 object-cover shadow-lg"
                     />
                     <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
                   </div>

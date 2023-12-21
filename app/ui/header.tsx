@@ -9,18 +9,8 @@ import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "Home", href: "/" },
-  {
-    name: "Governance",
-    href: "https://vote.trotelcoin.com/#/alexandretrotel.eth",
-    target: "_blank",
-  },
-  {
-    name: "Whitepaper",
-    href: "https://docs.trotelcoin.com/overview/whitepaper",
-    target: "_blank",
-  },
-  { name: "Buy TrotelCoin", href: "/buy" },
   { name: "Get started", href: "/get-started" },
+  { name: "Pricing", href: "/pricing" },
   { name: "About", href: "/about" },
 ];
 
@@ -33,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={`${
-        pathname === "/get-started" ? "bg-slate-950" : "bg-white dark:bg-slate-950"
+        pathname === "/pricing" ? "bg-black" : "bg-white dark:bg-black"
       }`}
     >
       <nav
@@ -50,45 +40,56 @@ export default function Header() {
             height={100}
           />
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div
+          className={`hidden lg:flex backdrop-blur-xl items-center ${
+            pathname === "/pricing" ? "bg-white" : "bg-black dark:bg-white"
+          } py-2 px-3 rounded-xl lg:gap-x-12`}
+        >
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              target={item.target}
-              className={`text-sm font-semibold leading-6 ${
-                pathname === "/get-started"
-                  ? "text-gray-100"
-                  : "text-gray-900 dark:text-gray-100"
-              } `}
+              className={`text-sm font-semibold leading-6 py-1 px-3 ${
+                pathname !== item.href && pathname === "/pricing"
+                  ? "text-gray-900 dark:text-gray-100"
+                  : null
+              } text-gray-100 dark:text-gray-900 ${
+                pathname === item.href && pathname === "/pricing"
+                  ? "bg-black dark:bg-white text-gray-100 dark:text-gray-900 shadow-lg py-1 px-3 rounded-lg"
+                  : null
+              } ${
+                pathname === item.href && pathname !== "/pricing"
+                  ? "text-gray-900 dark:text-gray-100 bg-white dark:bg-black shadow-lg rounded-lg"
+                  : null
+              }  `}
             >
               {item.name}
             </Link>
           ))}
         </div>
         <div className="flex flex-1 items-center justify-end gap-x-6">
-          <a
+          <Link
             href="https://app.trotelcoin.com"
             className={`${
-              pathname === "/get-started"
-                ? "bg-white text-gray-900 hover:border-white hover:bg-gray-100 hover:text-gray-900"
-                : "bg-slate-950 dark:bg-white text-gray-100 dark:text-gray-900 hover:border-black dark:hover:border-white hover:bg-slate-900 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-900"
+              pathname === "/pricing"
+                ? "bg-white text-gray-900 hover:bg-gray-200 hover:text-gray-900"
+                : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-200 hover:text-gray-100 dark:hover:text-gray-900"
             } rounded-md  px-3 py-2 text-sm font-semibold shadow-sm duration-200 border border-transparent hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
             type="button"
             className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ${
-              pathname === "/get-started" ? "text-gray-300" : "text-gray-700"
+              pathname === "/pricing" ? "text-gray-300" : "text-gray-700"
             }`}
             onClick={() => setMobileMenuOpen(true)}
           >
             <Bars3Icon
               className={`h-6 w-6 ${
-                pathname === "/get-started"
+                pathname === "/pricing"
                   ? "text-gray-100"
                   : "text-gray-900 dark:text-gray-100"
               }`}
@@ -104,7 +105,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-slate-950 px-6 py-6 sm:max-w-sm sm:ring-1 ring-gray-900/10 dark:ring-gray-100/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 ring-gray-900/10 dark:ring-gray-100/10">
           <div className="flex items-center gap-x-6">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
@@ -118,7 +119,7 @@ export default function Header() {
             </Link>
             <a
               href="https://app.trotelcoin.com"
-              className="ml-auto rounded-md bg-slate-950 dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
+              className="ml-auto rounded-md bg-black dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:focus-visible:outline-blue-200"
             >
               Launch app
             </a>
@@ -137,7 +138,6 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    target={item.target}
                     onClick={closeMenu}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100"
                   >

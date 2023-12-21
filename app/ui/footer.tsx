@@ -15,8 +15,8 @@ const navigation = {
       href: "https://docs.trotelcoin.com/overview/whitepaper",
       target: "_blank",
     },
-    { name: "Buy TrotelCoin", href: "/buy" },
     { name: "Get started", href: "/get-started" },
+    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
   ],
   ecosystem: [
@@ -84,7 +84,10 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-slate-950" aria-labelledby="footer-heading">
+    <footer
+      className="bg-white dark:bg-black"
+      aria-labelledby="footer-heading"
+    >
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -126,7 +129,27 @@ export default function Footer() {
                         target={item.target}
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                       >
-                        {item.name}
+                        <div className="flex items-center">
+                          {item.name}{" "}
+                          {item.target === "_blank" ? (
+                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-3 h-3"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                                />
+                              </svg>
+                            </span>
+                          ) : null}
+                        </div>
                       </Link>
                     </li>
                   ))}
@@ -144,7 +167,27 @@ export default function Footer() {
                         target={item.target}
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                       >
-                        {item.name}
+                        <div className="flex items-center">
+                          {item.name}{" "}
+                          {item.target === "_blank" ? (
+                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-3 h-3"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                                />
+                              </svg>
+                            </span>
+                          ) : null}
+                        </div>
                       </Link>
                     </li>
                   ))}
@@ -164,7 +207,27 @@ export default function Footer() {
                         target={item.target}
                         className="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                       >
-                        {item.name}
+                        <div className="flex items-center">
+                          {item.name}{" "}
+                          {item.target === "_blank" ? (
+                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-3 h-3"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                                />
+                              </svg>
+                            </span>
+                          ) : null}
+                        </div>
                       </Link>
                     </li>
                   ))}
