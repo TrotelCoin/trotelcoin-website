@@ -81,7 +81,7 @@ export default function Features() {
                       {feature.unavailable ? (
                         <div className="animate-pulse">
                           <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
-                            Beta
+                            Not available yet
                           </span>
                         </div>
                       ) : null}
