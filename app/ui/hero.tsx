@@ -63,7 +63,7 @@ export default function Hero() {
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
             TrotelCoin helps you learning about web3.{" "}
             <Link
-              href="/buy"
+              href="https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5"
               className="font-semibold text-blue-600 dark:text-blue-200"
             >
               <span className="absolute inset-0" aria-hidden="true" />

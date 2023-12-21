@@ -91,35 +91,38 @@ export default function Token() {
   return (
     <>
       <div className="bg-white dark:bg-black py-24 sm:py-32">
-        {inView ? (
-          <div ref={ref} className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
-            <div className="mx-auto max-w-2xl lg:max-w-none">
-              <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-                  A growing ecosystem.
-                </h2>
-                <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
-                  TrotelCoin leads to a growing ecosystem of learners.
-                </p>
+        {" "}
+        <div ref={ref}>
+          {inView ? (
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
+              <div className="mx-auto max-w-2xl lg:max-w-none">
+                <div className="text-center">
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+                    A growing ecosystem.
+                  </h2>
+                  <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+                    TrotelCoin leads to a growing ecosystem of learners.
+                  </p>
+                </div>
+                <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
+                  {stats.map((stat) => (
+                    <div
+                      key={stat.id}
+                      className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
+                    >
+                      <dt className="text-sm font-semibold leading-6 text-gray-300">
+                        {stat.name}
+                      </dt>
+                      <dd className="order-first text-3xl font-semibold tracking-tight text-gray-100">
+                        {stat.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
-              <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat) => (
-                  <div
-                    key={stat.id}
-                    className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
-                  >
-                    <dt className="text-sm font-semibold leading-6 text-gray-300">
-                      {stat.name}
-                    </dt>
-                    <dd className="order-first text-3xl font-semibold tracking-tight text-gray-100">
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
     </>
   );
