@@ -38,14 +38,13 @@ const tiers = [
 const Pricing = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    delay: 500,
   });
 
   return (
     <>
       <div ref={ref} className="isolate overflow-hidden bg-black">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
-          <div className="mx-auto max-w-4xl animate__animated animate__fadeIn">
+          <div className="mx-auto max-w-4xl animate__animated animate__fadeIn animate__slow">
             <h2 className="text-base font-semibold leading-7 text-blue-200">
               Pricing
             </h2>
@@ -84,7 +83,7 @@ const Pricing = () => {
                 {tiers.map((tier) => (
                   <div
                     key={tier.id}
-                    className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
+                    className="flex flex-col animate__animated animate__bounceIn animate__slow justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
                   >
                     <div>
                       <h3
@@ -127,7 +126,7 @@ const Pricing = () => {
                   </div>
                 ))}
                 {inView ? (
-                  <div className="flex flex-col animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
+                  <div className="flex flex-col animate__animated animate__bounceIn animate__slow items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
                     <div className="lg:min-w-0 lg:flex-1">
                       <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
                         Are you eligible?

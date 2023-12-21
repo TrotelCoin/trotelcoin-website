@@ -4,7 +4,7 @@ import "animate.css";
 export default function aboutHero() {
   return (
     <main>
-      <div className="relative isolate animate__animated animate__fadeIn">
+      <div className="relative isolate animate__animated animate__fadeIn animate__slow">
         <svg
           className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 dark:stroke-gray-800 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           aria-hidden="true"

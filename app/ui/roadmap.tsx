@@ -36,14 +36,13 @@ const timeline = [
 export default function Roadmap() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    delay: 500,
   });
 
   return (
     <>
       <div ref={ref} className="bg-white dark:bg-black py-24 sm:py-32">
         {inView ? (
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
               Roadmap.
             </h2>
