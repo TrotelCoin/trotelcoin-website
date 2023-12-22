@@ -44,7 +44,7 @@ const Pricing = () => {
     <>
       <div className="isolate overflow-hidden bg-black">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
-          <div className="mx-auto max-w-4xl animate__animated animate__fadeIn animate__slow">
+          <div className="mx-auto max-w-4xl animate__animated animate__fadeIn">
             <h2 className="text-base font-semibold leading-7 text-blue-200">
               Pricing
             </h2>
@@ -83,7 +83,7 @@ const Pricing = () => {
                 {tiers.map((tier) => (
                   <div
                     key={tier.id}
-                    className="flex flex-col animate__animated animate__bounceIn animate__slow justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
+                    className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
                   >
                     <div>
                       <h3
