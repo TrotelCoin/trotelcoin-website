@@ -6,10 +6,11 @@ import "animate.css";
 
 const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
 
-export default function Token() {
+export default function Ecosystem() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [error, setError] = useState<string>("");
+  const [coursesCount, setCoursesCount] = useState<number>(0);
   const [tokenRewards, setTokenRewards] = useState<string>("0");
 
   const { ref, inView } = useInView({
@@ -45,8 +46,29 @@ export default function Token() {
       }
     };
 
+    const fetchCoursesCount = async () => {
+      try {
+        const response = await fetch(
+          "https://app.trotelcoin.com/api/courses/coursesCount",
+          {
+            cache: "no-store",
+            method: "GET",
+            mode: "no-cors",
+          }
+        );
+        const coursesCount = await response.json();
+        console.log(coursesCount);
+        setCoursesCount(coursesCount);
+      } catch (error) {
+        setError("Error fetching courses count");
+        setCoursesCount(0);
+        console.error("Error fetching courses count:", error);
+      }
+    };
+
     fetchTokenPrice();
     fetchTotalSupply();
+    fetchCoursesCount();
   }, []);
 
   const stats = [
@@ -54,19 +76,13 @@ export default function Token() {
       id: 1,
       name: "TrotelCoin Price",
       value:
-        tokenPrice !== null && error === "" && tokenPrice
-          ? `$${tokenPrice?.toFixed(5)}`
-          : "$0",
+        tokenPrice !== null && tokenPrice ? `$${tokenPrice?.toFixed(5)}` : "$0",
     },
     {
       id: 2,
       name: "Market cap",
       value:
-        tokenPrice !== null &&
-        totalSupply !== null &&
-        error === "" &&
-        tokenPrice &&
-        totalSupply
+        tokenPrice !== null && totalSupply !== null && tokenPrice && totalSupply
           ? `$${(tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)}`
           : "$0",
     },
@@ -85,7 +101,14 @@ export default function Token() {
           </span>
         ),
     },
-    { id: 4, name: "Courses", value: "0" }, // add api call
+    {
+      id: 4,
+      name: "Courses",
+      value:
+        coursesCount !== null && coursesCount
+          ? `${coursesCount?.toString()}`
+          : "0",
+    },
   ];
 
   return (

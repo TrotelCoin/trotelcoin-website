@@ -1,5 +1,5 @@
 import Hero from "@/app/ui/hero";
-import Token from "@/app/ui/token";
+import Ecosystem from "@/app/ui/ecosystem";
 import Roadmap from "@/app/ui/roadmap";
 import Powered from "@/app/ui/powered";
 import Features from "@/app/ui/features";
@@ -10,7 +10,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
-        <Token />
+        <Ecosystem />
         <Roadmap />
         <Powered />
       </main>
