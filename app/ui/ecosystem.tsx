@@ -52,8 +52,6 @@ export default function Ecosystem() {
           "https://app.trotelcoin.com/api/courses/coursesCount",
           {
             cache: "no-store",
-            method: "GET",
-            mode: "no-cors",
           }
         );
         const coursesCount = await response.json();
