@@ -23,6 +23,9 @@ export default function Ecosystem() {
         const response = await fetch("/api/moralis/tokenPrice", {
           cache: "no-store",
         });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
         const data = await response.json();
         setTokenPrice(data.tokenPrice);
       } catch (error) {
@@ -37,6 +40,9 @@ export default function Ecosystem() {
         const response = await fetch("/api/totalSupply", {
           cache: "no-store",
         });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
         const totalSupply = await response.json();
         setTotalSupply(totalSupply);
       } catch (error) {
@@ -54,9 +60,12 @@ export default function Ecosystem() {
             cache: "no-store",
           }
         );
-        const coursesCount = await response.json();
-        console.log(coursesCount);
-        setCoursesCount(coursesCount);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const { totalCourses } = await response.json();
+        console.log(totalCourses);
+        setCoursesCount(totalCourses);
       } catch (error) {
         setError("Error fetching courses count");
         setCoursesCount(0);
