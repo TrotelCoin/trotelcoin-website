@@ -130,7 +130,7 @@ const Pricing = () => {
                   className="lg:col-span-2"
                 >
                   {inView ? (
-                    <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn animate__slow items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
+                    <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
                       <div className="lg:min-w-0 lg:flex-1">
                         <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
                           Are you eligible?

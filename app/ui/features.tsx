@@ -47,15 +47,19 @@ const features = [
 ];
 
 export default function Features() {
-  const { ref, inView } = useInView({
+  const { ref: ref1, inView: inView1 } = useInView({
+    triggerOnce: true,
+  });
+
+  const { ref: ref2, inView: inView2 } = useInView({
     triggerOnce: true,
   });
 
   return (
     <div className="bg-white dark:bg-black py-24 sm:py-32">
-      <div ref={ref}>
-        {inView ? (
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
+      <div ref={ref1}>
+        {inView1 ? (
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
               <div>
                 <h2 className="text-base font-semibold leading-7 text-blue-600 dark:text-blue-200">
@@ -72,21 +76,29 @@ export default function Features() {
               <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-gray-700 dark:text-gray-300 sm:grid-cols-2 lg:gap-y-16">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative pl-9">
-                    <dt className="font-semibold text-gray-900 dark:text-gray-100">
-                      <CheckIcon
-                        className="absolute left-0 top-1 h-5 w-5 text-blue-500 dark:text-blue-100"
-                        aria-hidden="true"
-                      />
-                      <div className="flex items-center gap-2">
-                        {feature.name}{" "}
-                        {feature.unavailable ? (
-                          <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
-                            Not available yet
-                          </span>
-                        ) : null}
-                      </div>
-                    </dt>
-                    <dd className="mt-2">{feature.description}</dd>
+                    <div ref={ref2}>
+                      {inView2 ? (
+                        <>
+                          <dt className="font-semibold text-gray-900 dark:text-gray-100">
+                            <div className="animate__animated animate__fadeIn">
+                              <CheckIcon
+                                className="absolute left-0 top-1 h-5 w-5 text-blue-500 dark:text-blue-100"
+                                aria-hidden="true"
+                              />
+                              <div className="flex items-center gap-2">
+                                {feature.name}{" "}
+                                {feature.unavailable ? (
+                                  <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
+                                    Not available yet
+                                  </span>
+                                ) : null}
+                              </div>
+                            </div>
+                          </dt>
+                          <dd className="mt-2">{feature.description}</dd>
+                        </>
+                      ) : null}
+                    </div>
                   </div>
                 ))}
               </dl>

@@ -46,7 +46,7 @@ export default function FAQ() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
           <div ref={ref}>
             {inView ? (
-              <div className="mx-auto max-w-4xl divide-y divide-gray-900/10 dark:divide-gray-100/10 animate__animated animate__fadeIn animate__slow">
+              <div className="mx-auto max-w-4xl divide-y divide-gray-900/10 dark:divide-gray-100/10 animate__animated animate__fadeIn">
                 <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-gray-100">
                   FAQ
                 </h2>

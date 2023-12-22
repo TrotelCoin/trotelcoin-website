@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Link from "next/link";
 import "animate.css";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   const typedTextRef = useRef(null);
@@ -45,7 +46,13 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative isolate px-6 lg:px-8 animate__animated animate__fadeIn animate__slow">
+    <div className="relative isolate px-6 lg:px-8 animate__animated animate__fadeIn">
+      <div className="hidden lg:block absolute pointer-events-none -z-10 top-24 left-24 max-w-sm w-full h-1/2 overflow-hidden">
+        <Spline scene="https://prod.spline.design/46jF1kpho7klY-qe/scene.splinecode" />
+      </div>
+      <div className="hidden lg:block absolute pointer-events-none -z-10 bottom-2 right-32 max-w-sm w-full h-1/2 overflow-hidden">
+        <Spline scene="https://prod.spline.design/EfLILeQKZCqaZ-9b/scene.splinecode" />
+      </div>
       <div
         className="absolute pointer-events-none inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
@@ -59,7 +66,7 @@ export default function Hero() {
         />
       </div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn animate__slow">
+        <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn">
           <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
             TrotelCoin helps you learning about web3.{" "}
             <Link
