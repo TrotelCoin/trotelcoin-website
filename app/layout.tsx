@@ -61,10 +61,10 @@ export default function RootLayout({
           <div className="hidden lg:block">
             <AnimatedCursor
               color="59, 130, 246"
-              innerSize={12}
+              innerSize={24}
               innerScale={1.6}
-              outerSize={6}
-              outerScale={0.8}
+              outerSize={24}
+              outerScale={2}
               showSystemCursor={true}
             />
           </div>
