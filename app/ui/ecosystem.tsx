@@ -64,7 +64,6 @@ export default function Ecosystem() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const { totalCourses } = await response.json();
-        console.log(totalCourses);
         setCoursesCount(totalCourses);
       } catch (error) {
         setError("Error fetching courses count");
