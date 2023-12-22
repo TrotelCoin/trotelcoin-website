@@ -47,12 +47,14 @@ export default function Hero() {
 
   return (
     <div className="relative isolate px-6 lg:px-8 animate__animated animate__fadeIn">
+      {/*
       <div className="hidden lg:block absolute pointer-events-none -z-10 top-24 left-24 max-w-sm w-full h-1/2 overflow-hidden">
         <Spline scene="https://prod.spline.design/46jF1kpho7klY-qe/scene.splinecode" />
       </div>
       <div className="hidden lg:block absolute pointer-events-none -z-10 bottom-2 right-32 max-w-sm w-full h-1/2 overflow-hidden">
         <Spline scene="https://prod.spline.design/EfLILeQKZCqaZ-9b/scene.splinecode" />
       </div>
+      */}
       <div
         className="absolute pointer-events-none inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"
