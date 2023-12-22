@@ -58,7 +58,15 @@ export default function RootLayout({
         <body
           className={`bg-white dark:bg-black ${poppins.className} antialiased`}
         >
-          <AnimatedCursor color="59, 130, 246" innerSize={12} innerScale={1.6} outerSize={6} outerScale={0.8} />
+          <div className="hidden lg:block">
+            <AnimatedCursor
+              color="59, 130, 246"
+              innerSize={12}
+              innerScale={1.6}
+              outerSize={6}
+              outerScale={0.8}
+            />
+          </div>
           <Header />
           {children}
           <Analytics />
