@@ -39,16 +39,16 @@ a:hover {
 @keyframes rainbow {
   0%,
   100% {
-    background-color: #ffedd5;
+    background-color: #fb923c;
   }
   25% {
-    background-color: #fce7f3;
+    background-color: #f472b6;
   }
   50% {
-    background-color: #dbeafe;
+    background-color: #60a5fa;
   }
   75% {
-    background-color: #dcfce7;
+    background-color: #4ade80;
   }
 }
 .rainbow-button {
