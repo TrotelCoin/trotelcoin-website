@@ -142,7 +142,18 @@ export default function Ecosystem() {
                       <dt className="text-sm font-semibold leading-6 text-gray-300">
                         {stat.name}
                       </dt>
-                      <dd className="order-first text-3xl font-semibold tracking-tight text-gray-100">
+                      <dd
+                        className={`order-first text-3xl font-semibold tracking-tight text-gray-100 ${
+                          stat.value === "0" ||
+                          stat.value ===
+                          (
+                            <span>
+                              0 <span className="text-xs">TROTEL</span>
+                            </span>
+                          ) ||
+                          (stat.value === "$0" && "animate-pulse")
+                        }`}
+                      >
                         {stat.value}
                       </dd>
                     </div>
