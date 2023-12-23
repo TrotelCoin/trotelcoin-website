@@ -65,7 +65,7 @@ export default function RootLayout({
               innerScale={0.5}
               outerSize={24}
               outerScale={2}
-              showSystemCursor={true}
+              showSystemCursor={false}
             />
           </div>
           <Header />
