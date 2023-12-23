@@ -144,14 +144,15 @@ export default function Ecosystem() {
                       </dt>
                       <dd
                         className={`order-first text-3xl font-semibold tracking-tight text-gray-100 ${
-                          stat.value === "0" ||
-                          stat.value ===
-                          (
-                            <span>
-                              0 <span className="text-xs">TROTEL</span>
-                            </span>
-                          ) ||
-                          (stat.value === "$0" && "animate-pulse")
+                          (stat.value === "0" ||
+                            stat.value ===
+                            (
+                              <span>
+                                0 <span className="text-xs">TROTEL</span>
+                              </span>
+                            ) ||
+                            stat.value === "$0") &&
+                          "animate-pulse"
                         }`}
                       >
                         {stat.value}
