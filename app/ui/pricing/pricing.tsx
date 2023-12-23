@@ -27,7 +27,7 @@ const tiers = [
     features: [
       "All the benefits of intermediate level",
       "Early access to experimental features and projects",
-      "Join an exclusive crypto community to network, collaborate on projects and explore TrotelCoin projects",
+      "Join an exclusive crypto community to network and more",
     ],
   },
 ];
