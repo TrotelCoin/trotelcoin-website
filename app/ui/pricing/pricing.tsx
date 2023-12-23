@@ -14,8 +14,6 @@ const tiers = [
     description:
       "Are you ready to take your crypto knowledge to the next level?",
     features: [
-      "Free access to all courses and learning resources",
-      "Make governance decisions based on the amount of TrotelCoin in your possession",
       "Access to more courses providing in-depth content and additional tutorials",
       "Gamification features to enhance your learning experience",
     ],
@@ -28,7 +26,6 @@ const tiers = [
     description: "Don't lose money ever again. Learn how to secure your funds.",
     features: [
       "All the benefits of intermediate level",
-      "Access to more courses providing in-depth content and additional tutorials",
       "Early access to experimental features and projects",
       "Join an exclusive crypto community to network, collaborate on projects and explore TrotelCoin projects",
     ],
@@ -125,10 +122,7 @@ const Pricing = () => {
                     </Link>
                   </div>
                 ))}
-                <div
-                  ref={ref}
-                  className="lg:col-span-2"
-                >
+                <div ref={ref} className="lg:col-span-2">
                   {inView ? (
                     <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
                       <div className="lg:min-w-0 lg:flex-1">
@@ -141,10 +135,10 @@ const Pricing = () => {
                         </p>
                       </div>
                       <Link
-                        href="#"
+                        href="https://app.trotelcoin.com/premium"
                         className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-600 hover:ring-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                       >
-                        Coming soon <span aria-hidden="true">&rarr;</span>
+                        Claim now <span aria-hidden="true">&rarr;</span>
                       </Link>
                     </div>
                   ) : null}
