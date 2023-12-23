@@ -80,7 +80,7 @@ export default function Ecosystem() {
   const stats = [
     {
       id: 1,
-      name: "TrotelCoin Price",
+      name: "TrotelCoin price",
       value:
         tokenPrice !== null && tokenPrice ? `$${tokenPrice?.toFixed(5)}` : "$0",
     },
