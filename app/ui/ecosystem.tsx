@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
+import CountUp from "react-countup";
 
 const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
 
@@ -82,25 +83,60 @@ export default function Ecosystem() {
       id: 1,
       name: "TrotelCoin price",
       value:
-        tokenPrice !== null && tokenPrice ? `$${tokenPrice?.toFixed(5)}` : "$0",
+        tokenPrice !== null && tokenPrice ? (
+          <>
+            $
+            <CountUp
+              start={0}
+              end={parseFloat(tokenPrice?.toFixed(5))}
+              duration={5}
+              decimal="."
+              decimals={5}
+            />
+          </>
+        ) : (
+          "$0"
+        ),
     },
     {
       id: 2,
       name: "Market cap",
       value:
-        tokenPrice !== null && totalSupply !== null && tokenPrice && totalSupply
-          ? `$${(tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)}`
-          : "$0",
+        tokenPrice !== null &&
+        totalSupply !== null &&
+        tokenPrice &&
+        totalSupply ? (
+          <>
+            $
+            <CountUp
+              start={0}
+              end={parseFloat(
+                (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)
+              )}
+              duration={5}
+              decimal="."
+              decimals={0}
+            />
+          </>
+        ) : (
+          "$0"
+        ),
     },
     {
       id: 3,
       name: "Rewards distributed",
       value:
         tokenRewards !== "0" ? (
-          <span>
-            {`${parseFloat(tokenRewards).toFixed(0)}`}{" "}
+          <>
+            <CountUp
+              start={0}
+              end={parseFloat(parseFloat(tokenRewards).toFixed(2))}
+              duration={5}
+              decimal="."
+              decimals={2}
+            />
             <span className="text-xs">TROTEL</span>
-          </span>
+          </>
         ) : (
           <span>
             0 <span className="text-xs">TROTEL</span>
@@ -111,9 +147,19 @@ export default function Ecosystem() {
       id: 4,
       name: "Courses",
       value:
-        coursesCount !== null && coursesCount
-          ? `${coursesCount?.toString()}`
-          : "0",
+        coursesCount !== null && coursesCount ? (
+          <>
+            <CountUp
+              start={0}
+              end={coursesCount}
+              duration={5}
+              decimal="."
+              decimals={0}
+            />
+          </>
+        ) : (
+          "0"
+        ),
     },
   ];
 

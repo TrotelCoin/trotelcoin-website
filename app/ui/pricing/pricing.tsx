@@ -4,13 +4,14 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import "animate.css";
 import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup";
 
 const tiers = [
   {
     name: "Intermediate",
     id: "tier-intermediate",
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
-    price: "10,000",
+    price: 10000,
     description:
       "Are you ready to take your crypto knowledge to the next level?",
     features: [
@@ -22,7 +23,7 @@ const tiers = [
     name: "Expert",
     id: "tier-expert",
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
-    price: "50,000",
+    price: 50000,
     description: "Don't lose money ever again. Learn how to secure your funds.",
     features: [
       "All the benefits of intermediate level",
@@ -91,7 +92,14 @@ const Pricing = () => {
                       </h3>
                       <div className="mt-4 flex items-baseline gap-x-2">
                         <span className="text-5xl font-bold tracking-tight text-gray-900">
-                          {tier.price} <span className="text-base">TROTEL</span>
+                          <CountUp
+                            start={0}
+                            end={tier.price}
+                            duration={5}
+                            decimal="."
+                            decimals={0}
+                          />{" "}
+                          <span className="text-base">TROTEL</span>
                         </span>
                       </div>
                       <p className="mt-6 text-base leading-7 text-gray-600">
