@@ -20,7 +20,6 @@ export default async function handler(
       res.status(500).json({ error: "Invalid response from the API" });
     }
   } catch (error) {
-    console.error("Error fetching data:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 }

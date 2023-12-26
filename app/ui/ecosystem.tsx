@@ -1,20 +1,18 @@
 "use client";
 
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
 import CountUp from "react-countup";
 import { useContractRead } from "wagmi";
-import { polygon } from "viem/chains";
-import { trotelCoinAddress, trotelCoinLearningAddress } from "@/data/addresses";
+import { polygon } from "wagmi/chains";
+import { trotelCoinLearningAddress } from "@/data/addresses";
 import trotelCoinLearningABI from "@/abi/trotelCoinLearningABI";
 
 export default function Ecosystem() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
-  const [error, setError] = useState<string>("");
   const [coursesCount, setCoursesCount] = useState<number>(0);
-  const [tokenRewards, setTokenRewards] = useState<string>("0");
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -24,15 +22,9 @@ export default function Ecosystem() {
     chainId: polygon.id,
     address: trotelCoinLearningAddress,
     abi: trotelCoinLearningABI,
-    functionName: "totalRewards",
+    functionName: "getTotalRewards",
     watch: true,
   });
-
-  useEffect(() => {
-    if (tokenRewardsData) {
-      setTokenRewards(parseFloat(tokenRewardsData as string).toString());
-    }
-  }, [tokenRewardsData]);
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
@@ -46,9 +38,7 @@ export default function Ecosystem() {
         const data = await response.json();
         setTokenPrice(data.tokenPrice);
       } catch (error) {
-        setError("Error fetching token information");
         setTokenPrice(0);
-        console.error("Error fetching token information:", error);
       }
     };
 
@@ -63,9 +53,7 @@ export default function Ecosystem() {
         const totalSupply = await response.json();
         setTotalSupply(totalSupply);
       } catch (error) {
-        setError("Error fetching token information");
         setTotalSupply(0);
-        console.error("Error fetching token information:", error);
       }
     };
 
@@ -83,9 +71,7 @@ export default function Ecosystem() {
         const { totalCourses } = await response.json();
         setCoursesCount(totalCourses);
       } catch (error) {
-        setError("Error fetching courses count");
         setCoursesCount(0);
-        console.error("Error fetching courses count:", error);
       }
     };
 
@@ -142,16 +128,16 @@ export default function Ecosystem() {
       id: 3,
       name: "Rewards distributed",
       value:
-        tokenRewards !== "0" ? (
+        tokenRewardsData && tokenRewardsData !== null ? (
           <>
             <CountUp
               start={0}
-              end={parseFloat(parseFloat(tokenRewards).toFixed(2))}
+              end={parseFloat(tokenRewardsData as string) * 1e-18}
               duration={5}
               decimal="."
-              decimals={2}
+              decimals={0}
             />
-            <span className="text-xs">TROTEL</span>
+            <span className="text-xs ml-2">TROTEL</span>
           </>
         ) : (
           <span>
