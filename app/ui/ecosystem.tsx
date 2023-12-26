@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, use } from "react";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
 import CountUp from "react-countup";
-
-const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
+import { useContractRead } from "wagmi";
+import { polygon } from "viem/chains";
+import { trotelCoinAddress, trotelCoinLearningAddress } from "@/data/addresses";
+import trotelCoinLearningABI from "@/abi/trotelCoinLearningABI";
 
 export default function Ecosystem() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
@@ -17,6 +19,20 @@ export default function Ecosystem() {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
+
+  const { data: tokenRewardsData } = useContractRead({
+    chainId: polygon.id,
+    address: trotelCoinLearningAddress,
+    abi: trotelCoinLearningABI,
+    functionName: "totalRewards",
+    watch: true,
+  });
+
+  useEffect(() => {
+    if (tokenRewardsData) {
+      setTokenRewards(parseFloat(tokenRewardsData as string).toString());
+    }
+  }, [tokenRewardsData]);
 
   useEffect(() => {
     const fetchTokenPrice = async () => {

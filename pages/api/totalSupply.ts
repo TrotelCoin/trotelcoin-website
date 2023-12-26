@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const trotelCoinAddress = "0x85057d5a8d063f9075Ba963101D76352051675E5";
+import { trotelCoinAddress } from "@/data/addresses";
 
 export default async function handler(
   req: NextApiRequest,
