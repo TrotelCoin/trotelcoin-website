@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 import { useContractRead } from "wagmi";
 import { polygon } from "wagmi/chains";
 import { trotelCoinLearningAddress } from "@/data/addresses";
-import trotelCoinLearningImplementationABI from "@/abi/trotelCoinLearningABI";
+import trotelCoinLearningABI from "@/abi/trotelCoinLearningABI";
 
 export default function Ecosystem() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
@@ -21,7 +21,7 @@ export default function Ecosystem() {
   const { data: tokenRewardsData } = useContractRead({
     chainId: polygon.id,
     address: trotelCoinLearningAddress,
-    abi: trotelCoinLearningImplementationABI,
+    abi: trotelCoinLearningABI,
     functionName: "getTotalRewards",
     watch: true,
   });
