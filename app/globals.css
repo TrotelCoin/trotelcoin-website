@@ -36,21 +36,31 @@ a:hover {
   text-decoration: none;
 }
 
-@keyframes rainbow {
+/* Style for the div */
+.rainbow-border {
+  border: 3px solid transparent;
+  animation: rainbowBorder 3s linear infinite;
+}
+
+/* Keyframes for the animation */
+@keyframes rainbowBorder {
   0%,
   100% {
-    background-color: #fb923c;
+    border: 3px solid #f87171;
   }
-  25% {
-    background-color: #f472b6;
+  16.66% {
+    border: 3px solid #fb923c;
+  }
+  33.33% {
+    border: 3px solid #facc15;
   }
   50% {
-    background-color: #60a5fa;
+    border: 3px solid #4ade80;
   }
-  75% {
-    background-color: #4ade80;
+  66.66% {
+    border: 3px solid #60a5fa;
   }
-}
-.rainbow-button {
-  animation: rainbow 4s linear infinite;
+  83.33% {
+    border: 3px solid #818cf8;
+  }
 }

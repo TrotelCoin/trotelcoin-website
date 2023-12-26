@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="https://app.trotelcoin.com"
-              className="rainbow-button rounded-full hover:shadow-lg hover:scale-105 duration-100 border border-black shadow-md bg-blue-600 hover:bg-blue-800 dark:bg-blue-200 px-4 py-2 text-sm font-semibold text-gray-900 dark:hover:bg-blue-300 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
+              className="rainbow-border rounded-full hover:shadow-lg hover:scale-105 duration-100 shadow-md bg-white dark:bg-black px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
             >
               Launch app
             </Link>
