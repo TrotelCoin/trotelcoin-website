@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { bsc } from "wagmi/chains";
+import { polygon } from "wagmi/chains";
 import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi/react";
 import { WagmiConfig } from "wagmi";
 
 // Define supported blockchain chains and project ID
-const chains = [bsc];
+const chains = [polygon];
 const projectId = "b0d3d1eb9c28fb7899eba1cff830b2b1";
 export const metadata = {
   title: "TrotelCoin App",

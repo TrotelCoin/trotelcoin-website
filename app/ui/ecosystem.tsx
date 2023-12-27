@@ -20,8 +20,8 @@ export default function Ecosystem() {
 
   const { data: tokenRewardsData } = useContractRead({
     chainId: polygon.id,
-    address: trotelCoinLearningAddress,
     abi: trotelCoinLearningABI,
+    address: trotelCoinLearningAddress,
     functionName: "totalRewards",
     watch: true,
   });
