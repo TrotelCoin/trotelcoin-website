@@ -22,7 +22,7 @@ export default function Ecosystem() {
     chainId: polygon.id,
     address: trotelCoinLearningAddress,
     abi: trotelCoinLearningABI,
-    functionName: "getTotalRewards",
+    functionName: "totalRewards",
     watch: true,
   });
 
