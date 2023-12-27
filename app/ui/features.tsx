@@ -27,6 +27,12 @@ const features = [
     unavailable: true,
   },
   {
+    name: "Gamification",
+    description: "Earn badges and XPs by completing courses and quizzes.",
+    beta: true,
+    unavailable: false,
+  },
+  {
     name: "Personalized",
     description: "Craft your own learning journey based on your interests.",
     beta: false,
@@ -35,12 +41,6 @@ const features = [
   {
     name: "Community",
     description: "Burn TrotelCoins to submit your courses for voting.",
-    beta: false,
-    unavailable: true,
-  },
-  {
-    name: "Gamification",
-    description: "Earn badges and XPs by completing courses and quizzes.",
     beta: false,
     unavailable: true,
   },
@@ -87,11 +87,16 @@ export default function Features() {
                               />
                               <div className="flex items-center gap-2">
                                 {feature.name}{" "}
-                                {feature.unavailable ? (
+                                {feature.unavailable && (
                                   <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
                                     Not available yet
                                   </span>
-                                ) : null}
+                                )}
+                                {feature.beta && (
+                                  <span className="inline-flex items-center rounded-full bg-green-50 dark:bg-green-400/10 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-200 ring-1 ring-inset ring-green-700/10 dark:ring-green-200/30">
+                                    Beta
+                                  </span>
+                                )}
                               </div>
                             </div>
                           </dt>
