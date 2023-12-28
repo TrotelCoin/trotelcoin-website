@@ -6,6 +6,7 @@ import Wagmi from "@/app/wagmi";
 import AnimatedCursor from "react-animated-cursor";
 import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/app/googleAnalytics";
+import Script from "next/script";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -54,6 +55,18 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="stylesheet" href="/globals.css"></link>
+        <Script strategy="lazyOnload">
+          {`
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3583733,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          `}
+        </Script>
       </head>
       <Wagmi>
         <body
