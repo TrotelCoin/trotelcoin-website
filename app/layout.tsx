@@ -5,6 +5,7 @@ import "@/app/globals.css";
 import Wagmi from "@/app/wagmi";
 import AnimatedCursor from "react-animated-cursor";
 import { Analytics } from "@vercel/analytics/react";
+import GoogleAnalytics from "@/app/googleAnalytics";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -58,6 +59,9 @@ export default function RootLayout({
         <body
           className={`bg-white dark:bg-black ${poppins.className} antialiased`}
         >
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
           <div className="hidden lg:block">
             {/*<AnimatedCursor
               color="59, 130, 246"
