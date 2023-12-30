@@ -126,7 +126,7 @@ export default function Community() {
     },
     {
       id: 3,
-      name: "Rewards distributed",
+      name: "TrotelCoins distributed",
       value:
         tokenRewardsData && tokenRewardsData !== null ? (
           <>
@@ -137,11 +137,10 @@ export default function Community() {
               decimal="."
               decimals={0}
             />
-            <span className="text-xs ml-2">TROTEL</span>
           </>
         ) : (
           <span>
-            0 <span className="text-xs">TROTEL</span>
+            0
           </span>
         ),
     },
