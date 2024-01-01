@@ -3,10 +3,10 @@ import Header from "@/app/ui/header";
 import Footer from "@/app/ui/footer";
 import "@/app/globals.css";
 import Wagmi from "@/app/wagmi";
-import AnimatedCursor from "react-animated-cursor";
 import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/app/googleAnalytics";
 import Script from "next/script";
+import { gsap } from "gsap";
 
 export const metadata = {
   title: "TrotelCoin | Learn & earn crypto",
@@ -75,20 +75,56 @@ export default function RootLayout({
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
-          <div className="hidden lg:block">
-            {/*<AnimatedCursor
-              color="59, 130, 246"
-              innerSize={24}
-              innerScale={0.5}
-              outerSize={24}
-              outerScale={2}
-              showSystemCursor={false}
-            />*/}
-          </div>
+          <div className="hidden lg:block"></div>
           <Header />
           {children}
           <Analytics />
           <Footer />
+          <Script strategy="lazyOnload">
+            {`document.addEventListener("DOMContentLoaded", function(event) {
+            var cursor = document.querySelector(".custom-cursor");
+            var links = document.querySelectorAll("a");
+            var initCursor = false;
+
+            for (var i = 0; i < links.length; i++) {
+              var selfLink = links[i];
+
+              selfLink.addEventListener("mouseover", function() {
+                cursor.classList.add("custom-cursor--link");
+              });
+              selfLink.addEventListener("mouseout", function() {
+                cursor.classList.remove("custom-cursor--link");
+              });
+            }
+
+            window.onmousemove = function(e) {
+              var mouseX = e.clientX;
+              var mouseY = e.clientY;
+
+              if (!initCursor) {
+                // cursor.style.opacity = 1;
+                gsap.to(cursor, 0.3, {
+                  opacity: 1
+                });
+                initCursor = true;
+              }
+
+              gsap.to(cursor, 0, {
+                top: mouseY + "px",
+                left: mouseX + "px"
+              });
+            };
+
+            window.onmouseout = function(e) {
+              gsap.to(cursor, 0.3, {
+                opacity: 0
+              });
+              initCursor = false;
+            };
+          });
+          `}
+          </Script>
+          <div className="custom-cursor"></div>
         </body>
       </Wagmi>
     </html>
