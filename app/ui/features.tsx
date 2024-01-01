@@ -62,7 +62,7 @@ export default function Features() {
           <>
             <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
-                <div className="lg:col-span-2 bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="lg:col-span-2 shadow bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex items-center">
                     <div className="w-1/2 flex flex-col gap-2">
                       <div className="flex gap-2 items-center">
@@ -83,7 +83,7 @@ export default function Features() {
                     </div>
                   </div>
                 </div>
-                <div className="backdrop-blur-xl bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="backdrop-blur-xl shadow bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <div className="flex gap-2 items-center">
                       <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -99,7 +99,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="backdrop-blur-xl bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="backdrop-blur-xl shadow bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>Videos 🎥 </span>
@@ -113,7 +113,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="backdrop-blur-xl bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="backdrop-blur-xl shadow bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>Gamification 🎯 </span>
@@ -126,7 +126,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="backdrop-blur-xl bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="backdrop-blur-xl shadow bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>AI 🤖 </span>
@@ -139,7 +139,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="backdrop-blur-xl bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="backdrop-blur-xl shadow bg-transparent dark:bg-gray-900 bg-opacity-50 border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>Community 🙈 </span>
@@ -152,7 +152,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="lg:col-span-2 bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="lg:col-span-2 shadow bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex">
                     <div className="w-1/2 flex flex-col gap-2">
                       <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
