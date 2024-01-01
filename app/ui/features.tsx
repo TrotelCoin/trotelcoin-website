@@ -18,7 +18,7 @@ export default function Features() {
         {inView1 && (
           <>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl text-center">
-              A full set of features
+              A full set of features.
             </h2>
             <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
@@ -112,7 +112,7 @@ export default function Features() {
                     </span>
                   </div>
                 </div>
-                <div className="lg:col-span-2 bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-2xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
+                <div className="hidden lg:block lg:col-span-2 bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-2xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex">
                     <div className="lg:w-1/2 flex flex-col gap-2">
                       <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
