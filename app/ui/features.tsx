@@ -1,50 +1,7 @@
 "use client";
 
-import { CheckIcon } from "@heroicons/react/20/solid";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
-
-const features = [
-  {
-    name: "Courses",
-    description:
-      "Learn all you need to become a web3 expert and navigate confidently.",
-    beta: false,
-    unavailable: false,
-  },
-  {
-    name: "Quizzes",
-    description:
-      "Test your knowledge and earn TrotelCoin by answering quizzes.",
-    beta: false,
-    unavailable: false,
-  },
-  {
-    name: "Videos",
-    description:
-      "Not into text? Acquire knowledge via carefully crafted videos.",
-    beta: false,
-    unavailable: true,
-  },
-  {
-    name: "Gamification",
-    description: "Earn badges and XPs by completing courses and quizzes.",
-    beta: true,
-    unavailable: false,
-  },
-  {
-    name: "Personalized",
-    description: "Craft your own learning journey based on your interests.",
-    beta: false,
-    unavailable: true,
-  },
-  {
-    name: "Community",
-    description: "Burn TrotelCoins to submit your courses for voting.",
-    beta: false,
-    unavailable: true,
-  },
-];
 
 export default function Features() {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -60,7 +17,10 @@ export default function Features() {
       <div ref={ref1}>
         {inView1 && (
           <>
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl text-center">
+              A full set of features
+            </h2>
+            <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
                 <div className="lg:col-span-2 bg-transparent dark:bg-gray-900 bg-opacity-50 backdrop-blur-2xl border border-black/10 dark:border-white/10 hover:border-black/50 dark:hover:border-white/50 p-6 rounded-2xl">
                   <div className="flex items-center">
@@ -78,7 +38,7 @@ export default function Features() {
                         confidently.
                       </span>
                     </div>
-                    <div className="hidden lg:block lg:w-1/2 text-8xl text-center pointer-events-none">
+                    <div className="hidden lg:block hover:scale-105 lg:w-1/2 text-8xl text-center pointer-events-none">
                       📚
                     </div>
                   </div>
@@ -163,7 +123,7 @@ export default function Features() {
                         learning experience better.
                       </span>
                     </div>
-                    <div className="hidden lg:block lg:w-1/2 text-8xl text-center pointer-events-none">
+                    <div className="hidden lg:block hover:scale-105 lg:w-1/2 text-8xl text-center pointer-events-none">
                       🦊
                     </div>
                   </div>
