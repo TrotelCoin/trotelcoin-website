@@ -97,7 +97,7 @@ export default function Hero() {
             <Link
               href="https://docs.trotelcoin.com"
               target="_blank"
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
+              className="text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
             >
               Learn more <span aria-hidden="true">→</span>
             </Link>
