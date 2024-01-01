@@ -38,7 +38,7 @@ export default function Features() {
                         confidently.
                       </span>
                     </div>
-                    <div className="hidden lg:block hover:scale-105 lg:w-1/2 text-8xl text-center pointer-events-none">
+                    <div className="hidden lg:block hover:text-9xl lg:w-1/2 text-8xl text-center pointer-events-none">
                       📚
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function Features() {
                         learning experience better.
                       </span>
                     </div>
-                    <div className="hidden lg:block hover:scale-105 lg:w-1/2 text-8xl text-center pointer-events-none">
+                    <div className="hidden lg:block hover:text-9xl lg:w-1/2 text-8xl text-center pointer-events-none">
                       🦊
                     </div>
                   </div>
