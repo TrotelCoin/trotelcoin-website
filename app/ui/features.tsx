@@ -67,7 +67,7 @@ export default function Features() {
                     <div className="lg:w-1/2 flex flex-col gap-2">
                       <div className="flex gap-2 items-center">
                         <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                          Courses 📚
+                          Courses
                         </span>
                         <span className="inline-flex items-center rounded-full bg-green-50 dark:bg-green-400/10 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-200 ring-1 ring-inset ring-green-700/10 dark:ring-green-200/30">
                           Beta
@@ -79,7 +79,7 @@ export default function Features() {
                       </span>
                     </div>
                     <div className="hidden lg:block lg:w-1/2 text-8xl text-center pointer-events-none">
-                      🎓
+                      📚
                     </div>
                   </div>
                 </div>
