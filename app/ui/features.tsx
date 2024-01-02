@@ -63,7 +63,7 @@ export default function Features() {
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>Videos 🎥 </span>
-                      <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
+                      <span className="inline-flex items-center rounded-full bg-yellow-50 dark:bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-200 ring-1 ring-inset ring-yellow-700/10 dark:ring-yellow-200/30">
                         Not available
                       </span>
                     </span>
@@ -90,7 +90,7 @@ export default function Features() {
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>AI 🤖 </span>
-                      <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
+                      <span className="inline-flex items-center rounded-full bg-yellow-50 dark:bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-200 ring-1 ring-inset ring-yellow-700/10 dark:ring-yellow-200/30">
                         Not available
                       </span>
                     </span>
@@ -103,7 +103,7 @@ export default function Features() {
                   <div className="flex flex-col gap-2">
                     <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
                       <span>Community 🙈 </span>
-                      <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-700/10 dark:ring-blue-200/30">
+                      <span className="inline-flex items-center rounded-full bg-yellow-50 dark:bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-200 ring-1 ring-inset ring-yellow-700/10 dark:ring-yellow-200/30">
                         Not available
                       </span>
                     </span>

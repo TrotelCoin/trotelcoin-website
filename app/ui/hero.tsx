@@ -73,7 +73,7 @@ export default function Hero() {
             TrotelCoin helps you learning about web3.{" "}
             <Link
               href="https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5"
-              className="font-semibold text-blue-600 dark:text-blue-200"
+              className="font-semibold text-yellow-500 dark:text-yellow-300"
             >
               <span className="absolute inset-0" aria-hidden="true" />
               Invest now <span aria-hidden="true">&rarr;</span>
@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="https://app.trotelcoin.com"
-              className="rainbow-border rounded-full hover:shadow-lg hover:scale-105 duration-100 shadow-md bg-white dark:bg-black px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-200"
+              className="rainbow-border rounded-full hover:shadow-lg hover:scale-105 duration-100 shadow-md bg-white dark:bg-black px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
             >
               Launch app
             </Link>

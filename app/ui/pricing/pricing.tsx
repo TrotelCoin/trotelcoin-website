@@ -43,7 +43,7 @@ const Pricing = () => {
       <div className="isolate overflow-hidden bg-black">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
           <div className="mx-auto max-w-4xl animate__animated animate__fadeIn">
-            <h2 className="text-base font-semibold leading-7 text-blue-200">
+            <h2 className="text-base font-semibold leading-7 text-yellow-500 dark:text-yellow-300">
               Pricing
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -86,7 +86,7 @@ const Pricing = () => {
                     <div>
                       <h3
                         id={tier.id}
-                        className="text-base font-semibold leading-7 text-blue-600"
+                        className="text-base font-semibold leading-7 text-yellow-500"
                       >
                         {tier.name}
                       </h3>
@@ -112,7 +112,7 @@ const Pricing = () => {
                         {tier.features.map((feature) => (
                           <li key={feature} className="flex gap-x-3">
                             <CheckIcon
-                              className="h-6 w-5 flex-none text-blue-600"
+                              className="h-6 w-5 flex-none text-yellow-500"
                               aria-hidden="true"
                             />
                             {feature}
@@ -124,7 +124,7 @@ const Pricing = () => {
                       href={tier.href}
                       target="_blank"
                       aria-describedby={tier.id}
-                      className="mt-8 block rounded-md bg-blue-600 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      className="mt-8 block rounded-md bg-yellow-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-white shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
                     >
                       Buy TrotelCoin
                     </Link>
@@ -134,7 +134,7 @@ const Pricing = () => {
                   {inView ? (
                     <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
                       <div className="lg:min-w-0 lg:flex-1">
-                        <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-600">
+                        <h3 className="text-lg font-semibold leading-8 tracking-tight text-yellow-500">
                           Are you eligible?
                         </h3>
                         <p className="mt-1 text-base leading-7 text-gray-700">
@@ -144,7 +144,7 @@ const Pricing = () => {
                       </div>
                       <Link
                         href="https://app.trotelcoin.com/premium"
-                        className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-600 hover:ring-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-yellow-500 hover:ring-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
                       >
                         Claim now <span aria-hidden="true">&rarr;</span>
                       </Link>

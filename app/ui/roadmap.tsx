@@ -59,7 +59,7 @@ export default function Roadmap() {
                         <div className="animate__animated animate__fadeIn">
                           <time
                             dateTime={item.dateTime}
-                            className="flex items-center text-sm font-semibold leading-6 text-blue-700 dark:text-blue-200"
+                            className="flex items-center text-sm font-semibold leading-6 text-yellow-500 dark:text-yellow-300"
                           >
                             {item.date}
                           </time>
