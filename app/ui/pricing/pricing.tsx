@@ -95,7 +95,7 @@ const Pricing = () => {
                           <CountUp
                             start={0}
                             end={tier.price}
-                            duration={5}
+                            duration={2}
                             decimal="."
                             decimals={0}
                           />{" "}
