@@ -91,7 +91,7 @@ export default function Community() {
             <CountUp
               start={0}
               end={parseFloat(tokenPrice?.toFixed(5))}
-              duration={2}
+              duration={1}
               decimal="."
               decimals={5}
             />
@@ -115,7 +115,7 @@ export default function Community() {
               end={parseFloat(
                 (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)
               )}
-              duration={2}
+              duration={1}
               decimal="."
               decimals={0}
             />
@@ -133,7 +133,7 @@ export default function Community() {
             <CountUp
               start={0}
               end={parseFloat(tokenRewardsData as string) * 1e-18}
-              duration={2}
+              duration={1}
               decimal="."
               decimals={0}
             />
@@ -153,7 +153,7 @@ export default function Community() {
             <CountUp
               start={0}
               end={coursesCount}
-              duration={2}
+              duration={1}
               decimal="."
               decimals={0}
             />
