@@ -6,7 +6,7 @@ This is the official repository of TrotelCoin's website. It contains the source 
 
 TrotelCoin aims to provide an interactive application that empowers individuals to understand cryptocurrencies and decentralized finance (DeFi) better. The project's flagship product is a comprehensive platform that offers a range of educational resources, engaging quizzes, and activities for users to learn about cryptocurrencies and blockchain technology.
 
-## Technologies Used
+## Technologies used
 
 The TrotelCoin website is built using a modern tech stack, which includes:
 
@@ -15,7 +15,7 @@ The TrotelCoin website is built using a modern tech stack, which includes:
 - **TypeScript**: A typed superset of JavaScript that enhances code maintainability and helps catch potential errors during development.
 - **Tailwind**: Styling the website is done using Tailwind, ensuring a visually user-friendly interface and a faster development.
 
-## Getting Started
+## Getting started
 
 To run the TrotelCoin website locally, follow these steps:
 
