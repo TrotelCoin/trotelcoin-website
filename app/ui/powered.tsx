@@ -37,8 +37,8 @@ export default function Powered() {
               <div className="flex justify-center">
                 <p className="relative rounded-full bg-gray-50 dark:bg-gray-900 px-4 py-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20 dark:ring-gray-100/10 dark:hover:ring-gray-100/20">
                   <span className="hidden md:inline">
-                    With Flooz, you have the opportunity to buy TrotelCoin using
-                    Apple Pay and Google Pay.
+                    Buy TrotelCoins with Apple Pay and Google Pay thanks to
+                    Flooz.
                   </span>
                   <Link
                     href="https://flooz.xyz/trade/how-to-buy/0x85057d5a8d063f9075Ba963101D76352051675E5?network=polygon"
@@ -46,7 +46,7 @@ export default function Powered() {
                     className="font-semibold text-yellow-500 dark:text-yellow-300"
                   >
                     <span className="absolute inset-0" aria-hidden="true" />{" "}
-                    What's Flooz ? <span aria-hidden="true">&rarr;</span>
+                    Learn more <span aria-hidden="true">&rarr;</span>
                   </Link>
                 </p>
               </div>

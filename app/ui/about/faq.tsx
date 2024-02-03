@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What is TrotelCoin?",
     answer:
-      "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched with the aim of providing educational resources and practical experiences related to cryptocurrencies.",
+      "TrotelCoin is a platform designed to offer an interactive way to understand how cryptocurrencies work. It was launched with the aim of providing educational resources and practical experiences related to cryptocurrencies, Web3 and blockchain technology.",
   },
   {
     question: "How can I earn TrotelCoin on the platform?",
@@ -17,15 +17,20 @@ const faqs = [
       "You can earn TrotelCoin by participating in interactive quizzes and activities as you progress through the learning process on the TrotelCoin platform.",
   },
   {
-    question:
-      "How are rewards calculated for users on the TrotelCoin platform?",
+    question: "How do I get my TrotelCoins on my wallet?",
     answer:
-      "User rewards are calculated using a formula that considers the number of quizzes answered. The reward decreases as users answer more quizzes.",
+      "You can claim your TrotelCoins whenever you want from the application. You earn rewards off chain so you don't have to pay gas fees for each quiz answered.",
+  },
+  {
+    question:
+      "How are rewards calculated for learners on the TrotelCoin platform?",
+    answer:
+      "Learner rewards are calculated using an algorithm that considers the total number of quizzes answered by all users. The reward decreases as users answer more quizzes however it is reinitialized every day.",
   },
   {
     question: "How does TrotelCoin prevent fraud and abuse in its quiz system?",
     answer:
-      "TrotelCoin implements a system of unique quiz participation and validation of captcha to prevent potential fraud and abuse. There are also plans to consider the use of Worldcoin ID for enhanced authentication in the future.",
+      "TrotelCoin implements a system of unique quiz participation and validation of captcha to prevent potential fraud and abuse.",
   },
 ];
 

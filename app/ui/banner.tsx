@@ -14,10 +14,10 @@ export default function Banner() {
         <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-black dark:bg-white px-6 py-2.5 hover:bg-gray-700 dark:hover:bg-gray-200 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
           <p className="text-sm leading-6 text-white dark:text-black">
             <a
-              href="https://www.mintme.com/fr/token/TrotelCoin"
+              href="https://docs.trotelcoin.com"
               target="_blank"
             >
-              <strong className="font-semibold">Airdrop en cours</strong>
+              <strong className="font-semibold">TrotelCoin is in beta version</strong>
               <svg
                 viewBox="0 0 2 2"
                 className="mx-2 inline h-0.5 w-0.5 fill-current"
@@ -25,7 +25,7 @@ export default function Banner() {
               >
                 <circle cx={1} cy={1} r={1} />
               </svg>
-              Get free TrotelCoin&nbsp;
+              Learn more&nbsp;
               <span aria-hidden="true">&rarr;</span>
             </a>
           </p>

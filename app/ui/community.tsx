@@ -146,7 +146,7 @@ export default function Community() {
     },
     {
       id: 4,
-      name: "Courses",
+      name: "Courses available",
       value:
         coursesCount !== null && coursesCount ? (
           <>
@@ -177,7 +177,7 @@ export default function Community() {
                     A growing community.
                   </h2>
                   <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
-                    TrotelCoin leads to a growing community of learners.
+                    TrotelCoin is a community-driven project.
                   </p>
                 </div>
                 <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">

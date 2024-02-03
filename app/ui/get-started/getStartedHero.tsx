@@ -8,71 +8,27 @@ import Link from "next/link";
 
 const features = [
   {
-    name: "Choose your Wallet",
+    name: "Choose your wallet",
     description:
-      "Start by choosing a wallet that suits your needs and preferences. Your wallet will serve as a secure hub for your TrotelCoin transactions.",
+      "Start by choosing a wallet that suits your needs and preferences. Your wallet will serve as the way you interact with decentralized applications.",
     href: "https://docs.trotelcoin.com/get-started/choose-your-wallet",
     icon: WalletIcon,
   },
   {
-    name: "Configure your Wallet",
+    name: "Configure your wallet",
     description:
       "Once you've chosen your wallet, configure it according to your preferences and security settings.",
     href: "https://docs.trotelcoin.com/get-started/configure-your-wallet",
     icon: Cog6ToothIcon,
   },
   {
-    name: "Get TrotelCoin",
+    name: "Get some TrotelCoins",
     description:
-      "Whether you earn, exchange, or buy TrotelCoin, having them in your wallet can accelerate and enrich your learning and earning opportunities.",
+      "Whether you earn, exchange, or buy TrotelCoins, having them in your wallet can accelerate and enrich your learning on the TrotelCoin platform.",
     href: "https://docs.trotelcoin.com/get-started/get-some-trotelcoin",
     icon: CreditCardIcon,
   },
 ];
-
-const pricing = {
-  tiers: [
-    {
-      name: "Beginner",
-      id: "tier-beginner",
-      href: "/buy",
-      featured: false,
-      description: "No holding requirement.",
-      price: "0",
-      mainFeatures: [
-        "Free access to all educational courses and resources",
-        "Governance decision-making based on the amount of TrotelCoin in your possession",
-      ],
-    },
-    {
-      name: "Expert",
-      id: "tier-expert",
-      href: "/buy",
-      featured: true,
-      description: "Hold 50k TrotelCoin.",
-      price: "50000",
-      mainFeatures: [
-        "All Beginner and Intermediate level advantages",
-        "Access to more courses providing in-depth content and additional tutorials",
-        "Early access to experimental features and projects",
-        "Join an exclusive crypto community to network, collaborate on projects and explore TrotelCoin projects",
-      ],
-    },
-    {
-      name: "Intermediate",
-      id: "tier-intermediate",
-      href: "/buy",
-      featured: false,
-      description: "Hold 10k TrotelCoin.",
-      price: "10000",
-      mainFeatures: [
-        "All Beginner level benefits",
-        "Access to more courses providing in-depth content and additional tutorials",
-        "Gamification features to enhance your learning experience",
-      ],
-    },
-  ],
-};
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -88,15 +44,15 @@ export default function GetStartedHero() {
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
                   <h2 className="text-base font-semibold leading-7 text-yellow-500 dark:text-yellow-300">
-                    HODL TrotelCoin
+                    Learn & earn crypto
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-                    Learn now.
+                    Get started.
                   </p>
                   <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
-                    You can start learning and earning crypto without owning
-                    TrotelCoin. However, you can enhance your learning by owning
-                    TrotelCoin.
+                    You can start learning and earning crypto without having any
+                    TrotelCoin. However, holding TrotelCoin will make your
+                    experience better.
                   </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

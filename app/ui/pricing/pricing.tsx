@@ -13,7 +13,7 @@ const tiers = [
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
     price: 10000,
     description:
-      "Are you ready to take your crypto knowledge to the next level?",
+      "Wanna learn more about crypto?",
     features: [
       "Access to more courses providing in-depth content and additional tutorials",
       "Gamification features to enhance your learning experience",
@@ -24,9 +24,9 @@ const tiers = [
     id: "tier-expert",
     href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
     price: 50000,
-    description: "Don't lose money ever again. Learn how to secure your funds.",
+    description: "Wanna be a crypto expert?",
     features: [
-      "All the benefits of intermediate level",
+      "All the benefits of Intermediate level",
       "Early access to experimental features and projects",
       "Join an exclusive crypto community to network and more",
     ],

@@ -18,7 +18,7 @@ export default function Features() {
         {inView1 && (
           <>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl text-center">
-              A full set of features.
+              What's TrotelCoin?
             </h2>
             <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto">
@@ -34,11 +34,10 @@ export default function Features() {
                         </span>
                       </div>
                       <span className="text-gray-700 dark:text-gray-300">
-                        Learn all you need to become a web3 expert and navigate
-                        confidently.
+                        Learn all the basics to start using crypto.
                       </span>
                     </div>
-                    <div className="hidden lg:block hover:text-9xl lg:w-1/2 text-8xl text-center duration-500">
+                    <div className="hidden lg:block lg:w-1/2 text-8xl text-center">
                       📚
                     </div>
                   </div>
@@ -54,7 +53,7 @@ export default function Features() {
                       </span>
                     </div>
                     <span className="text-gray-700 dark:text-gray-300">
-                      Test your knowledge and earn TrotelCoin by answering
+                      Test your knowledge and earn TrotelCoins by answering
                       quizzes.
                     </span>
                   </div>
@@ -68,8 +67,7 @@ export default function Features() {
                       </span>
                     </span>
                     <span className="text-gray-700 dark:text-gray-300">
-                      Not into text? Acquire knowledge via carefully crafted
-                      videos.
+                      Watch videos and learn from another perspective.
                     </span>
                   </div>
                 </div>
@@ -82,7 +80,7 @@ export default function Features() {
                       </span>
                     </span>
                     <span className="text-gray-700 dark:text-gray-300">
-                      Earn badges and XPs by completing courses and quizzes.
+                      Enjoy learning more by completing challenges and earning badges.
                     </span>
                   </div>
                 </div>
@@ -95,7 +93,7 @@ export default function Features() {
                       </span>
                     </span>
                     <span className="text-gray-700 dark:text-gray-300">
-                      Craft your own learning journey based on your interests.
+                      Get personalized learning recommendations.
                     </span>
                   </div>
                 </div>
@@ -108,7 +106,7 @@ export default function Features() {
                       </span>
                     </span>
                     <span className="text-gray-700 dark:text-gray-300">
-                      Burn TrotelCoins to submit your courses for voting.
+                      Create your courses and learn from others.
                     </span>
                   </div>
                 </div>
@@ -123,7 +121,7 @@ export default function Features() {
                         learning experience better.
                       </span>
                     </div>
-                    <div className="hidden lg:block hover:text-9xl lg:w-1/2 text-8xl text-center duration-500">
+                    <div className="hidden lg:block lg:w-1/2 text-8xl text-center">
                       🦊
                     </div>
                   </div>

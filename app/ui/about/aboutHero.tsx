@@ -55,11 +55,11 @@ export default function aboutHero() {
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
-                  We're changing the way you learn about crypto.
+                  Learn Web3 another way
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
-                  Earn rewards in TrotelCoin by acquiring knowledge about
-                  cryptocurrencies.
+                  We're building a platform to help you learn about web3 like
+                  never before.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <a

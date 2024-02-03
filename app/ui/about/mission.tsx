@@ -8,17 +8,15 @@ export default function Mission() {
           </h2>
           <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
             <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <p className="text-xl leading-8 text-gray-600 dark:text-gray-200">
-                The mission is to provide individuals with the knowledge and
-                tools necessary to navigate and thrive in the world of Web3.
-              </p>
               <div className="mt-10 m-auto max-w-xl text-base leading-7 text-gray-700 dark:text-gray-300">
                 <p>
-                  We provide a comprehensive educational platform that
-                  simplifies complex concepts and offers examples for learning
-                  about transactions, DeFi, etc. Our goal is to democratize
-                  access to decentralized finance, foster a dynamic community,
-                  and encourage widespread adoption of Web3 technologies.
+                  Our mission is to give individuals the knowledge and tools
+                  they need to navigate and thrive in the web3 world. We provide
+                  a comprehensive educational platform that simplifies complex
+                  concepts and offers practical examples for learning about
+                  transactions, DeFi, and more. Our goal is to democratize
+                  access to decentralized finance, foster a dynamic community
+                  and encourage widespread adoption of web3 technologies.
                 </p>
               </div>
             </div>
