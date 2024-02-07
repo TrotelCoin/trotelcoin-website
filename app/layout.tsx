@@ -1,4 +1,4 @@
-import { poppins } from "@/app/ui/fonts";
+import { inter } from "@/app/ui/fonts";
 import Header from "@/app/ui/header";
 import Footer from "@/app/ui/footer";
 import "@/app/globals.css";
@@ -70,7 +70,7 @@ export default function RootLayout({
       </head>
       <Wagmi>
         <body
-          className={`bg-white dark:bg-black ${poppins.className} antialiased`}
+          className={`bg-white dark:bg-black ${inter.className} antialiased`}
         >
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
