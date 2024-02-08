@@ -60,7 +60,8 @@ export default function Features() {
                           </span>
                         </div>
                         <span className="text-gray-700 dark:text-gray-300">
-                          You don't need a crypto wallet to get started.
+                          Login with your favorite social network without any
+                          wallet.
                         </span>
                         <span className="text-blue-500 dark:text-blue-300">
                           Learn more &rarr;
@@ -81,7 +82,7 @@ export default function Features() {
                         </span>
                       </div>
                       <span className="text-gray-700 dark:text-gray-300">
-                        Test your knowledge and earn TrotelCoins by answering
+                        Test your knowledge and earn crypto by answering
                         quizzes.
                       </span>
                       <span className="text-blue-500 dark:text-blue-300">
@@ -155,8 +156,7 @@ export default function Features() {
                         </span>
                       </span>
                       <span className="text-gray-700 dark:text-gray-300">
-                        Create your courses, earn more crypto and learn from
-                        others.
+                        Create your courses, earn more and learn from others.
                       </span>
                       <span className="text-blue-500 dark:text-blue-300">
                         Learn more &rarr;
