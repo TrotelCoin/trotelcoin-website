@@ -68,39 +68,42 @@ export default function Hero() {
         />
       </div>
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
-            TrotelCoin is more than just a cryptocurrency.{" "}
-            <Link
-              href="https://docs.trotelcoin.com"
-              className="font-semibold text-yellow-500 dark:text-yellow-300"
-            >
-              <span className="absolute inset-0" aria-hidden="true" />
-              Learn more <span aria-hidden="true">&rarr;</span>
-            </Link>
+        <div className="py-12">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
+              TrotelCoin is more than just a cryptocurrency.{" "}
+              <Link
+                href="https://docs.trotelcoin.com"
+                className="font-semibold text-yellow-500 dark:text-yellow-300"
+              >
+                <span className="absolute inset-0" aria-hidden="true" />
+                Learn more <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
-            Learn <span ref={typedTextRef} />
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
-            Learn & earn crypto by taking courses, quizzes, and watching videos.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              href="https://app.trotelcoin.com"
-              className="rainbow-border rounded-full hover:shadow-lg hover:scale-105 duration-100 shadow-md bg-white dark:bg-black px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
-            >
-              Launch app
-            </Link>
-            <Link
-              href="https://docs.trotelcoin.com"
-              target="_blank"
-              className="text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
-            >
-              Learn more <span aria-hidden="true">→</span>
-            </Link>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
+              Learn <span ref={typedTextRef} />
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
+              Learn & earn crypto by taking courses, quizzes, and watching
+              videos.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                href="https://app.trotelcoin.com"
+                className="rainbow-border rounded-full hover:shadow-lg hover:scale-105 duration-100 shadow-md bg-white dark:bg-black px-4 py-2 text-sm font-semibold text-gray-900 dark:text-gray-100 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-300"
+              >
+                Launch app
+              </Link>
+              <Link
+                href="https://docs.trotelcoin.com"
+                target="_blank"
+                className="text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
+              >
+                Learn more <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
