@@ -56,7 +56,7 @@ export default function Features() {
                       <div className="flex flex-col gap-2">
                         <div className="flex gap-2 items-center">
                           <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                            🤝 Social login
+                            🤝 Social Login
                           </span>
                         </div>
                         <span className="text-gray-700 dark:text-gray-300">
@@ -131,7 +131,7 @@ export default function Features() {
                   <div className="bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 border border-gray-900/10 hover:border-gray-900/50 dark:border-transparent backdrop-blur-2xl p-6 rounded-xl">
                     <div className="flex flex-col gap-2">
                       <span className="text-2xl font-bold text-gray-900 dark:text-gray-100 flex gap-2 items-center">
-                        <span>🦄 AI </span>
+                        <span>🦄 Tailored </span>
                         <span className="inline-flex items-center rounded-full bg-yellow-50 dark:bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-200 ring-1 ring-inset ring-yellow-600/20 dark:ring-transparent">
                           Not available
                         </span>
