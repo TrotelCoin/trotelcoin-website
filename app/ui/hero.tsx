@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Link from "next/link";
 import "animate.css";
-import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   const typedTextRef = useRef(null);

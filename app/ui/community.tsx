@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import "animate.css";
 import CountUp from "react-countup";
 import { useContractRead } from "wagmi";
@@ -13,10 +12,6 @@ export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [coursesCount, setCoursesCount] = useState<number>(0);
-
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
 
   const { data: tokenRewardsData } = useContractRead({
     chainId: polygon.id,
@@ -166,48 +161,46 @@ export default function Community() {
     <>
       <div className="bg-white dark:bg-black py-24 sm:py-32">
         {" "}
-        <div ref={ref}>
-          {inView ? (
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
-              <div className="mx-auto max-w-2xl lg:max-w-none">
-                <div className="text-center">
-                  <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-                    A growing community.
-                  </h2>
-                  <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
-                    TrotelCoin is a community-driven project.
-                  </p>
-                </div>
-                <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                  {stats.map((stat) => (
-                    <div
-                      key={stat.id}
-                      className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
-                    >
-                      <dt className="text-sm font-semibold leading-6 text-gray-300">
-                        {stat.name}
-                      </dt>
-                      <dd
-                        className={`order-first text-3xl font-semibold tracking-tight text-gray-100 ${
-                          (stat.value === "0" ||
-                            stat.value ===
-                            (
-                              <span>
-                                0 <span className="text-xs">TROTEL</span>
-                              </span>
-                            ) ||
-                            stat.value === "$0") &&
-                          "animate-pulse"
-                        }`}
-                      >
-                        {stat.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
+        <div>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
+            <div className="mx-auto max-w-2xl lg:max-w-none">
+              <div className="text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
+                  A growing community.
+                </h2>
+                <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+                  TrotelCoin is a community-driven project.
+                </p>
               </div>
+              <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center sm:grid-cols-2 lg:grid-cols-4">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.id}
+                    className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
+                  >
+                    <dt className="text-sm font-semibold leading-6 text-gray-300">
+                      {stat.name}
+                    </dt>
+                    <dd
+                      className={`order-first text-3xl font-semibold tracking-tight text-gray-100 ${
+                        (stat.value === "0" ||
+                          stat.value ===
+                          (
+                            <span>
+                              0 <span className="text-xs">TROTEL</span>
+                            </span>
+                          ) ||
+                          stat.value === "$0") &&
+                        "animate-pulse"
+                      }`}
+                    >
+                      {stat.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </div>
-          ) : null}
+          </div>
         </div>
       </div>
     </>
