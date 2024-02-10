@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "animate.css";
 
-const link: string = "https://docs.trotelcoin.com";
+const link: string = "https://docs.trotelcoin.com/overview/features";
 
 const featuresData = [
   {
