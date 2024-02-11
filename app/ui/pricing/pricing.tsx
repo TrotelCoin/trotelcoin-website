@@ -4,6 +4,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import "animate.css";
 import CountUp from "react-countup";
+import Tilt from "react-parallax-tilt";
 
 const tiers = [
   {
@@ -73,56 +74,65 @@ const Pricing = () => {
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
                 {tiers.map((tier) => (
-                  <div
-                    key={tier.id}
-                    className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
+                  <Tilt
+                    perspective={500}
+                    glareEnable={true}
+                    glareMaxOpacity={0.45}
+                    scale={1.02}
+                    tiltMaxAngleX={5}
+                    tiltMaxAngleY={5}
                   >
-                    <div>
-                      <h3
-                        id={tier.id}
-                        className="text-base font-semibold leading-7 text-yellow-500"
-                      >
-                        {tier.name}
-                      </h3>
-                      <div className="mt-4 flex items-baseline gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-gray-900">
-                          <CountUp
-                            start={0}
-                            end={tier.price}
-                            duration={1}
-                            decimal="."
-                            decimals={0}
-                          />{" "}
-                          <span className="text-base">TROTEL</span>
-                        </span>
-                      </div>
-                      <p className="mt-6 text-base leading-7 text-gray-600">
-                        {tier.description}
-                      </p>
-                      <ul
-                        role="list"
-                        className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
-                      >
-                        {tier.features.map((feature) => (
-                          <li key={feature} className="flex gap-x-3">
-                            <CheckIcon
-                              className="h-6 w-5 flex-none text-yellow-500"
-                              aria-hidden="true"
-                            />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <Link
-                      href={tier.href}
-                      target="_blank"
-                      aria-describedby={tier.id}
-                      className="mt-8 block rounded-md bg-yellow-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-gray-900 shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+                    <div
+                      key={tier.id}
+                      className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
                     >
-                      Buy TrotelCoin
-                    </Link>
-                  </div>
+                      <div>
+                        <h3
+                          id={tier.id}
+                          className="text-base font-semibold leading-7 text-yellow-500"
+                        >
+                          {tier.name}
+                        </h3>
+                        <div className="mt-4 flex items-baseline gap-x-2">
+                          <span className="text-5xl font-bold tracking-tight text-gray-900">
+                            <CountUp
+                              start={0}
+                              end={tier.price}
+                              duration={1}
+                              decimal="."
+                              decimals={0}
+                            />{" "}
+                            <span className="text-base">TROTEL</span>
+                          </span>
+                        </div>
+                        <p className="mt-6 text-base leading-7 text-gray-600">
+                          {tier.description}
+                        </p>
+                        <ul
+                          role="list"
+                          className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
+                        >
+                          {tier.features.map((feature) => (
+                            <li key={feature} className="flex gap-x-3">
+                              <CheckIcon
+                                className="h-6 w-5 flex-none text-yellow-500"
+                                aria-hidden="true"
+                              />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <Link
+                        href={tier.href}
+                        target="_blank"
+                        aria-describedby={tier.id}
+                        className="mt-8 block rounded-md bg-yellow-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-gray-900 shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500"
+                      >
+                        Buy TrotelCoin
+                      </Link>
+                    </div>
+                  </Tilt>
                 ))}
                 <div className="lg:col-span-2">
                   <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
