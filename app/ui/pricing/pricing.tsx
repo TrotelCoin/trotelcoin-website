@@ -77,7 +77,7 @@ const Pricing = () => {
                   <Tilt
                     perspective={500}
                     glareEnable={true}
-                    glareMaxOpacity={0.45}
+                    glareMaxOpacity={0.2}
                     scale={1.02}
                     tiltMaxAngleX={5}
                     tiltMaxAngleY={5}
