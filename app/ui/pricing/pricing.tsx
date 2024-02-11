@@ -75,9 +75,9 @@ const Pricing = () => {
               <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
                 {tiers.map((tier) => (
                   <Tilt
-                    perspective={500}
+                    perspective={800}
                     glareEnable={true}
-                    glareMaxOpacity={0.2}
+                    glareMaxOpacity={0.45}
                     scale={1.02}
                     tiltMaxAngleX={5}
                     tiltMaxAngleY={5}

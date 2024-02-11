@@ -85,9 +85,9 @@ export default function Features() {
                   }`}
                 >
                   <Tilt
-                    perspective={500}
+                    perspective={800}
                     glareEnable={true}
-                    glareMaxOpacity={0.2}
+                    glareMaxOpacity={0.45}
                     scale={1.02}
                     tiltMaxAngleX={5}
                     tiltMaxAngleY={5}
