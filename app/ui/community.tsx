@@ -59,6 +59,10 @@ export default function Community() {
         const response = await fetch(
           "https://app.trotelcoin.com/api/courses/coursesCount",
           {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
             cache: "no-store",
           }
         );
