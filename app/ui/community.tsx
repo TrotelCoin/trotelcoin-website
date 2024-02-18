@@ -8,6 +8,8 @@ import { polygon } from "wagmi/chains";
 import { trotelCoinLearningAddress } from "@/data/addresses";
 import trotelCoinLearningABI from "@/abi/trotelCoinLearningABI";
 
+export const revalidate = 5; // revalidate every 5 seconds
+
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
@@ -63,7 +65,7 @@ export default function Community() {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const { totalCourses } = await response.json();
+        const totalCourses = await response.json();
         setCoursesCount(totalCourses);
       } catch (error) {
         setCoursesCount(0);
