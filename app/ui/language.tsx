@@ -16,7 +16,7 @@ export default function Language() {
       <select
         id="language"
         name="language"
-        className="mt-6 block w-auto rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-yellow-500 sm:text-sm sm:leading-6"
+        className="mt-6 block w-auto rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 dark:text-gray-100 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-blue-500 sm:text-sm sm:leading-6"
         defaultValue=""
         onChange={(e) => handleChangeLocale(e.target.value)}
       >

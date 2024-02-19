@@ -30,7 +30,7 @@ const featuresData = [
     title: "🎥 Videos",
     description: "Watch videos and learn from another perspective.",
     status: "Not available",
-    color: "yellow",
+    color: "blue",
   },
   {
     title: "🎯 Gamification",
@@ -43,13 +43,13 @@ const featuresData = [
     title: "🦄 Tailored",
     description: "Get personalized learning recommendations.",
     status: "Not available",
-    color: "yellow",
+    color: "blue",
   },
   {
     title: "🙈 Community",
     description: "Create your courses, earn more and learn from others.",
     status: "Not available",
-    color: "yellow",
+    color: "blue",
   },
   {
     title: "Coming soon...",
@@ -103,7 +103,7 @@ export default function Features() {
                           <span>{feature.title}</span>
                           {feature.status && (
                             <span
-                              className={`inline-flex items-center rounded-full bg-yellow-50 dark:bg-yellow-400/10 px-2 py-1 text-xs font-medium text-yellow-700 dark:text-yellow-200 ring-1 ring-inset ring-yellow-600/20 dark:ring-transparent`}
+                              className={`inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-400/10 px-2 py-1 text-xs font-medium text-blue-700 dark:text-blue-200 ring-1 ring-inset ring-blue-600/20 dark:ring-transparent`}
                             >
                               {feature.status}
                             </span>
