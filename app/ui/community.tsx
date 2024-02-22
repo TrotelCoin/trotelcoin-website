@@ -3,10 +3,9 @@
 import React, { useState, useEffect } from "react";
 import "animate.css";
 import CountUp from "react-countup";
-import { useContractRead } from "wagmi";
 import { polygon } from "wagmi/chains";
-import { trotelCoinLearningAddress } from "@/data/addresses";
-import trotelCoinLearningABI from "@/abi/trotelCoinLearningABI";
+import { trotelCoinAddress } from "@/data/addresses";
+import { useToken } from "wagmi";
 
 export const revalidate = 5; // revalidate every 5 seconds
 
@@ -14,14 +13,25 @@ export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [coursesCount, setCoursesCount] = useState<number>(0);
+  const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
+    number | null
+  >(0);
 
-  const { data: tokenRewardsData } = useContractRead({
+  const { data: tokenRewardsData } = useToken({
     chainId: polygon.id,
-    abi: trotelCoinLearningABI,
-    address: trotelCoinLearningAddress,
-    functionName: "totalRewards",
-    watch: true,
+    address: trotelCoinAddress,
   });
+
+  useEffect(() => {
+    if (tokenRewardsData) {
+      const tokenTotalSupply = parseFloat(
+        tokenRewardsData.totalSupply.formatted
+      );
+      const initialSupply = 100000000;
+
+      setTrotelCoinsDistributed(tokenTotalSupply - initialSupply);
+    }
+  }, [tokenRewardsData]);
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
@@ -128,20 +138,19 @@ export default function Community() {
     {
       id: 3,
       name: "TrotelCoins distributed",
-      value:
-        tokenRewardsData && tokenRewardsData !== null ? (
-          <>
-            <CountUp
-              start={0}
-              end={parseFloat(tokenRewardsData as string) * 1e-18}
-              duration={1}
-              decimal="."
-              decimals={0}
-            />
-          </>
-        ) : (
-          <span>0</span>
-        ),
+      value: trotelCoinsDistributed ? (
+        <>
+          <CountUp
+            start={0}
+            end={trotelCoinsDistributed}
+            duration={1}
+            decimal="."
+            decimals={0}
+          />
+        </>
+      ) : (
+        <span>0</span>
+      ),
     },
     {
       id: 4,
