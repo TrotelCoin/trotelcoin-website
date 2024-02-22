@@ -80,7 +80,8 @@ export default function Community() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const totalCourses = await response.json();
-        setCoursesCount(totalCourses);
+        const coursesCount = parseFloat(totalCourses.toString());
+        setCoursesCount(coursesCount);
       } catch (error) {
         setCoursesCount(0);
       }
