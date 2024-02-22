@@ -86,9 +86,9 @@ export default function Community() {
       }
     };
 
+    fetchCoursesCount();
     fetchTokenPrice();
     fetchTotalSupply();
-    fetchCoursesCount();
   }, []);
 
   const stats = [
