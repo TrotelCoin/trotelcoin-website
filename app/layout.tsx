@@ -6,18 +6,26 @@ import Wagmi from "@/app/wagmi";
 import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/app/googleAnalytics";
 import Script from "next/script";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "TrotelCoin | Learn & earn crypto",
   description:
     "We're building TrotelCoin - the best app to learn & earn crypto.",
+  generator: "Next.js",
+  manifest: "/manifest.json",
+  themeColor: "#fff",
+  authors: [{ name: "TrotelCoin" }],
+  applicationName: "TrotelCoin",
+  appleWebApp: true,
   keywords:
     "trotelcoin, learn, earn, crypto, bitcoin, ethereum, learn & earn crypto, trotelcoin app, trotelcoin.com, trotelcoin app, trotelcoin website",
+  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     type: "website",
     url: "https://trotelcoin.com",
     title: "TrotelCoin | Learn & earn crypto",
+    locale: "en_US",
     description:
       "We're building TrotelCoin - the best app to learn & earn crypto.",
     images: [
@@ -54,13 +62,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8"></meta>
-        <meta name="theme-color" content="#fff" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="stylesheet" href="/globals.css"></link>
         <Script strategy="lazyOnload">
           {`
             (function(h,o,t,j,a,r){
@@ -85,11 +88,11 @@ export default function RootLayout({
           {children}
           <Analytics />
           <Footer />
-          <Script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
         </body>
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </Wagmi>
     </html>
   );
