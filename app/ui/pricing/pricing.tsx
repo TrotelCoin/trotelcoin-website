@@ -73,7 +73,7 @@ const Pricing = () => {
           <div className="-mt-80">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
-                {tiers.map((tier) => (
+                {tiers.map((tier, index) => (
                   <Tilt
                     perspective={800}
                     glareEnable={true}
@@ -81,11 +81,9 @@ const Pricing = () => {
                     scale={1.02}
                     tiltMaxAngleX={5}
                     tiltMaxAngleY={5}
+                    key={index}
                   >
-                    <div
-                      key={tier.id}
-                      className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10"
-                    >
+                    <div className="flex flex-col animate__animated animate__bounceIn justify-between rounded-3xl bg-white p-8 shadow-xl ring-1 ring-gray-900/10 sm:p-10">
                       <div>
                         <h3
                           id={tier.id}
@@ -112,8 +110,8 @@ const Pricing = () => {
                           role="list"
                           className="mt-10 space-y-4 text-sm leading-6 text-gray-600"
                         >
-                          {tier.features.map((feature) => (
-                            <li key={feature} className="flex gap-x-3">
+                          {tier.features.map((feature, index) => (
+                            <li key={index} className="flex gap-x-3">
                               <CheckIcon
                                 className="h-6 w-5 flex-none text-blue-500"
                                 aria-hidden="true"

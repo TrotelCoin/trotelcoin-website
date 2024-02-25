@@ -57,8 +57,8 @@ export default function GetStartedHero() {
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
                   <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-                    {features.map((feature) => (
-                      <div key={feature.name} className="flex flex-col">
+                    {features.map((feature, index) => (
+                      <div key={index} className="flex flex-col">
                         <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
                           <feature.icon
                             className="h-5 w-5 flex-none text-blue-500 dark:text-blue-300"

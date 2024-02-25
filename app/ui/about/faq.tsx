@@ -51,7 +51,7 @@ export default function FAQ() {
               </h2>
               <dl className="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
                 {faqs.map((faq, index) => (
-                  <div key={faq.question} className="pt-6">
+                  <div key={index} className="pt-6">
                     <dt>
                       <button
                         className="flex w-full items-start justify-between text-left text-gray-900 dark:text-gray-100"

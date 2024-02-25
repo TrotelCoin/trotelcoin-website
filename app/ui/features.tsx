@@ -80,6 +80,7 @@ export default function Features() {
                 <Link
                   href={link}
                   target="_blank"
+                  key={index}
                   className={`${
                     feature.title === "Coming soon..." ? "md:col-span-2" : ""
                   }`}

@@ -32,11 +32,8 @@ export default function Community() {
           },
           cache: "no-store",
         });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
         const data = await response.json();
-        setNumberOfLearners(data);
+        setNumberOfLearners(data.length);
       } catch (error) {
         setNumberOfLearners(0);
       }
@@ -194,9 +191,9 @@ export default function Community() {
                 </p>
               </div>
               <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat) => (
+                {stats.map((stat, index) => (
                   <div
-                    key={stat.id}
+                    key={index}
                     className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
                   >
                     <dt className="text-sm font-semibold leading-6 text-gray-300">

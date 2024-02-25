@@ -121,9 +121,9 @@ export default function Footer() {
               Learn & earn crypto.
             </p>
             <div className="flex space-x-6">
-              {navigation.social.map((item) => (
+              {navigation.social.map((item, index) => (
                 <Link
-                  key={item.name}
+                  key={index}
                   href={item.href}
                   target={item.target}
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
@@ -141,8 +141,8 @@ export default function Footer() {
                   TrotelCoin
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.trotelcoin.map((item) => (
-                    <li key={item.name}>
+                  {navigation.trotelcoin.map((item, index) => (
+                    <li key={index}>
                       <Link
                         href={item.href}
                         target={item.target}
@@ -179,8 +179,8 @@ export default function Footer() {
                   Onchain
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.ecosystem.map((item) => (
-                    <li key={item.name}>
+                  {navigation.ecosystem.map((item, index) => (
+                    <li key={index}>
                       <Link
                         href={item.href}
                         target={item.target}
@@ -219,8 +219,8 @@ export default function Footer() {
                   Social networks
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.socials.map((item) => (
-                    <li key={item.name}>
+                  {navigation.socials.map((item, index) => (
+                    <li key={index}>
                       <Link
                         href={item.href}
                         target={item.target}
