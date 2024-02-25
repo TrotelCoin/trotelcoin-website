@@ -7,8 +7,6 @@ import { polygon } from "wagmi/chains";
 import { trotelCoinAddress } from "@/data/addresses";
 import { useToken } from "wagmi";
 
-export const revalidate = 5; // revalidate every 5 seconds
-
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
@@ -79,6 +77,9 @@ export default function Community() {
       try {
         const response = await fetch("/api/totalSupply", {
           cache: "no-store",
+          headers: {
+            "cache-control": "no-store",
+          },
         });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -92,6 +93,13 @@ export default function Community() {
 
     fetchTokenPrice();
     fetchTotalSupply();
+
+    const interval = setInterval(() => {
+      fetchTokenPrice();
+      fetchTotalSupply();
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const stats = [
