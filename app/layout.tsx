@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   appleWebApp: true,
   keywords:
     "trotelcoin, learn, earn, crypto, bitcoin, ethereum, learn & earn crypto, trotelcoin app, trotelcoin.com, trotelcoin app, trotelcoin website",
-  viewport: "width=device-width, initial-scale=1.0",
   openGraph: {
     type: "website",
     url: "https://trotelcoin.com",
