@@ -186,7 +186,7 @@ export default function Community() {
       id: 4,
       name: "Learners",
       value:
-        coursesCount !== null && coursesCount ? (
+        numberOfLearners !== null && numberOfLearners ? (
           <>
             <CountUp
               start={0}
