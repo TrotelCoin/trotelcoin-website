@@ -16,11 +16,37 @@ export default function Community() {
   const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
     number | null
   >(0);
+  const [numberOfLearners, setNumberOfLearners] = useState<number | null>(0);
 
   const { data: tokenRewardsData } = useToken({
     chainId: polygon.id,
     address: trotelCoinAddress,
   });
+
+  useEffect(() => {
+    const fetchNumberOfLearners = async () => {
+      try {
+        const response = await fetch("/api/numberOfLearners", {
+          cache: "no-store",
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setNumberOfLearners(data);
+      } catch (error) {
+        setNumberOfLearners(0);
+      }
+    };
+
+    fetchNumberOfLearners();
+
+    const interval = setInterval(() => {
+      fetchNumberOfLearners();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (tokenRewardsData) {
@@ -158,13 +184,13 @@ export default function Community() {
     },
     {
       id: 4,
-      name: "Courses available",
+      name: "Learners",
       value:
         coursesCount !== null && coursesCount ? (
           <>
             <CountUp
               start={0}
-              end={coursesCount}
+              end={numberOfLearners as number}
               duration={1}
               decimal="."
               decimals={0}
