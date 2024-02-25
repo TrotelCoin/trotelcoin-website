@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "TrotelCoin | Learn & earn crypto",
   description:
-    "We're building TrotelCoin - the best app to learn & earn crypto.",
+    "TrotelCoin, a web3 platform, facilitates connecting, attracting, and retaining users through interactive experiences. Join a community exploring crypto daily through Quests, Streaks, Activities, and beyond.",
   generator: "Next.js",
   manifest: "/manifest.json",
   themeColor: "#fff",
