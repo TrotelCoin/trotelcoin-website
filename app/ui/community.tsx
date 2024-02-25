@@ -12,7 +12,6 @@ export const revalidate = 5; // revalidate every 5 seconds
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
   const [totalSupply, setTotalSupply] = useState<number | null>(0);
-  const [coursesCount, setCoursesCount] = useState<number>(0);
   const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
     number | null
   >(0);
@@ -27,6 +26,10 @@ export default function Community() {
     const fetchNumberOfLearners = async () => {
       try {
         const response = await fetch("/api/numberOfLearners", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
           cache: "no-store",
         });
         if (!response.ok) {
@@ -90,33 +93,6 @@ export default function Community() {
       }
     };
 
-    const fetchCoursesCount = async () => {
-      try {
-        const response = await fetch(
-          "https://app.trotelcoin.com/api/courses/coursesCount",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-              "Access-Control-Allow-Methods": "GET",
-              "Access-Control-Allow-Headers": "Content-Type",
-            },
-            cache: "no-store",
-          }
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const totalCourses = await response.json();
-        const coursesCount = parseFloat(totalCourses.toString());
-        setCoursesCount(coursesCount);
-      } catch (error) {
-        setCoursesCount(0);
-      }
-    };
-
-    fetchCoursesCount();
     fetchTokenPrice();
     fetchTotalSupply();
   }, []);
@@ -190,7 +166,7 @@ export default function Community() {
           <>
             <CountUp
               start={0}
-              end={numberOfLearners as number}
+              end={numberOfLearners}
               duration={1}
               decimal="."
               decimals={0}
