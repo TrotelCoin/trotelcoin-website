@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "TrotelCoin | Learn & earn crypto",
     locale: "en_US",
     description:
-      "We're building TrotelCoin - the best app to learn & earn crypto.",
+      "TrotelCoin, a web3 platform, facilitates connecting, attracting, and retaining users through interactive experiences. Join a community exploring crypto daily through Quests, Streaks, Activities, and beyond.",
     images: [
       {
         url: "/assets/banner/trotelcoin-banner.png",
@@ -51,7 +51,7 @@ export const jsonLd = {
   name: "TrotelCoin",
   image: "/assets/logo/trotelcoin.png",
   description:
-    "We're building TrotelCoin - the best app to learn & earn crypto",
+    "TrotelCoin, a web3 platform, facilitates connecting, attracting, and retaining users through interactive experiences. Join a community exploring crypto daily through Quests, Streaks, Activities, and beyond.",
 };
 
 export default function RootLayout({
