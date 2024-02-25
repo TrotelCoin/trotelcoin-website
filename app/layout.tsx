@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     "TrotelCoin, a web3 platform, facilitates connecting, attracting, and retaining users through interactive experiences. Join a community exploring crypto daily through Quests, Streaks, Activities, and beyond.",
   generator: "Next.js",
   manifest: "/manifest.json",
-  themeColor: "#fff",
   authors: [{ name: "TrotelCoin" }],
   applicationName: "TrotelCoin",
   appleWebApp: true,
