@@ -6,11 +6,44 @@ import Wagmi from "@/app/wagmi";
 import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/app/googleAnalytics";
 import Script from "next/script";
-import { gsap } from "gsap";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "TrotelCoin | Learn & earn crypto",
-  description: "Learn & earn crypto",
+  description:
+    "We're building TrotelCoin - the best app to learn & earn crypto.",
+  keywords:
+    "trotelcoin, learn, earn, crypto, bitcoin, ethereum, learn & earn crypto, trotelcoin app, trotelcoin.com, trotelcoin app, trotelcoin website",
+  openGraph: {
+    type: "website",
+    url: "https://trotelcoin.com",
+    title: "TrotelCoin | Learn & earn crypto",
+    description:
+      "We're building TrotelCoin - the best app to learn & earn crypto.",
+    images: [
+      {
+        url: "/assets/banner/trotelcoin-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "TrotelCoin | Learn & earn crypto",
+      },
+    ],
+  },
+  twitter: {
+    site: "@trotelcoin",
+    images: "/assets/banner/trotelcoin-banner.png",
+    card: "summary_large_image",
+    creator: "@trotelcoin",
+  },
+};
+
+export const jsonLd = {
+  "@context": "https://trotelcoin.com/",
+  "@type": "Product",
+  name: "TrotelCoin",
+  image: "/assets/logo/trotelcoin.png",
+  description:
+    "We're building TrotelCoin - the best app to learn & earn crypto",
 };
 
 export default function RootLayout({
@@ -21,36 +54,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta
-          name="keywords"
-          content="trotelcoin, learn, earn, crypto, bitcoin, ethereum"
-        />
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta
-          name="keywords"
-          content="trotelcoin, learn, earn, crypto, bitcoin, ethereum"
-        />
-        <meta
-          property="og:image"
-          content="/assets/banner/trotelcoin-banner.png"
-        />
-        <meta
-          property="twitter:image"
-          content="/assets/banner/trotelcoin-banner.png"
-        />
-        <meta
-          property="twitter:card"
-          content="/assets/banner/trotelcoin-banner.png"
-        />
-        <meta property="twitter:title" content={metadata.title} />
-        <meta property="twitter:description" content={metadata.description} />
-        <meta property="og:url" content="https://app.trotelcoin.com" />
         <meta charSet="UTF-8"></meta>
         <meta name="theme-color" content="#fff" />
-        <meta name="apple-mobile-web-app-capable" content="yes"></meta>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -75,56 +81,14 @@ export default function RootLayout({
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
-          <div className="hidden lg:block"></div>
           <Header />
           {children}
           <Analytics />
           <Footer />
-          <Script strategy="lazyOnload">
-            {`document.addEventListener("DOMContentLoaded", function(event) {
-            var cursor = document.querySelector(".custom-cursor");
-            var links = document.querySelectorAll("a");
-            var initCursor = false;
-
-            for (var i = 0; i < links.length; i++) {
-              var selfLink = links[i];
-
-              selfLink.addEventListener("mouseover", function() {
-                cursor.classList.add("custom-cursor--link");
-              });
-              selfLink.addEventListener("mouseout", function() {
-                cursor.classList.remove("custom-cursor--link");
-              });
-            }
-
-            window.onmousemove = function(e) {
-              var mouseX = e.clientX;
-              var mouseY = e.clientY;
-
-              if (!initCursor) {
-                // cursor.style.opacity = 1;
-                gsap.to(cursor, 0.3, {
-                  opacity: 1
-                });
-                initCursor = true;
-              }
-
-              gsap.to(cursor, 0, {
-                top: mouseY + "px",
-                left: mouseX + "px"
-              });
-            };
-
-            window.onmouseout = function(e) {
-              gsap.to(cursor, 0.3, {
-                opacity: 0
-              });
-              initCursor = false;
-            };
-          });
-          `}
-          </Script>
-          <div className="custom-cursor"></div>
+          <Script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
         </body>
       </Wagmi>
     </html>
