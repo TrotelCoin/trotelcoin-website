@@ -35,7 +35,7 @@ const tiers = [
 const Pricing = () => {
   return (
     <>
-      <div className="isolate overflow-hidden bg-black">
+      <div className="isolate overflow-hidden bg-gray-900">
         <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
           <div className="mx-auto max-w-4xl animate__animated animate__fadeIn">
             <h2 className="text-base font-semibold leading-7 text-blue-300 dark:text-blue-300">

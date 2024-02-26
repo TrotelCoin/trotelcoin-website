@@ -185,7 +185,7 @@ export default function Community() {
 
   return (
     <>
-      <div className="bg-white dark:bg-black py-24 sm:py-32">
+      <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
         {" "}
         <div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
@@ -202,7 +202,7 @@ export default function Community() {
                 {stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="flex flex-col bg-gray-900 hover:bg-gray-800 p-8"
+                    className="flex flex-col bg-gray-800 hover:bg-gray-700 p-8"
                   >
                     <dt className="text-sm font-semibold leading-6 text-gray-300">
                       {stat.name}

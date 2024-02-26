@@ -1,6 +1,6 @@
 export default function Mission() {
   return (
-    <div className="bg-white dark:bg-black">
+    <div className="bg-white dark:bg-gray-900">
       <div className="mx-auto justify-center flex text-center -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">

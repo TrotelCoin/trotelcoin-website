@@ -38,7 +38,7 @@ export default function GetStartedHero() {
   return (
     <>
       <div className="isolate overflow-hidden animate__animated animate__fadeIn">
-        <div className="relative bg-white dark:bg-black">
+        <div className="relative bg-white dark:bg-gray-900">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">

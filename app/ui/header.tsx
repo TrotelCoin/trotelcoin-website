@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={`${
-        pathname === "/pricing" ? "bg-black" : "bg-white dark:bg-black"
+        pathname === "/pricing" ? "bg-gray-900" : "bg-white dark:bg-gray-900"
       }`}
     >
       <nav
@@ -42,7 +42,7 @@ export default function Header() {
         </div>
         <div
           className={`hidden lg:flex backdrop-blur-xl items-center ${
-            pathname === "/pricing" ? "bg-white" : "bg-black dark:bg-white"
+            pathname === "/pricing" ? "bg-white" : "bg-gray-900 dark:bg-white"
           } py-2 px-3 rounded-full lg:gap-x-8`}
         >
           {navigation.map((item, index) => {
@@ -52,16 +52,16 @@ export default function Header() {
 
             if (pathname !== item.href && pathname !== "/pricing") {
               dynamicClasses =
-                "text-gray-100 dark:text-gray-900 hover:bg-white hover:text-gray-900 dark:hover:bg-black dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+                "text-gray-100 dark:text-gray-900 hover:bg-white hover:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-100 hover:shadow-lg rounded-full";
             } else if (pathname !== item.href && pathname === "/pricing") {
               dynamicClasses =
-                "text-gray-900 dark:text-gray-900 hover:bg-black hover:text-gray-100 dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+                "text-gray-900 dark:text-gray-900 hover:bg-gray-900 hover:text-gray-100 dark:hover:text-gray-100 hover:shadow-lg rounded-full";
             } else if (pathname === item.href && pathname === "/pricing") {
               dynamicClasses =
-                "bg-black dark:bg-black text-gray-100 dark:text-gray-100 hover:text-gray-100 hover:bg-black dark:hover:bg-black dark:hover:text-gray-100 hover:shadow-lg rounded-full";
+                "bg-gray-900 dark:bg-gray-900 text-gray-100 dark:text-gray-100 hover:text-gray-100 hover:bg-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-100 hover:shadow-lg rounded-full";
             } else if (pathname === item.href && pathname !== "/pricing") {
               dynamicClasses =
-                "text-gray-900 dark:text-gray-100 bg-white dark:bg-black shadow-lg rounded-full";
+                "text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 shadow-lg rounded-full";
             }
 
             const combinedClasses = `${defaultClasses} ${dynamicClasses}`;
@@ -82,8 +82,8 @@ export default function Header() {
             href="https://app.trotelcoin.com"
             className={`${
               pathname === "/pricing"
-                ? "bg-white text-gray-900 hover:bg-gray-200 hover:text-gray-900"
-                : "bg-black dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-200 hover:text-gray-100 dark:hover:text-gray-900"
+                ? "bg-white text-gray-900 hover:bg-gray-300 hover:text-gray-900"
+                : "bg-gray-900 dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-600 dark:hover:bg-gray-300 hover:text-gray-100 dark:hover:text-gray-900"
             } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
           >
             Launch app
@@ -115,7 +115,7 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-black px-6 py-6 sm:max-w-sm sm:ring-1 ring-gray-900/10 dark:ring-gray-100/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 ring-gray-900/10 dark:ring-gray-100/10">
           <div className="flex items-center gap-x-6">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
@@ -129,7 +129,7 @@ export default function Header() {
             </Link>
             <Link
               href="https://app.trotelcoin.com"
-              className="ml-auto rounded-full bg-black dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:focus-visible:outline-blue-300"
+              className="ml-auto rounded-full bg-gray-900 dark:bg-white px-4 py-2 text-sm font-semibold text-white dark:text-black duration-200 shadow-sm hover:scale-110 hover:duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:focus-visible:outline-blue-300"
             >
               Launch app
             </Link>
