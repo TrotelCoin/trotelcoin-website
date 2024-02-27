@@ -38,12 +38,6 @@ export default function Community() {
     };
 
     fetchNumberOfLearners();
-
-    const interval = setInterval(() => {
-      fetchNumberOfLearners();
-    }, 5000);
-
-    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -93,13 +87,6 @@ export default function Community() {
 
     fetchTokenPrice();
     fetchTotalSupply();
-
-    const interval = setInterval(() => {
-      fetchTokenPrice();
-      fetchTotalSupply();
-    }, 5000);
-
-    return () => clearInterval(interval);
   }, []);
 
   const stats = [
