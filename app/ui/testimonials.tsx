@@ -172,36 +172,34 @@ export default function Testimonials() {
             glareMaxOpacity={0.15}
             tiltMaxAngleX={5}
             tiltMaxAngleY={5}
-            className="rounded-xl"
+            className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1"
           >
-            <figure className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
-              <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:p-12 sm:text-xl sm:leading-8">
-                <p>{`“${featuredTestimonial.body}”`}</p>
-              </blockquote>
-              <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/20 dark:border-gray-100/20 px-6 py-4 sm:flex-nowrap">
-                <span className="flex-none text-4xl">
-                  {featuredTestimonial.author.imageUrl}
-                </span>
-                <div className="flex-auto">
-                  <div className="font-semibold">
-                    {featuredTestimonial.author.name}
-                  </div>
-                  <div className="text-gray-700 dark:text-gray-100">{`@${featuredTestimonial.author.handle}`}</div>
+            <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:p-12 sm:text-xl sm:leading-8">
+              <p>{`“${featuredTestimonial.body}”`}</p>
+            </blockquote>
+            <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/20 dark:border-gray-100/20 px-6 py-4 sm:flex-nowrap">
+              <span className="flex-none text-4xl">
+                {featuredTestimonial.author.imageUrl}
+              </span>
+              <div className="flex-auto">
+                <div className="font-semibold">
+                  {featuredTestimonial.author.name}
                 </div>
-                <Link
-                  href="https://cryptonaute.fr/entretien-avec-fondateur-trotelcoin-gagner-largent-apprenant-crypto/"
-                  target="_blank"
-                >
-                  <Image
-                    className="h-6 w-auto flex-none"
-                    src={featuredTestimonial.author.logoUrl}
-                    alt="Cryptonaute"
-                    width={120}
-                    height={32}
-                  />
-                </Link>
-              </figcaption>
-            </figure>
+                <div className="text-gray-700 dark:text-gray-100">{`@${featuredTestimonial.author.handle}`}</div>
+              </div>
+              <Link
+                href="https://cryptonaute.fr/entretien-avec-fondateur-trotelcoin-gagner-largent-apprenant-crypto/"
+                target="_blank"
+              >
+                <Image
+                  className="h-6 w-auto flex-none"
+                  src={featuredTestimonial.author.logoUrl}
+                  alt="Cryptonaute"
+                  width={120}
+                  height={32}
+                />
+              </Link>
+            </figcaption>
           </Tilt>
           {testimonials.map((columnGroup, columnGroupIdx) => (
             <div className="space-y-8 xl:contents xl:space-y-0">
@@ -224,25 +222,23 @@ export default function Testimonials() {
                       glareMaxOpacity={0.15}
                       tiltMaxAngleX={5}
                       tiltMaxAngleY={5}
-                      className="rounded-xl"
                       key={index}
+                      className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5"
                     >
-                      <figure className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5">
-                        <blockquote className="text-gray-900 dark:text-gray-100">
-                          <p>{`“${testimonial.body}”`}</p>
-                        </blockquote>
-                        <figcaption className="mt-6 flex items-center gap-x-4">
-                          <span className="flex-none text-4xl">
-                            {testimonial.author.imageUrl}
-                          </span>
-                          <div>
-                            <div className="font-semibold">
-                              {testimonial.author.name}
-                            </div>
-                            <div className="text-gray-700 dark:text-gray-300">{`@${testimonial.author.handle}`}</div>
+                      <blockquote className="text-gray-900 dark:text-gray-100">
+                        <p>{`“${testimonial.body}”`}</p>
+                      </blockquote>
+                      <figcaption className="mt-6 flex items-center gap-x-4">
+                        <span className="flex-none text-4xl">
+                          {testimonial.author.imageUrl}
+                        </span>
+                        <div>
+                          <div className="font-semibold">
+                            {testimonial.author.name}
                           </div>
-                        </figcaption>
-                      </figure>
+                          <div className="text-gray-700 dark:text-gray-300">{`@${testimonial.author.handle}`}</div>
+                        </div>
+                      </figcaption>
                     </Tilt>
                   ))}
                 </div>
