@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Tilt from "react-parallax-tilt";
 
 const featuredTestimonial = {
   body: "Quite often, lack of understanding and the fear of losing money push users towards the exit. Thanks to TrotelCoin, users will have the keys in hand to take possession of this essential technology for our economic future.",
@@ -165,75 +166,91 @@ export default function Testimonials() {
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 dark:text-gray-100 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
-          <figure className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
-            <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:p-12 sm:text-xl sm:leading-8">
-              <p>{`“${featuredTestimonial.body}”`}</p>
-            </blockquote>
-            <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/20 dark:border-gray-100/20 px-6 py-4 sm:flex-nowrap">
-              <span className="flex-none text-4xl">
-                {featuredTestimonial.author.imageUrl}
-              </span>
-              <div className="flex-auto">
-                <div className="font-semibold">
-                  {featuredTestimonial.author.name}
+          <Tilt
+            perspective={800}
+            glareEnable={true}
+            glareMaxOpacity={0.15}
+            tiltMaxAngleX={5}
+            tiltMaxAngleY={5}
+            className="rounded-xl"
+          >
+            <figure className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1">
+              <blockquote className="p-6 text-lg font-semibold leading-7 tracking-tight text-gray-900 dark:text-gray-100 sm:p-12 sm:text-xl sm:leading-8">
+                <p>{`“${featuredTestimonial.body}”`}</p>
+              </blockquote>
+              <figcaption className="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/20 dark:border-gray-100/20 px-6 py-4 sm:flex-nowrap">
+                <span className="flex-none text-4xl">
+                  {featuredTestimonial.author.imageUrl}
+                </span>
+                <div className="flex-auto">
+                  <div className="font-semibold">
+                    {featuredTestimonial.author.name}
+                  </div>
+                  <div className="text-gray-700 dark:text-gray-100">{`@${featuredTestimonial.author.handle}`}</div>
                 </div>
-                <div className="text-gray-700 dark:text-gray-100">{`@${featuredTestimonial.author.handle}`}</div>
-              </div>
-              <Link
-                href="https://cryptonaute.fr/entretien-avec-fondateur-trotelcoin-gagner-largent-apprenant-crypto/"
-                target="_blank"
-              >
-                <Image
-                  className="h-6 w-auto flex-none"
-                  src={featuredTestimonial.author.logoUrl}
-                  alt="Cryptonaute"
-                  width={120}
-                  height={32}
-                />
-              </Link>
-            </figcaption>
-          </figure>
-          {testimonials.map((columnGroup, columnGroupIdx) => (
-            <div
-              key={columnGroupIdx}
-              className="space-y-8 xl:contents xl:space-y-0"
-            >
-              {columnGroup.map((column, columnIdx) => (
-                <div
-                  key={columnIdx}
-                  className={classNames(
-                    (columnGroupIdx === 0 && columnIdx === 0) ||
-                      (columnGroupIdx === testimonials.length - 1 &&
-                        columnIdx === columnGroup.length - 1)
-                      ? "xl:row-span-2"
-                      : "xl:row-start-1",
-                    "space-y-8"
-                  )}
+                <Link
+                  href="https://cryptonaute.fr/entretien-avec-fondateur-trotelcoin-gagner-largent-apprenant-crypto/"
+                  target="_blank"
                 >
-                  {column.map((testimonial) => (
-                    <figure
-                      key={testimonial.author.handle}
-                      className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5"
-                    >
-                      <blockquote className="text-gray-900 dark:text-gray-100">
-                        <p>{`“${testimonial.body}”`}</p>
-                      </blockquote>
-                      <figcaption className="mt-6 flex items-center gap-x-4">
-                        <span className="flex-none text-4xl">
-                          {testimonial.author.imageUrl}
-                        </span>
-                        <div>
-                          <div className="font-semibold">
-                            {testimonial.author.name}
+                  <Image
+                    className="h-6 w-auto flex-none"
+                    src={featuredTestimonial.author.logoUrl}
+                    alt="Cryptonaute"
+                    width={120}
+                    height={32}
+                  />
+                </Link>
+              </figcaption>
+            </figure>
+          </Tilt>
+          {testimonials.map((columnGroup, columnGroupIdx) => (
+            <Tilt
+              perspective={800}
+              glareEnable={true}
+              glareMaxOpacity={0.15}
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+              className="rounded-xl"
+              key={columnGroupIdx}
+            >
+              <div className="space-y-8 xl:contents xl:space-y-0">
+                {columnGroup.map((column, columnIdx) => (
+                  <div
+                    key={columnIdx}
+                    className={classNames(
+                      (columnGroupIdx === 0 && columnIdx === 0) ||
+                        (columnGroupIdx === testimonials.length - 1 &&
+                          columnIdx === columnGroup.length - 1)
+                        ? "xl:row-span-2"
+                        : "xl:row-start-1",
+                      "space-y-8"
+                    )}
+                  >
+                    {column.map((testimonial) => (
+                      <figure
+                        key={testimonial.author.handle}
+                        className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5"
+                      >
+                        <blockquote className="text-gray-900 dark:text-gray-100">
+                          <p>{`“${testimonial.body}”`}</p>
+                        </blockquote>
+                        <figcaption className="mt-6 flex items-center gap-x-4">
+                          <span className="flex-none text-4xl">
+                            {testimonial.author.imageUrl}
+                          </span>
+                          <div>
+                            <div className="font-semibold">
+                              {testimonial.author.name}
+                            </div>
+                            <div className="text-gray-700 dark:text-gray-300">{`@${testimonial.author.handle}`}</div>
                           </div>
-                          <div className="text-gray-700 dark:text-gray-300">{`@${testimonial.author.handle}`}</div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  ))}
-                </div>
-              ))}
-            </div>
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </Tilt>
           ))}
         </div>
       </div>
