@@ -204,33 +204,30 @@ export default function Testimonials() {
             </figure>
           </Tilt>
           {testimonials.map((columnGroup, columnGroupIdx) => (
-            <Tilt
-              perspective={800}
-              glareEnable={true}
-              glareMaxOpacity={0.15}
-              tiltMaxAngleX={5}
-              tiltMaxAngleY={5}
-              className="rounded-xl"
-              key={columnGroupIdx}
-            >
-              <div className="space-y-8 xl:contents xl:space-y-0">
-                {columnGroup.map((column, columnIdx) => (
-                  <div
-                    key={columnIdx}
-                    className={classNames(
-                      (columnGroupIdx === 0 && columnIdx === 0) ||
-                        (columnGroupIdx === testimonials.length - 1 &&
-                          columnIdx === columnGroup.length - 1)
-                        ? "xl:row-span-2"
-                        : "xl:row-start-1",
-                      "space-y-8"
-                    )}
-                  >
-                    {column.map((testimonial) => (
-                      <figure
-                        key={testimonial.author.handle}
-                        className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5"
-                      >
+            <div className="space-y-8 xl:contents xl:space-y-0">
+              {columnGroup.map((column, columnIdx) => (
+                <div
+                  key={columnIdx}
+                  className={classNames(
+                    (columnGroupIdx === 0 && columnIdx === 0) ||
+                      (columnGroupIdx === testimonials.length - 1 &&
+                        columnIdx === columnGroup.length - 1)
+                      ? "xl:row-span-2"
+                      : "xl:row-start-1",
+                    "space-y-8"
+                  )}
+                >
+                  {column.map((testimonial, index) => (
+                    <Tilt
+                      perspective={800}
+                      glareEnable={true}
+                      glareMaxOpacity={0.15}
+                      tiltMaxAngleX={5}
+                      tiltMaxAngleY={5}
+                      className="rounded-xl"
+                      key={index}
+                    >
+                      <figure className="rounded-2xl bg-white dark:bg-gray-800 border border-transparent hover:border-gray-900/50 dark:hover:border-gray-100/50 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-gray-100/5">
                         <blockquote className="text-gray-900 dark:text-gray-100">
                           <p>{`“${testimonial.body}”`}</p>
                         </blockquote>
@@ -246,11 +243,11 @@ export default function Testimonials() {
                           </div>
                         </figcaption>
                       </figure>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </Tilt>
+                    </Tilt>
+                  ))}
+                </div>
+              ))}
+            </div>
           ))}
         </div>
       </div>
