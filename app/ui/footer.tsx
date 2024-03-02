@@ -104,10 +104,13 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
+    <footer
+      className="bg-white dark:bg-gray-900"
+      aria-labelledby="footer-heading"
+    >
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
+          <div className="space-y-8 flex flex-col w-1/2">
             <Link href="/">
               <Image
                 className="h-10 w-auto"
@@ -132,6 +135,18 @@ export default function Footer() {
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
               ))}
+            </div>
+            <div>
+              <Link
+                href="https://www.producthunt.com/posts/trotelcoin?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trotelcoin"
+                target="_blank"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442238&theme=light"
+                  alt="Product Hunt"
+                  className="hover:opacity-90"
+                />
+              </Link>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
@@ -176,7 +191,7 @@ export default function Footer() {
               </div>
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100">
-                  Onchain
+                  Blockchain
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.ecosystem.map((item, index) => (
