@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 import { polygon } from "wagmi/chains";
 import { trotelCoinAddress } from "@/data/addresses";
 import { useToken } from "wagmi";
+import axios from "axios";
 
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
@@ -21,23 +22,15 @@ export default function Community() {
   });
 
   useEffect(() => {
-    const fetchNumberOfLearners = async () => {
-      try {
-        const response = await fetch("/api/numberOfLearners", {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          cache: "no-store",
-        });
-        const data = await response.json();
-        setNumberOfLearners(data.length);
-      } catch (error) {
+    axios
+      .get("/api/numberOfLearners")
+      .then((res) => {
+        setNumberOfLearners(res.data.length);
+      })
+      .catch((err) => {
+        console.error(err);
         setNumberOfLearners(0);
-      }
-    };
-
-    fetchNumberOfLearners();
+      });
   }, []);
 
   useEffect(() => {
