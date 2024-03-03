@@ -9,23 +9,15 @@ import { useToken } from "wagmi";
 import axios from "axios";
 import useSWR from "swr";
 
-const fetcher = (url: string) =>
-  axios
-    .get(url)
-    .then((res) => {
-      res.data.length;
-    })
-    .catch((err) => {
-      console.error(err);
-    });
+type Fetcher = (url: string) => Promise<any>;
+
+const fetcher: Fetcher = (url: string) =>
+  axios.get(url).then((res) => res.data);
 
 export default function Community() {
-  const [tokenPrice, setTokenPrice] = useState<number | null>(0);
-  const [totalSupply, setTotalSupply] = useState<number | null>(0);
   const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
     number | null
   >(0);
-  const [numberOfLearners, setNumberOfLearners] = useState<number | null>(0);
 
   const { data: tokenRewardsData } = useToken({
     chainId: polygon.id,
@@ -38,14 +30,6 @@ export default function Community() {
   );
 
   useEffect(() => {
-    if (numberOfLearnersData) {
-      setNumberOfLearners(numberOfLearnersData);
-    } else {
-      setNumberOfLearners(0);
-    }
-  }, [numberOfLearnersData]);
-
-  useEffect(() => {
     if (tokenRewardsData) {
       const tokenTotalSupply = parseFloat(
         tokenRewardsData.totalSupply.formatted
@@ -53,125 +37,88 @@ export default function Community() {
       const initialSupply = 100000000;
 
       setTrotelCoinsDistributed(tokenTotalSupply - initialSupply);
+    } else {
+      setTrotelCoinsDistributed(0);
     }
   }, [tokenRewardsData]);
 
-  useEffect(() => {
-    const fetchTokenPrice = async () => {
-      try {
-        const response = await fetch("/api/moralis/tokenPrice", {
-          cache: "no-store",
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setTokenPrice(data.tokenPrice);
-      } catch (error) {
-        setTokenPrice(0);
-      }
-    };
-
-    const fetchTotalSupply = async () => {
-      try {
-        const response = await fetch("/api/totalSupply", {
-          cache: "no-store",
-          headers: {
-            "cache-control": "no-store",
-          },
-        });
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const totalSupply = await response.json();
-        setTotalSupply(totalSupply);
-      } catch (error) {
-        setTotalSupply(0);
-      }
-    };
-
-    fetchTokenPrice();
-    fetchTotalSupply();
-  }, []);
+  const { data: tokenPriceData } = useSWR("/api/moralis/tokenPrice", fetcher);
+  const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher);
 
   const stats = [
     {
       id: 1,
       name: "TrotelCoin price",
-      value:
-        tokenPrice !== null && tokenPrice ? (
-          <>
-            $
-            <CountUp
-              start={0}
-              end={parseFloat(tokenPrice?.toFixed(5))}
-              duration={1}
-              decimal="."
-              decimals={5}
-            />
-          </>
-        ) : (
-          "$0"
-        ),
+      value: (
+        <>
+          $
+          <CountUp
+            start={0}
+            end={
+              parseFloat(
+                parseFloat(
+                  (tokenPriceData as number)?.toFixed(5)
+                ).toLocaleString("en-US")
+              ) ?? 0
+            }
+            duration={1}
+            decimal="."
+            decimals={5}
+          />
+        </>
+      ),
     },
     {
       id: 2,
       name: "Market cap",
-      value:
-        tokenPrice !== null &&
-        totalSupply !== null &&
-        tokenPrice &&
-        totalSupply ? (
-          <>
-            $
-            <CountUp
-              start={0}
-              end={parseFloat(
-                (tokenPrice * parseFloat(totalSupply?.toString())).toFixed(0)
-              )}
-              duration={1}
-              decimal="."
-              decimals={0}
-            />
-          </>
-        ) : (
-          "$0"
-        ),
-    },
-    {
-      id: 3,
-      name: "TrotelCoins distributed",
-      value: trotelCoinsDistributed ? (
+      value: (
         <>
+          $
           <CountUp
             start={0}
-            end={trotelCoinsDistributed}
+            end={
+              parseFloat(
+                (
+                  (tokenPriceData as number) * (totalSupplyData as number)
+                ).toLocaleString("en-US")
+              ) ?? 0
+            }
             duration={1}
             decimal="."
             decimals={0}
           />
         </>
-      ) : (
-        <span>0</span>
+      ),
+    },
+    {
+      id: 3,
+      name: "TrotelCoins distributed",
+      value: (
+        <>
+          <CountUp
+            start={0}
+            end={trotelCoinsDistributed ?? 0}
+            duration={1}
+            decimal="."
+            decimals={0}
+          />
+        </>
       ),
     },
     {
       id: 4,
       name: "Learners",
-      value:
-        numberOfLearners !== null && numberOfLearners ? (
-          <>
-            <CountUp
-              start={0}
-              end={numberOfLearners}
-              duration={1}
-              decimal="."
-              decimals={0}
-            />
-          </>
-        ) : (
-          "0"
-        ),
+      value: (
+        <>
+          <CountUp
+            start={0}
+            end={numberOfLearnersData ?? 0}
+            duration={1}
+            decimal="."
+            decimals={0}
+          />
+        </>
+      ),
     },
   ];
 
@@ -201,18 +148,11 @@ export default function Community() {
                     </dt>
                     <dd
                       className={`order-first text-3xl font-semibold tracking-tight text-gray-100 ${
-                        (stat.value === "0" ||
-                          stat.value ===
-                          (
-                            <span>
-                              0 <span className="text-xs">TROTEL</span>
-                            </span>
-                          ) ||
-                          stat.value === "$0") &&
-                        "animate-pulse"
+                        !stat.value && "animate-pulse"
                       }`}
                     >
-                      {stat.value}
+                      {stat.value}{" "}
+                      <span className="text-xs">{!stat.value && "TROTEL"}</span>
                     </dd>
                   </div>
                 ))}
