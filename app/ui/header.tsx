@@ -33,7 +33,14 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <span className="sr-only">TrotelCoin</span>
           <Image
-            className="h-12 w-auto"
+            className="h-12 w-auto hidden dark:block"
+            src="/trotelcoin.png"
+            alt="TrotelCoin logo"
+            width={100}
+            height={100}
+          />
+          <Image
+            className="h-12 w-auto block dark:hidden"
             src="/trotelcoin-white.png"
             alt="TrotelCoin logo"
             width={100}
@@ -67,11 +74,7 @@ export default function Header() {
             const combinedClasses = `${defaultClasses} ${dynamicClasses}`;
 
             return (
-              <Link
-                key={index}
-                href={item.href}
-                className={combinedClasses}
-              >
+              <Link key={index} href={item.href} className={combinedClasses}>
                 {item.name}
               </Link>
             );

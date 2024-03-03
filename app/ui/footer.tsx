@@ -113,7 +113,14 @@ export default function Footer() {
           <div className="space-y-8 flex flex-col w-1/2">
             <Link href="/">
               <Image
-                className="h-10 w-auto"
+                className="h-10 w-auto hidden dark:block"
+                src="/trotelcoin.png"
+                alt="TrotelCoin logo"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="h-10 w-auto block dark:hidden"
                 src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
                 width={100}
