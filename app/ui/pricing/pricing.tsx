@@ -87,7 +87,7 @@ const Pricing = () => {
                       <div>
                         <h3
                           id={tier.id}
-                          className="text-base font-semibold leading-7 text-blue-500 dark:text-blue-300"
+                          className="text-base font-semibold leading-7 text-blue-500"
                         >
                           {tier.name}
                         </h3>
@@ -113,7 +113,7 @@ const Pricing = () => {
                           {tier.features.map((feature, index) => (
                             <li key={index} className="flex gap-x-3">
                               <CheckIcon
-                                className="h-6 w-5 flex-none text-blue-500 dark:text-blue-300"
+                                className="h-6 w-5 flex-none text-blue-500"
                                 aria-hidden="true"
                               />
                               {feature}
@@ -135,7 +135,7 @@ const Pricing = () => {
                 <div className="lg:col-span-2">
                   <div className="flex flex-col lg:flex-row lg:items-center animate__animated animate__bounceIn items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10">
                     <div className="lg:min-w-0 lg:flex-1">
-                      <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-500 dark:text-blue-300">
+                      <h3 className="text-lg font-semibold leading-8 tracking-tight text-blue-500">
                         Are you eligible?
                       </h3>
                       <p className="mt-1 text-base leading-7 text-gray-700">
