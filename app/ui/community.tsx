@@ -7,7 +7,17 @@ import { polygon } from "wagmi/chains";
 import { trotelCoinAddress } from "@/data/addresses";
 import { useToken } from "wagmi";
 import axios from "axios";
-import swr from "swr";
+import useSWR from "swr";
+
+const fetcher = (url: string) =>
+  axios
+    .get(url)
+    .then((res) => {
+      res.data.length;
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
@@ -22,22 +32,16 @@ export default function Community() {
     address: trotelCoinAddress,
   });
 
-  const fetcher = (url: string) =>
-    axios
-      .get(url)
-      .then((res) => {
-        setNumberOfLearners(res.data.length);
-      })
-      .catch((err) => {
-        console.error(err);
-        setNumberOfLearners(0);
-      });
-
-  const { data: numberOfLearnersData } = swr("/api/numberOfLearners", fetcher);
+  const { data: numberOfLearnersData } = useSWR(
+    "/api/numberOfLearners",
+    fetcher
+  );
 
   useEffect(() => {
     if (numberOfLearnersData) {
       setNumberOfLearners(numberOfLearnersData);
+    } else {
+      setNumberOfLearners(0);
     }
   }, [numberOfLearnersData]);
 
