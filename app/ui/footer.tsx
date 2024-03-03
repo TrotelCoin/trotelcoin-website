@@ -120,7 +120,7 @@ export default function Footer() {
                 height={100}
               />
             </Link>
-            <p className="text-sm leading-6 text-gray-700 dark:text-gray-200">
+            <p className="text-sm leading-6 text-gray-700 dark:text-gray-300">
               Learn & earn crypto.
             </p>
             <div className="flex space-x-6">

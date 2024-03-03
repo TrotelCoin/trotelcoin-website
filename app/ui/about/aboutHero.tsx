@@ -57,7 +57,7 @@ export default function aboutHero() {
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
                   Learn Web3 another way
                 </h1>
-                <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200 sm:max-w-md lg:max-w-none">
+                <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:max-w-md lg:max-w-none">
                   We're building a platform to help you learn about web3 like
                   never before.
                 </p>
@@ -65,7 +65,7 @@ export default function aboutHero() {
                   <a
                     href="https://docs.trotelcoin.com"
                     target="_blank"
-                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-200"
+                    className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300"
                   >
                     Learn more <span aria-hidden="true">→</span>
                   </a>

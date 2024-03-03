@@ -77,7 +77,7 @@ export default function FAQ() {
                     </dt>
                     {activeIndex === index && (
                       <dd className="mt-2 pr-12">
-                        <p className="text-base leading-7 text-gray-600 dark:text-gray-200">
+                        <p className="text-base leading-7 text-gray-600 dark:text-gray-300">
                           {faq.answer}
                         </p>
                       </dd>

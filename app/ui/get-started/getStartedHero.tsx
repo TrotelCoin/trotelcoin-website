@@ -43,13 +43,13 @@ export default function GetStartedHero() {
             <div className="py-24 sm:py-32">
               <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
-                  <h2 className="text-base font-semibold leading-7 text-blue-500 ">
+                  <h2 className="text-base font-semibold leading-7 text-blue-500 dark:text-blue-300">
                     Learn & earn crypto
                   </h2>
                   <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
                     Get started.
                   </p>
-                  <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
+                  <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
                     You can start learning and earning crypto without having any
                     TrotelCoin. However, holding TrotelCoin will make your
                     experience better.
@@ -61,18 +61,18 @@ export default function GetStartedHero() {
                       <div key={index} className="flex flex-col">
                         <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100">
                           <feature.icon
-                            className="h-5 w-5 flex-none text-blue-500 "
+                            className="h-5 w-5 flex-none text-blue-500 dark:text-blue-300"
                             aria-hidden="true"
                           />
                           {feature.name}
                         </dt>
-                        <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-200">
+                        <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600 dark:text-gray-300">
                           <p className="flex-auto">{feature.description}</p>
                           <p className="mt-6">
                             <Link
                               href={feature.href}
                               target="_blank"
-                              className="text-sm font-semibold leading-6 text-blue-500  hover:text-blue-400 dark:hover:text-blue-400"
+                              className="text-sm font-semibold leading-6 text-blue-500 hover:text-blue-400 dark:hover:text-blue-400 dark:text-blue-300"
                             >
                               Learn more <span aria-hidden="true">→</span>
                             </Link>

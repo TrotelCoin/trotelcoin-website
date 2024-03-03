@@ -69,11 +69,11 @@ export default function Hero() {
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="py-12 md:py-0">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center animate__animated animate__bounceIn">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-200 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-gray-300 ring-1 ring-gray-900/10 dark:ring-gray-100/10 hover:ring-gray-900/20 dark:hover:ring-gray-100/20">
               TrotelCoin is more than just a cryptocurrency.{" "}
               <Link
                 href="https://docs.trotelcoin.com"
-                className="font-semibold text-blue-500"
+                className="font-semibold text-blue-500 dark:text-blue-300"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Learn more <span aria-hidden="true">&rarr;</span>
@@ -84,7 +84,7 @@ export default function Hero() {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">
               Learn <span ref={typedTextRef} />
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-200">
+            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
               Learn & earn crypto by taking courses, quizzes, and watching
               videos.
             </p>

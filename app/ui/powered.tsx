@@ -36,7 +36,7 @@ export default function Powered() {
                 <Link
                   href="https://flooz.xyz/trade/how-to-buy/0x85057d5a8d063f9075Ba963101D76352051675E5?network=polygon"
                   target="_blank"
-                  className="font-semibold text-blue-500 "
+                  className="font-semibold text-blue-500 dark:text-blue-300"
                 >
                   <span className="absolute inset-0" aria-hidden="true" /> Learn
                   more <span aria-hidden="true">&rarr;</span>
