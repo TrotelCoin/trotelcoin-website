@@ -7,6 +7,7 @@ import { polygon } from "wagmi/chains";
 import { trotelCoinAddress } from "@/data/addresses";
 import { useToken } from "wagmi";
 import axios from "axios";
+import swr from "swr";
 
 export default function Community() {
   const [tokenPrice, setTokenPrice] = useState<number | null>(0);
@@ -21,9 +22,9 @@ export default function Community() {
     address: trotelCoinAddress,
   });
 
-  useEffect(() => {
+  const fetcher = (url: string) =>
     axios
-      .get("/api/numberOfLearners")
+      .get(url)
       .then((res) => {
         setNumberOfLearners(res.data.length);
       })
@@ -31,7 +32,14 @@ export default function Community() {
         console.error(err);
         setNumberOfLearners(0);
       });
-  }, []);
+
+  const { data: numberOfLearnersData } = swr("/api/numberOfLearners", fetcher);
+
+  useEffect(() => {
+    if (numberOfLearnersData) {
+      setNumberOfLearners(numberOfLearnersData);
+    }
+  }, [numberOfLearnersData]);
 
   useEffect(() => {
     if (tokenRewardsData) {
