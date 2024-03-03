@@ -120,7 +120,7 @@ export default function Features() {
                           {feature.description}
                         </span>
 
-                        <span className="text-blue-500 dark:text-blue-300">
+                        <span className="text-blue-500 ">
                           Learn more &rarr;
                         </span>
                       </div>

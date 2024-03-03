@@ -73,7 +73,7 @@ export default function Hero() {
               TrotelCoin is more than just a cryptocurrency.{" "}
               <Link
                 href="https://docs.trotelcoin.com"
-                className="font-semibold text-blue-500 dark:text-blue-300"
+                className="font-semibold text-blue-500"
               >
                 <span className="absolute inset-0" aria-hidden="true" />
                 Learn more <span aria-hidden="true">&rarr;</span>
@@ -96,11 +96,11 @@ export default function Hero() {
                 Launch app
               </Link>
               <Link
-                href="https://docs.trotelcoin.com"
+                href="https://docs.trotelcoin.com/businesses/listing-on-the-platform"
                 target="_blank"
                 className="text-sm font-semibold leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
               >
-                Learn more <span aria-hidden="true">→</span>
+                List on the platform <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>
