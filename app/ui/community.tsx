@@ -54,13 +54,7 @@ export default function Community() {
           $
           <CountUp
             start={0}
-            end={
-              parseFloat(
-                parseFloat(
-                  (tokenPriceData as number)?.toFixed(5)
-                ).toLocaleString("en-US")
-              ) ?? 0
-            }
+            end={parseFloat(tokenPriceData) ?? 0}
             duration={1}
             decimal="."
             decimals={5}
@@ -76,13 +70,7 @@ export default function Community() {
           $
           <CountUp
             start={0}
-            end={
-              parseFloat(
-                (
-                  (tokenPriceData as number) * (totalSupplyData as number)
-                ).toLocaleString("en-US")
-              ) ?? 0
-            }
+            end={(tokenPriceData as number) * (totalSupplyData as number) ?? 0}
             duration={1}
             decimal="."
             decimals={0}
