@@ -87,7 +87,7 @@ export default function Header() {
               pathname === "/pricing"
                 ? "bg-white text-gray-900 hover:bg-gray-300 hover:text-gray-900"
                 : "bg-gray-900 dark:bg-white text-gray-100 dark:text-gray-900 hover:bg-gray-600 dark:hover:bg-gray-300 hover:text-gray-100 dark:hover:text-gray-900"
-            } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+            } rounded-full px-4 py-2 text-sm font-semibold shadow-sm duration-200 hover:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:focus-visible:outline-blue-300`}
           >
             Launch app
           </Link>

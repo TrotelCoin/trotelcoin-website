@@ -125,7 +125,7 @@ const Pricing = () => {
                         href={tier.href}
                         target="_blank"
                         aria-describedby={tier.id}
-                        className="mt-8 block rounded-md bg-blue-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-gray-100 shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                        className="mt-8 block rounded-md bg-blue-500 px-3.5 py-2 text-center text-sm font-semibold leading-6 text-gray-100 shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:focus-visible:outline-blue-300"
                       >
                         Buy TrotelCoin
                       </Link>
@@ -145,7 +145,7 @@ const Pricing = () => {
                     </div>
                     <Link
                       href="https://app.trotelcoin.com/premium"
-                      className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-500 hover:ring-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+                      className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-blue-500 hover:ring-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:focus-visible:outline-blue-300"
                     >
                       Claim now <span aria-hidden="true">&rarr;</span>
                     </Link>
