@@ -45,6 +45,9 @@ export default function Community() {
   const { data: tokenPriceData } = useSWR("/api/moralis/tokenPrice", fetcher);
   const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher);
 
+  console.log("tokenPriceData", tokenPriceData);
+  console.log("totalSupplyData", totalSupplyData);
+
   const stats = [
     {
       id: 1,

@@ -202,10 +202,12 @@ export default function Testimonials() {
             </figcaption>
           </Tilt>
           {testimonials.map((columnGroup, columnGroupIdx) => (
-            <div className="space-y-8 xl:contents xl:space-y-0">
+            <div
+              className="space-y-8 xl:contents xl:space-y-0"
+              key={columnGroupIdx}
+            >
               {columnGroup.map((column, columnIdx) => (
                 <div
-                  key={columnIdx}
                   className={classNames(
                     (columnGroupIdx === 0 && columnIdx === 0) ||
                       (columnGroupIdx === testimonials.length - 1 &&

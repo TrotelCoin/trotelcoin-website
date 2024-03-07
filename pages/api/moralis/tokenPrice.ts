@@ -22,7 +22,7 @@ export default async function handler(
 
     const tokenPrice = response.raw.usdPrice;
 
-    res.status(200).json({ tokenPrice });
+    res.status(200).json(tokenPrice);
   } catch (error) {
     res
       .status(500)
