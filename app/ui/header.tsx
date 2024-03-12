@@ -123,7 +123,14 @@ export default function Header() {
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">TrotelCoin</span>
               <Image
-                className="h-12 w-auto"
+                className="h-12 w-auto hidden dark:block"
+                src="/trotelcoin.png"
+                alt="TrotelCoin logo"
+                width={100}
+                height={100}
+              />
+              <Image
+                className="h-12 w-auto block dark:hidden"
                 src="/trotelcoin-white.png"
                 alt="TrotelCoin logo"
                 width={100}
