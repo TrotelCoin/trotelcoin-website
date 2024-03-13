@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   generator: "Next.js",
   manifest: "/manifest.json",
   authors: [{ name: "TrotelCoin" }],
+  robots: "follow, index",
   applicationName: "TrotelCoin",
   appleWebApp: true,
   keywords:
