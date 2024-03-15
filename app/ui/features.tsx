@@ -15,8 +15,8 @@ const featuresData = [
     color: "",
   },
   {
-    title: "🤝 Social Login",
-    description: "Login with your favorite social network without any wallet.",
+    title: "📞 PWA",
+    description: "The application is accesible from everywhere natively.",
     status: "",
     color: "",
   },
@@ -120,7 +120,7 @@ export default function Features() {
                           {feature.description}
                         </span>
 
-                        <span className="text-blue-500 dark:text-blue-300">
+                        <span className="text-blue-500 dark:text-blue-300 hover:text-blue-400 dark:hover:text-blue-400">
                           Learn more &rarr;
                         </span>
                       </div>
