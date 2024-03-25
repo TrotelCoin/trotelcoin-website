@@ -29,7 +29,7 @@ export default function Powered() {
               />
             </div>
             <div className="flex justify-center">
-              <p className="relative rounded-full bg-gray-100 dark:bg-gray-800 px-4 py-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20 dark:ring-gray-100/10 dark:hover:ring-gray-100/20">
+              <p className="relative rounded-full bg-gray-50 dark:bg-gray-800 px-4 py-1.5 text-sm leading-6 text-gray-700 dark:text-gray-300 ring-1 ring-inset ring-gray-900/10 hover:ring-gray-900/20 dark:ring-gray-100/10 dark:hover:ring-gray-100/20">
                 <span className="hidden md:inline">
                   Buy TrotelCoins with Apple Pay and Google Pay thanks to Flooz.
                 </span>

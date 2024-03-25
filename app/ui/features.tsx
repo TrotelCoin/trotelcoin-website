@@ -101,7 +101,7 @@ export default function Features() {
                     className="rounded-xl"
                   >
                     <div
-                      className={`flex bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 border border-gray-900/10 hover:border-gray-900/50 dark:border-transparent backdrop-blur-2xl p-6 rounded-xl`}
+                      className={`flex bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 border border-gray-900/10 hover:border-gray-900/50 dark:border-transparent backdrop-blur-2xl p-6 rounded-xl`}
                     >
                       <div className="flex flex-col gap-2">
                         <span
