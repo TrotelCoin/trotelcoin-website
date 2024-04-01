@@ -26,7 +26,13 @@ export default function Community() {
 
   const { data: numberOfLearnersData } = useSWR(
     "/api/numberOfLearners",
-    fetcher
+    fetcher,
+    {
+      revalidateOnReconnect: true,
+      revalidateIfStale: true,
+      revalidateOnMount: true,
+      refreshInterval: 10000,
+    }
   );
 
   useEffect(() => {
@@ -42,11 +48,18 @@ export default function Community() {
     }
   }, [tokenRewardsData]);
 
-  const { data: tokenPriceData } = useSWR("/api/moralis/tokenPrice", fetcher);
-  const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher);
-
-  console.log("tokenPriceData", tokenPriceData);
-  console.log("totalSupplyData", totalSupplyData);
+  const { data: tokenPriceData } = useSWR("/api/moralis/tokenPrice", fetcher, {
+    revalidateOnReconnect: true,
+    revalidateIfStale: true,
+    revalidateOnMount: true,
+    refreshInterval: 10000,
+  });
+  const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher, {
+    revalidateOnReconnect: true,
+    revalidateIfStale: true,
+    revalidateOnMount: true,
+    refreshInterval: 10000,
+  });
 
   const stats = [
     {

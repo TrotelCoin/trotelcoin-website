@@ -8,6 +8,8 @@ import GoogleAnalytics from "@/app/googleAnalytics";
 import Script from "next/script";
 import type { Metadata } from "next";
 
+export const revalidate: number = 60;
+
 export const metadata: Metadata = {
   title: "TrotelCoin | Learn & earn crypto",
   description:
