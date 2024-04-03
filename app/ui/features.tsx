@@ -55,8 +55,8 @@ const featuresData = [
     title: "🛍️ Shop",
     description:
       "Buy more lives, reset your streak, grow your inventory and more.",
-    status: "Not available",
-    color: "blue",
+    status: "",
+    color: "",
   },
   {
     title: "🦊 Coming soon...",
