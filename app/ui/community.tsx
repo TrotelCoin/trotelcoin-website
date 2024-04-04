@@ -83,7 +83,6 @@ export default function Community() {
       name: "Quizzes answered",
       value: (
         <>
-          $
           <CountUp
             start={0}
             end={parseFloat(numberOfQuizzesAnswered) ?? 0}
@@ -98,7 +97,6 @@ export default function Community() {
       name: "Pending rewards",
       value: (
         <>
-          $
           <CountUp
             start={0}
             end={totalPendingRewards ?? 0}
