@@ -35,6 +35,28 @@ export default function Community() {
     }
   );
 
+  const { data: totalPendingRewards } = useSWR(
+    "/api/totalPendingRewards",
+    fetcher,
+    {
+      revalidateOnReconnect: true,
+      revalidateIfStale: true,
+      revalidateOnMount: true,
+      refreshInterval: 10000,
+    }
+  );
+
+  const { data: numberOfQuizzesAnswered } = useSWR(
+    "/api/numberOfQuizzesAnswered",
+    fetcher,
+    {
+      revalidateIfStale: true,
+      revalidateOnReconnect: true,
+      revalidateOnMount: true,
+      refreshInterval: 10000,
+    }
+  );
+
   useEffect(() => {
     if (tokenRewardsData) {
       const tokenTotalSupply = parseFloat(
@@ -48,12 +70,6 @@ export default function Community() {
     }
   }, [tokenRewardsData]);
 
-  const { data: tokenPriceData } = useSWR("/api/moralis/tokenPrice", fetcher, {
-    revalidateOnReconnect: true,
-    revalidateIfStale: true,
-    revalidateOnMount: true,
-    refreshInterval: 10000,
-  });
   const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher, {
     revalidateOnReconnect: true,
     revalidateIfStale: true,
@@ -64,29 +80,28 @@ export default function Community() {
   const stats = [
     {
       id: 1,
-      name: "TrotelCoin price",
+      name: "Quizzes answered",
       value: (
         <>
           $
           <CountUp
             start={0}
-            end={parseFloat(tokenPriceData) ?? 0}
+            end={parseFloat(numberOfQuizzesAnswered) ?? 0}
             duration={1}
             decimal="."
-            decimals={5}
           />
         </>
       ),
     },
     {
       id: 2,
-      name: "Market cap",
+      name: "Pending rewards",
       value: (
         <>
           $
           <CountUp
             start={0}
-            end={(tokenPriceData as number) * (totalSupplyData as number) ?? 0}
+            end={totalPendingRewards ?? 0}
             duration={1}
             decimal="."
             decimals={0}
@@ -129,7 +144,6 @@ export default function Community() {
   return (
     <>
       <div className="bg-white dark:bg-gray-900 py-24 sm:py-32">
-        {" "}
         <div>
           <div className="mx-auto max-w-7xl px-6 lg:px-8 animate__animated animate__fadeIn">
             <div className="mx-auto max-w-2xl lg:max-w-none">
