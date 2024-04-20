@@ -36,8 +36,8 @@ const navigation = {
       target: "_blank",
     },
     {
-      name: "Coinbrain",
-      href: "https://coinbrain.com/coins/poly-0x85057d5a8d063f9075ba963101d76352051675e5",
+      name: "Gecko Terminal",
+      href: "https://www.geckoterminal.com/polygon_pos/pools/0x360103feb052acda1f09bdfb3d73a0c1b9662c78",
       target: "_blank",
     },
   ],
@@ -50,6 +50,11 @@ const navigation = {
     {
       name: "Discord",
       href: "https://discord.gg/a33hjU5Usb",
+      target: "_blank",
+    },
+    {
+      name: "Blog / Mirror",
+      href: "https://mirror.xyz/alexandretrotel.eth",
       target: "_blank",
     },
     { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
