@@ -29,7 +29,7 @@ const featuresData = [
   {
     title: "🎥 Videos",
     description: "Watch videos and learn from another perspective.",
-    status: "Not available",
+    status: "Beta",
     color: "blue",
   },
   {
@@ -48,7 +48,7 @@ const featuresData = [
   {
     title: "🙈 Community",
     description: "Create your courses, earn more and learn from others.",
-    status: "Not available",
+    status: "Coming soon",
     color: "blue",
   },
   {
