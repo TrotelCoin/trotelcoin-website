@@ -200,9 +200,9 @@ export default function Footer() {
                           {item.name}{" "}
                           {item.target === "_blank" ? (
                             <span
-                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-100 ${
                                 hoveringLink === item.id &&
-                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                                "translate-x-0.5 -translate-y-0.5 duration-100"
                               }`}
                             >
                               <svg
@@ -245,9 +245,9 @@ export default function Footer() {
                           {item.name}{" "}
                           {item.target === "_blank" ? (
                             <span
-                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-100 ${
                                 hoveringLink === item.id &&
-                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                                "translate-x-0.5 -translate-y-0.5 duration-100"
                               }`}
                             >
                               <svg
@@ -292,9 +292,9 @@ export default function Footer() {
                           {item.name}{" "}
                           {item.target === "_blank" ? (
                             <span
-                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-100 ${
                                 hoveringLink === item.id &&
-                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                                "translate-x-0.5 -translate-y-0.5 duration-100"
                               }`}
                             >
                               <svg
