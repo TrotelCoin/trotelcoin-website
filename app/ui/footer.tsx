@@ -1,44 +1,52 @@
-import { JSX, SVGProps } from "react";
+"use client";
+
+import { JSX, SVGProps, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const navigation = {
   trotelcoin: [
-    { name: "Home", href: "/" },
+    { name: "Home", href: "/", id: 1 },
     {
       name: "Governance",
       href: "https://vote.trotelcoin.com/#/alexandretrotel.eth",
       target: "_blank",
+      id: 2,
     },
     {
       name: "Whitepaper",
       href: "https://docs.trotelcoin.com/overview/whitepaper",
       target: "_blank",
+      id: 3,
     },
-    { name: "Get started", href: "/get-started" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "About", href: "/about" },
+    { name: "Get started", href: "/get-started", id: 4 },
+    { name: "Pricing", href: "/pricing", id: 5 },
+    { name: "About", href: "/about", id: 6 },
   ],
   ecosystem: [
     {
       name: "Uniswap",
       href: "https://app.uniswap.org/tokens/polygon/0x85057d5a8d063f9075ba963101d76352051675e5",
       target: "_blank",
+      id: 7,
     },
     {
       name: "CoinMarketCap",
       href: "https://coinmarketcap.com/currencies/trotelcoin-v2/",
       target: "_blank",
+      id: 8,
     },
     {
       name: "Polygon Explorer",
       href: "https://polygonscan.com/token/0x85057d5a8d063f9075ba963101d76352051675e5",
       target: "_blank",
+      id: 9,
     },
     {
       name: "Gecko Terminal",
       href: "https://www.geckoterminal.com/polygon_pos/pools/0x360103feb052acda1f09bdfb3d73a0c1b9662c78",
       target: "_blank",
+      id: 10,
     },
   ],
   socials: [
@@ -46,22 +54,31 @@ const navigation = {
       name: "X / Twitter",
       href: "https://x.com/trotelcoin",
       target: "_blank",
+      id: 11,
     },
     {
       name: "Discord",
       href: "https://discord.gg/a33hjU5Usb",
       target: "_blank",
+      id: 12,
     },
     {
       name: "Blog / Mirror",
       href: "https://mirror.xyz/alexandretrotel.eth",
       target: "_blank",
+      id: 13,
     },
-    { name: "Telegram", href: "https://t.me/TrotelCoin", target: "_blank" },
+    {
+      name: "Telegram",
+      href: "https://t.me/TrotelCoin",
+      target: "_blank",
+      id: 14,
+    },
     {
       name: "YouTube",
       href: "https://youtube.com/@TrotelCoin",
       target: "_blank",
+      id: 15,
     },
   ],
   social: [
@@ -108,6 +125,8 @@ const navigation = {
 };
 
 export default function Footer() {
+  const [hoveringLink, setHoveringLink] = useState<number | null>(null);
+
   return (
     <footer
       className="bg-white dark:bg-gray-900"
@@ -173,12 +192,19 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
+                        onMouseEnter={() => setHoveringLink(item.id)}
+                        onMouseLeave={() => setHoveringLink(null)}
                         className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
                           {item.target === "_blank" ? (
-                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                            <span
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                                hoveringLink === item.id &&
+                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                              }`}
+                            >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -211,12 +237,19 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
+                        onMouseEnter={() => setHoveringLink(item.id)}
+                        onMouseLeave={() => setHoveringLink(null)}
                         className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
                           {item.target === "_blank" ? (
-                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                            <span
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                                hoveringLink === item.id &&
+                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                              }`}
+                            >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -251,12 +284,19 @@ export default function Footer() {
                       <Link
                         href={item.href}
                         target={item.target}
+                        onMouseEnter={() => setHoveringLink(item.id)}
+                        onMouseLeave={() => setHoveringLink(null)}
                         className="text-sm leading-6 text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         <div className="flex items-center">
                           {item.name}{" "}
                           {item.target === "_blank" ? (
-                            <span className="text-gray-900 dark:text-gray-100 ml-1">
+                            <span
+                              className={`text-gray-900 dark:text-gray-100 ml-1 duration-200 ${
+                                hoveringLink === item.id &&
+                                "translate-x-0.5 -translate-y-0.5 duration-200"
+                              }`}
+                            >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
