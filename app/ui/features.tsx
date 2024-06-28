@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import "animate.css";
 import Tilt from "react-parallax-tilt";

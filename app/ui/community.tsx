@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "animate.css";
 import CountUp from "react-countup";
 import { polygon } from "wagmi/chains";
@@ -8,6 +8,7 @@ import { trotelCoinAddress } from "@/data/addresses";
 import { useToken } from "wagmi";
 import axios from "axios";
 import useSWR from "swr";
+import TrotelPriceContext from "@/contexts/TrotelPrice";
 
 type Fetcher = (url: string) => Promise<any>;
 
@@ -70,12 +71,10 @@ export default function Community() {
     }
   }, [tokenRewardsData]);
 
-  const { data: totalSupplyData } = useSWR("/api/totalSupply", fetcher, {
-    revalidateOnReconnect: true,
-    revalidateIfStale: true,
-    revalidateOnMount: true,
-    refreshInterval: 10000,
-  });
+  const { trotelPrice } = useContext(TrotelPriceContext);
+
+  console.log("trotelPrice", trotelPrice);
+  console.log("totalPendingRewards", totalPendingRewards);
 
   const stats = [
     {
@@ -99,10 +98,11 @@ export default function Community() {
         <>
           <CountUp
             start={0}
-            end={totalPendingRewards ?? 0}
+            prefix="$"
+            end={(totalPendingRewards as number) * (trotelPrice as number)}
             duration={1}
             decimal="."
-            decimals={0}
+            decimals={2}
           />
         </>
       ),

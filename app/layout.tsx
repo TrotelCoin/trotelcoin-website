@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import GoogleAnalytics from "@/app/googleAnalytics";
 import Script from "next/script";
 import type { Metadata } from "next";
+import TrotelPriceProvider from "@/providers/TrotelPrice";
 
 export const revalidate: number = 60;
 
@@ -85,10 +86,12 @@ export default function RootLayout({
           {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
             <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
           ) : null}
-          <Header />
-          {children}
-          <Analytics />
-          <Footer />
+          <TrotelPriceProvider>
+            <Header />
+            {children}
+            <Analytics />
+            <Footer />
+          </TrotelPriceProvider>
         </body>
         <Script
           type="application/ld+json"
