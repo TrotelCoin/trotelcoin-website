@@ -4,11 +4,16 @@ import React, { useState, useEffect, useContext } from "react";
 import "animate.css";
 import CountUp from "react-countup";
 import { polygon } from "wagmi/chains";
-import { trotelCoinAddress } from "@/data/addresses";
-import { useToken } from "wagmi";
+import {
+  trotelCoinAddress,
+  trotelCoinStakingV1,
+  trotelCoinStakingV2,
+} from "@/data/addresses";
+import { useToken, useBalance } from "wagmi";
 import axios from "axios";
 import useSWR from "swr";
 import TrotelPriceContext from "@/contexts/TrotelPrice";
+import { formatEther } from "viem";
 
 type Fetcher = (url: string) => Promise<any>;
 
@@ -19,6 +24,9 @@ export default function Community() {
   const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
     number | null
   >(0);
+  const [totalStakingBalance, setTotalStakingBalance] = useState<number | null>(
+    null
+  );
 
   const { data: tokenRewardsData } = useToken({
     chainId: polygon.id,
@@ -71,10 +79,36 @@ export default function Community() {
     }
   }, [tokenRewardsData]);
 
-  const { trotelPrice } = useContext(TrotelPriceContext);
+  const { data: stakingV1Balance } = useBalance({
+    chainId: polygon.id,
+    address: trotelCoinStakingV1,
+    token: trotelCoinAddress,
+  });
 
-  console.log("trotelPrice", trotelPrice);
-  console.log("totalPendingRewards", totalPendingRewards);
+  const { data: stakingV2Balance } = useBalance({
+    chainId: polygon.id,
+    address: trotelCoinStakingV2,
+    token: trotelCoinAddress,
+  });
+
+  useEffect(() => {
+    if (stakingV1Balance || stakingV2Balance) {
+      const totalStakingBalance =
+        parseFloat(
+          formatEther(stakingV1Balance ? stakingV1Balance?.value : BigInt(0))
+        ) +
+        parseFloat(
+          formatEther(stakingV2Balance ? stakingV2Balance?.value : BigInt(0))
+        );
+
+      const totalStakingPrice =
+        totalStakingBalance * (storedTrotelPrice as number);
+
+      setTotalStakingBalance(totalStakingPrice);
+    }
+  }, [stakingV1Balance, stakingV2Balance]);
+
+  const { storedTrotelPrice } = useContext(TrotelPriceContext);
 
   const stats = [
     {
@@ -99,7 +133,9 @@ export default function Community() {
           <CountUp
             start={0}
             prefix="$"
-            end={(totalPendingRewards as number) * (trotelPrice as number)}
+            end={
+              (totalPendingRewards as number) * (storedTrotelPrice as number)
+            }
             duration={1}
             decimal="."
             decimals={2}
@@ -109,12 +145,13 @@ export default function Community() {
     },
     {
       id: 3,
-      name: "TrotelCoins distributed",
+      name: "Staking TVL",
       value: (
         <>
           <CountUp
             start={0}
-            end={trotelCoinsDistributed ?? 0}
+            prefix="$"
+            end={totalStakingBalance as number}
             duration={1}
             decimal="."
             decimals={0}

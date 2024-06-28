@@ -14,3 +14,7 @@ export const trotelCoinPolygonUniswapV3Pool: Address =
   "0x360103Feb052aCDa1F09BDFB3D73a0C1B9662C78";
 export const usdcPolygonUniswapV3Pool: Address =
   "0xA374094527e1673A86dE625aa59517c5dE346d32";
+export const trotelCoinStakingV1: Address =
+  "0x47350DEF1f6CDA6022703e5e05e6b9a3Ab4b7703";
+export const trotelCoinStakingV2: Address =
+  "0x5BE3D6E046e69751fBB960FAE3E9c7BF4e011E2a";
