@@ -9,7 +9,7 @@ import {
   trotelCoinStakingV1,
   trotelCoinStakingV2,
 } from "@/data/addresses";
-import { useToken, useBalance } from "wagmi";
+import { useToken, useBalance, useBlockNumber } from "wagmi";
 import axios from "axios";
 import useSWR from "swr";
 import TrotelPriceContext from "@/contexts/TrotelPrice";
@@ -21,16 +21,15 @@ const fetcher: Fetcher = (url: string) =>
   axios.get(url).then((res) => res.data);
 
 export default function Community() {
-  const [trotelCoinsDistributed, setTrotelCoinsDistributed] = useState<
-    number | null
-  >(0);
   const [totalStakingBalance, setTotalStakingBalance] = useState<number | null>(
     null
   );
 
-  const { data: tokenRewardsData } = useToken({
+  const { storedTrotelPrice } = useContext(TrotelPriceContext);
+
+  const { data: blockNumber } = useBlockNumber({
     chainId: polygon.id,
-    address: trotelCoinAddress,
+    watch: true,
   });
 
   const { data: numberOfLearnersData } = useSWR(
@@ -66,38 +65,27 @@ export default function Community() {
     }
   );
 
-  useEffect(() => {
-    if (tokenRewardsData) {
-      const tokenTotalSupply = parseFloat(
-        tokenRewardsData.totalSupply.formatted
-      );
-      const initialSupply = 100000000;
+  const { data: stakingV1Balance, refetch: refetchStakingV1Balance } =
+    useBalance({
+      chainId: polygon.id,
+      address: trotelCoinStakingV1,
+      token: trotelCoinAddress,
+    });
 
-      setTrotelCoinsDistributed(tokenTotalSupply - initialSupply);
-    } else {
-      setTrotelCoinsDistributed(0);
-    }
-  }, [tokenRewardsData]);
-
-  const { data: stakingV1Balance } = useBalance({
-    chainId: polygon.id,
-    address: trotelCoinStakingV1,
-    token: trotelCoinAddress,
-  });
-
-  const { data: stakingV2Balance } = useBalance({
-    chainId: polygon.id,
-    address: trotelCoinStakingV2,
-    token: trotelCoinAddress,
-  });
+  const { data: stakingV2Balance, refetch: refetchStakingV2Balance } =
+    useBalance({
+      chainId: polygon.id,
+      address: trotelCoinStakingV2,
+      token: trotelCoinAddress,
+    });
 
   useEffect(() => {
     if (stakingV1Balance || stakingV2Balance) {
       const totalStakingBalance =
-        parseFloat(
+        Number(
           formatEther(stakingV1Balance ? stakingV1Balance?.value : BigInt(0))
         ) +
-        parseFloat(
+        Number(
           formatEther(stakingV2Balance ? stakingV2Balance?.value : BigInt(0))
         );
 
@@ -108,7 +96,10 @@ export default function Community() {
     }
   }, [stakingV1Balance, stakingV2Balance]);
 
-  const { storedTrotelPrice } = useContext(TrotelPriceContext);
+  useEffect(() => {
+    refetchStakingV1Balance();
+    refetchStakingV2Balance();
+  }, [blockNumber, refetchStakingV1Balance, refetchStakingV2Balance]);
 
   const stats = [
     {
@@ -118,7 +109,7 @@ export default function Community() {
         <>
           <CountUp
             start={0}
-            end={parseFloat(numberOfQuizzesAnswered) ?? 0}
+            end={Number(numberOfQuizzesAnswered) ?? 0}
             duration={1}
             decimal="."
           />
