@@ -58,7 +58,7 @@ export default function aboutHero() {
                   Learn Web3 another way
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:max-w-md lg:max-w-none">
-                  We're building a platform to help you learn about web3 like
+                  We&apos;re building a platform to help you learn about web3 like
                   never before.
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">

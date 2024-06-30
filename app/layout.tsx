@@ -66,7 +66,7 @@ export default function RootLayout({
       <head>
         <link rel="apple-touch-icon" href="/assets/logo/trotelcoin.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <Script strategy="lazyOnload">
+        <Script strategy="lazyOnload" id="hotjar">
           {`
             (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -94,6 +94,7 @@ export default function RootLayout({
           </TrotelPriceProvider>
         </body>
         <Script
+          id="json-ld-trotelcoin"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />

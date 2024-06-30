@@ -73,7 +73,7 @@ export default function Features() {
         <>
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-              What's TrotelCoin?
+              What&apos;s TrotelCoin?
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
               A lot of features so you can learn better.

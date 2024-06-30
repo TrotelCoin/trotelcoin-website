@@ -172,10 +172,12 @@ export default function Footer() {
                 href="https://www.producthunt.com/posts/trotelcoin?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-trotelcoin"
                 target="_blank"
               >
-                <img
+                <Image
                   src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=442238&theme=light"
                   alt="Product Hunt"
                   className="hover:opacity-90"
+                  width={250}
+                  height={54}
                 />
               </Link>
             </div>

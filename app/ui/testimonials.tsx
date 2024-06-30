@@ -208,6 +208,7 @@ export default function Testimonials() {
             >
               {columnGroup.map((column, columnIdx) => (
                 <div
+                  key={columnIdx}
                   className={classNames(
                     (columnGroupIdx === 0 && columnIdx === 0) ||
                       (columnGroupIdx === testimonials.length - 1 &&

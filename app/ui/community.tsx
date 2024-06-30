@@ -9,7 +9,7 @@ import {
   trotelCoinStakingV1,
   trotelCoinStakingV2,
 } from "@/data/addresses";
-import { useToken, useBalance, useBlockNumber } from "wagmi";
+import { useBalance, useBlockNumber } from "wagmi";
 import axios from "axios";
 import useSWR from "swr";
 import TrotelPriceContext from "@/contexts/TrotelPrice";
@@ -80,7 +80,7 @@ export default function Community() {
     });
 
   useEffect(() => {
-    if (stakingV1Balance || stakingV2Balance) {
+    if ((stakingV1Balance || stakingV2Balance) && storedTrotelPrice) {
       const totalStakingBalance =
         Number(
           formatEther(stakingV1Balance ? stakingV1Balance?.value : BigInt(0))
@@ -89,12 +89,11 @@ export default function Community() {
           formatEther(stakingV2Balance ? stakingV2Balance?.value : BigInt(0))
         );
 
-      const totalStakingPrice =
-        totalStakingBalance * (storedTrotelPrice as number);
+      const totalStakingPrice = totalStakingBalance * storedTrotelPrice;
 
       setTotalStakingBalance(totalStakingPrice);
     }
-  }, [stakingV1Balance, stakingV2Balance]);
+  }, [stakingV1Balance, stakingV2Balance, storedTrotelPrice]);
 
   useEffect(() => {
     refetchStakingV1Balance();
